@@ -14,6 +14,18 @@ PuppieShop es una tienda online para mascotas que cuenta con una gran variedad d
 - Estrato socioeconómico: Medio o alto.
 - Intereses: Amantes de las mascotas que buscan el bienestar de ellos a través de su desarrollo integral, brindándoles además de amor, un entorno en el que sean felices.
 
+## Colaboradores
+
+### Oswar Baez
+Soy un Ingeniero Mecatrónico Msc Project Management,  ubicado en Barranquilla, Colombia. Actualmente en formación del Desarrollo Web FullStack. Estoy interesado en el diseño, seguridad y la aplicación multidiciplinaria de sistemas eléctricos, electronicos y de control con el desarrollo web.
+Soy una persona disciplinada, con grandes valores, siempre dispuesto a ayudar a quien lo requiera.
+Amante de la naturaleza y los animales. "Donde alguien huye de una abeja yo busco miel y la alimento".
+
+
+
+
+
+
 
 
 
