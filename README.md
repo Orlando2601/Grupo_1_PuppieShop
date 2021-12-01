@@ -21,6 +21,10 @@ Soy un Ingeniero Mecatrónico Msc Project Management,  ubicado en Barranquilla, 
 Soy una persona disciplinada, con grandes valores, siempre dispuesto a ayudar a quien lo requiera.
 Amante de la naturaleza y los animales. "Donde alguien huye de una abeja yo busco miel y la alimento".
 
+### Rafael Estrada
+Soy Ingeniero Mecatrónico, vivo actualmente en Medellín, Colombia.Estoy en formación de desarrollo web fullstack, siempre he estado interesado en la tecnología y aplicar estos conocimientos en la electrónica.
+Me considero una persona muy dinámica y que siempre quiere aprender más o fortalecer los conocimientos ya adquiridos.En mis tiempos libres prefiero saber que pasa a mi alrededor y aprender sobre las causas sociales.
+
 
 
 
