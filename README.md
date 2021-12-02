@@ -32,10 +32,3 @@ Soy una persona analítica, amante de la astronomía y dedicada a mi familia. En
 ### Alvaro Andres Alfonso Rodriguez.
 
 Soy futuro ingeniero de sistemas, decidi tomarme un año sabatico para convertirme en autodidacta y aprender el mundo de los sistemas. Aprendo con plataformas como #Platzi #Playground y hago parte de la aceleradora de talentos #Protalento; Gracias  #Playground y #Protalento me estoy formando como Desarrollador web FullStack; Soy una persona curiosa, me encanta nadar, los libros y viajar.
-
-
-
-
-
-
-g
