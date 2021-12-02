@@ -25,7 +25,9 @@ Amante de la naturaleza y los animales. "Donde alguien huye de una abeja yo busc
 Soy Ingeniero Mecatrónico, vivo actualmente en Medellín, Colombia.Estoy en formación de desarrollo web fullstack, siempre he estado interesado en la tecnología y aplicar estos conocimientos en la electrónica.
 Me considero una persona muy dinámica y que siempre quiere aprender más o fortalecer los conocimientos ya adquiridos.En mis tiempos libres prefiero saber que pasa a mi alrededor y aprender sobre las causas sociales.
 
-
+### Hernán D. Trujillo M.
+Soy Ingeniero Industrial e Ingeniero Agrícola, actualmente vivo en Rionegro, pero a partir de la próxima semana viviré en Apartadó. Estoy en formación de Desarrollo Web Fullstack con el fin de reorientar mi experiencia profesional.
+Soy una persona analítica, amante de la astronomía y dedicada a mi familia. En los tiempos libres me gusta la lectura y compartir con mi hijo.
 
 
 
