@@ -29,7 +29,9 @@ Me considero una persona muy dinámica y que siempre quiere aprender más o fort
 Soy Ingeniero Industrial e Ingeniero Agrícola, actualmente vivo en Rionegro, pero a partir de la próxima semana viviré en Apartadó. Estoy en formación de Desarrollo Web Fullstack con el fin de reorientar mi experiencia profesional.
 Soy una persona analítica, amante de la astronomía y dedicada a mi familia. En los tiempos libres me gusta la lectura y compartir con mi hijo.
 
+### Alvaro Andres Alfonso Rodriguez.
 
+Soy futuro ingeniero de sistemas, decidi tomarme un año sabatico para convertirme en autodidacta y aprender el mundo de los sistemas. Aprendo con plataformas como #Platzi #Playground y hago parte de la aceleradora de talentos #Protalento; Gracias  #Playground y #Protalento me estoy formando como Desarrollador web FullStack; Soy una persona curiosa, me encanta nadar, los libros y viajar.
 
 
 
