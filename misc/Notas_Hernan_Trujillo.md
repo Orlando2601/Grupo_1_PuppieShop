@@ -56,7 +56,7 @@
 ## **Diseño de la página del carrito de compras:**
     Se decidió hacerlo en dos páginas, pero para llegar a ese punto diseñé también la página previa, donde el cliente inspecciona el producto y ve sus características. El producto entregado al equipo fue:
         1) Página en la que se muestra el producto seleccionado con sus características y se elige el medio de pago.
-            ![Medios de pago](https://github.com/Orlando2601/Grupo_1_PuppieShop/issues/1#issue-1071262812)
+            ![Medios de pago](https://user-images.githubusercontent.com/94150941/144719770-07c1673b-d4a0-492b-8ee0-6ee382e02993.jpg)
         2) Página en la que se muestra el resumen de lo comprado.
             ![Resumen compra]<img src="/Wireframe_Hernan/Resumen_Compra.jpg">
     
