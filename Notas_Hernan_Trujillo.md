@@ -1,9 +1,9 @@
-**Definición de tema de página web:**
+**Definición de tema de página web:
     Propuesta: Página de artículos de temporada, (incluído deportes).
     Propuesta Álvaro: Página de mascotas.
     Se define realizarla sobre mascotas.
 
-**Investigación páginas de mascotas para la definición de contenidos y estilos:**
+**Investigación páginas de mascotas para la definición de contenidos y estilos:
     [www.mascotas.com](https://www.mascotas.com/contenidos)
     [www.naturalpetinnovations.com](https://www.naturalpetinnovations.com/)
     [petuku.com](https://petuku.com) (página sobre información útil para mascotas)
