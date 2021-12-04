@@ -28,6 +28,7 @@ Me considero una persona muy dinámica y que siempre quiere aprender más o fort
 ### Hernán D. Trujillo M.
 Soy Ingeniero Industrial e Ingeniero Agrícola, actualmente vivo en Rionegro, pero a partir de la próxima semana viviré en Apartadó. Estoy en formación de Desarrollo Web Fullstack con el fin de reorientar mi experiencia profesional.
 Soy una persona analítica, amante de la astronomía y dedicada a mi familia. En los tiempos libres me gusta la lectura y compartir con mi hijo.
+El mas buñuelo del grupo
 
 ### Alvaro Andres Alfonso Rodriguez.
 
