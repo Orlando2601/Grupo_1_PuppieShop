@@ -1,9 +1,9 @@
-**Definición de tema de página web:
+## **Definición de tema de página web:**
     Propuesta: Página de artículos de temporada, (incluído deportes).
     Propuesta Álvaro: Página de mascotas.
     Se define realizarla sobre mascotas.
 
-**Investigación páginas de mascotas para la definición de contenidos y estilos:
+## **Investigación páginas de mascotas para la definición de contenidos y estilos:
     [www.mascotas.com](https://www.mascotas.com/contenidos)
     [www.naturalpetinnovations.com](https://www.naturalpetinnovations.com/)
     [petuku.com](https://petuku.com) (página sobre información útil para mascotas)
@@ -15,7 +15,7 @@
     [petcityhouston.com](https://petcityhouston.com/) (muchos tipos de mascota)
     [www.unclebills.com](https://www.unclebills.com/) (otra con muchos tipos de mascotas)
 
-**Definición de nombre de página:**
+## **Definición de nombre de página:**
     propuesta: Todochanditas.
     Otras propuestas:
     puppieshop
@@ -25,7 +25,7 @@
     marketopet
     Nombre escogido: puppieshop.
 
-**Definición de público objetivo:**
+## **Definición de público objetivo:**
     Propuestas:
         PuppieShop es una tienda online para mascotas, cuenta con una gran variedad de productos de diversión, entrenamiento, alimentación y salud para mascotas. Además de una red en donde siempre se comparten tips de cuidado por parte de todos los usuarios. PuppieShop cuenta con servicio de entrega domiciliaria de cada producto a nivel nacional.
 
@@ -37,7 +37,7 @@
         Medicamentos y aseo
         Tips de cuidado y entrenamiento
 
-**Definición de colores y estilo:**
+## **Definición de colores y estilo:**
     Paginas consultadas:
         [www.arturogarcia.com](https://www.arturogarcia.com/como-elegir-colores-web/)
         [es.wix.com](https://es.wix.com/blog/2019/11/paletas-de-colores-para-paginas-web/)
@@ -53,12 +53,12 @@
     La paleta seleccionada se encuentra disponible en el siguiente link:
         [Paleta seleccionada y aprobada por equipo](https://coolors.co/8aea92-80ada0-5f5566-33202a-000000)
 
-**Diseño de la página del carrito de compras:**
+## **Diseño de la página del carrito de compras:**
     Se decidió hacerlo en dos páginas, pero para llegar a ese punto diseñé también la página previa, donde el cliente inspecciona el producto y ve sus características. El producto entregado al equipo fue:
         1) Página en la que se muestra el producto seleccionado con sus características y se elige el medio de pago.
-            ![Medios de pago](/Wireframe_Hernan/Medios_Pago.jpg?raw=true "Wireframe de medios de pago")
+            ![Medios de pago]<img src="/Wireframe_Hernan/Medios_Pago.jpg">
         2) Página en la que se muestra el resumen de lo comprado.
-            ![Resumen compra](/Wireframe_Hernan/Resumen_Compra.jpg?raw=true "Wireframe resumen de compra")
+            ![Resumen compra]<img src="/Wireframe_Hernan/Resumen_Compra.jpg">
     
     La página diseñada donde el cliente inspecciona el producto fue la siguiente:
         ![Detalle de producto no aprobado por equipo](/Wireframe_Hernan/Descripcion_Producto.jpg?raw=true "Wireframe de inspección del producto")
