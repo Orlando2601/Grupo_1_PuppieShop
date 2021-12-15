@@ -1,8 +1,14 @@
+@import url(/css/parametrizacion.css);
+
+
 header{
-    background-color: #4c564f;
+    background-color: #7ca04f;
     
 }
-
+.logo {
+    border: solid;
+}
 .logo img{
     width: 50%;
+    border: solid;
 }
