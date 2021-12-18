@@ -1,0 +1,119 @@
+@media (max-width: 360px) {
+    header{
+        background-color: #7ca04f;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 15px;
+        
+    } 
+    header .header-right{
+        display:none
+    
+    }
+    header .header-right .redes{
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-bottom: 20px;
+    
+    }
+    header .caja-logo{
+        width: 100%;
+    }
+    header .caja-enlace-header{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-bottom: 20px;
+        
+       
+    }
+
+    .caja-logo img{
+        width: 100%;
+    }/* img logo */
+}
+@media (min-width: 361px) and (max-width:760px){
+    header{
+        background-color: #7ca04f;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 15px;
+        
+    } 
+    header .header-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    
+    }
+    header .header-right .redes{
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    header .caja-logo{
+        width: 80%;
+    }
+    header .caja-enlace-header{
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-bottom: 20px;
+        
+       
+    }
+
+    .caja-logo img{
+        width: 100%;
+    }/* img logo */
+    
+}
+@media (min-width:761px){
+    header{
+        background-color: #7ca04f;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 15px;
+        
+    } 
+    header .header-right{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    
+    }
+    header .header-right .redes{
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    header .caja-logo{
+        width: 40%;
+    }
+    header .caja-enlace-header{
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-bottom: 20px;
+        
+       
+    }
+
+    .caja-logo img{
+        width: 100%;
+    }/* img logo */
+}

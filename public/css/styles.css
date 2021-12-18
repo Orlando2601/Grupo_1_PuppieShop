@@ -1,25 +1,13 @@
 @import url(/css/parametrizacion.css);
 @import url(/css/txt.css);
+@import url(/css/responsive.css);
 
 /* HEADER */
-header{
-    background-color: #7ca04f;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    
-    
-}
-.logo {
-    border: solid;
-    width: 30%;
-}/* Div logo */
-.logo img{
-    width: 100%;
-}/* img logo */
 
-header .div-btn-header{
-    border: 2px solid black;
-}
+
+
+
+
+
+
 
