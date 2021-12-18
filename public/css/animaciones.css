@@ -1,3 +1,10 @@
-header .caja-logo img{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+header .header-right .redes .iconred i{
+    transition-property: color;
+    transition-duration: 300ms;
+}
+
+header .header-right .redes .iconred:hover a i{
+  color:white;
+
+
 }

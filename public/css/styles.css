@@ -1,13 +1,43 @@
 @import url(/css/parametrizacion.css);
 @import url(/css/txt.css);
 @import url(/css/responsive.css);
+@import url(/css/animaciones.css);
 
 /* HEADER */
+header{
+    background-color: #7ca04f;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    
+} 
 
+header .header-right .redes{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 20px;
 
+}
+header .caja-enlace-header{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 20px;
+}
 
+.caja-logo img{
+    width: 100%;
+}/* img logo */
 
-
+header .header-right .redes .iconred i{
+    background-color: #7ca04f ;
+    border: none;
+    color: black;
+    transition-property: color;
+}
 
 
 
