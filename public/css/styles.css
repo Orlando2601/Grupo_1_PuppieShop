@@ -71,18 +71,29 @@ main .botton{
 main .top .left{
     border: solid blue;
     height: 100%;
-    width: 50%;
+    width: 60%;
+    padding: 5pX;
 }
 main .top .right{
     border: solid blue;
     height: 100%;
-    width: 50%;
+    width: 40%;
+   
 }
-main .top .lef. .img-detalle{
-    border: solid yellow;
-    width: 100px;
-    height: 100px;
+main .top .left picture{
+    background-color: orchid;
+    padding: 20px;
+    display: flex;
 }
+
+main .top .left picture img{
+    width: 100%;
+    height: 20%;
+    border: solid orange;
+    
+}
+
+
 
 
 
