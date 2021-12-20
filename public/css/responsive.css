@@ -14,6 +14,43 @@
         flex-wrap: wrap;
         text-align: center;
     }
+
+    /* MAIN */
+    main .top{
+        border: solid;
+        width: 100%;
+        color: red;
+        margin-bottom: 5px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main .top .left{
+        border: solid blue;
+        height: 100%;
+
+        padding: 5pX;
+    }
+    main .top .right{
+        border: solid blue;
+        height: 100%;
+
+       
+    }
+    main .top .left picture{
+        padding: 5px;
+        display: flex;
+    }
+    
+    main .top .left picture img{
+        width: 100%;
+        height: 20%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        
+    }
+
 }
 @media (min-width: 361px) and (max-width:760px){
 
@@ -26,6 +63,19 @@
     header .caja-logo{
         width: 80%;
     }
+
+    /* MAIN */
+    main .top{
+        border: solid;
+        width: 100%;
+        color: red;
+        margin-bottom: 5px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }    
+    
 }
 
 @media (min-width:761px){
@@ -39,4 +89,19 @@
     header .caja-logo{
         width: 40%;
     }
+
+        /* MAIN */
+    main .top{
+        border: solid;
+        width: 100%;
+        color: red;
+        margin-bottom: 5px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        
+    }  
+
+    
 }
