@@ -39,5 +39,50 @@ header .header-right .redes .iconred i{
     transition-property: color;
 }
 
+main {
+   
+    border: solid;
+    width: 77%;
+    height: 100vh;
+    margin: 5px auto;
+    padding: 20px;
+    overflow: hidden;
+   
+}
+
+main .top{
+    border: solid;
+    width: 100%;
+    height: 80%;
+    color: red;
+    margin-bottom: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+main .botton{
+    border: solid;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 5px;
+}
+
+main .top .left{
+    border: solid blue;
+    height: 100%;
+    width: 50%;
+}
+main .top .right{
+    border: solid blue;
+    height: 100%;
+    width: 50%;
+}
+main .top .lef. .img-detalle{
+    border: solid yellow;
+    width: 100px;
+    height: 100px;
+}
+
 
 
