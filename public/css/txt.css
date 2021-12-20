@@ -2,10 +2,19 @@ header .div-btn-header .a-btn-header{
     font-size: 2em;
     color: black;
     text-decoration: none;
-}
+}/* Eenlaces navegación */
 
 header .header-right .redes .iconred i{
     font-size: 2.5em;
+}/* Tamaño iconos */
+/* MAIN */
 
-}
+main .top .right  h5, h6{
+    font-family: var(--fuente);
+    color: var(--gris-texto);
+}/* Textos */
 
+main .top .right  h2, h3{
+    font-family: var(--fuente);
+    color: var(--negro-texto);
+}/* Titulos */

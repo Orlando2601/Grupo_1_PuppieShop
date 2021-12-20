@@ -12,7 +12,7 @@ header{
     justify-content: space-evenly;
     padding: 15px;
     
-} 
+} /* estilos header */
 
 header .header-right .redes{
     display: flex;
@@ -20,13 +20,13 @@ header .header-right .redes{
     gap: 15px;
     margin-bottom: 20px;
 
-}
+}/* Contenedor redes */
 header .caja-enlace-header{
     display: flex;
     justify-content: flex-end;
     gap: 15px;
     margin-bottom: 20px;
-}
+}/* Contenedor enlaces header */
 
 .caja-logo img{
     width: 100%;
@@ -36,8 +36,9 @@ header .header-right .redes .iconred i{
     background-color: #7ca04f ;
     border: none;
     color: black;
-    transition-property: color;
-}
+}/* Iconos redes */
+
+/* MAIN */
 
 main {
    
@@ -45,53 +46,53 @@ main {
     width: 77%;
     height: 100vh;
     margin: 5px auto;
-    padding: 20px;
     overflow: hidden;
    
 }
 
-main .top{
-    border: solid;
-    width: 100%;
-    height: 80%;
-    color: red;
-    margin-bottom: 5px;
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
 main .botton{
     border: solid;
     width: 100%;
     height: 20%;
     margin-bottom: 5px;
-}
+}/* contenedor inferior productos similares */
 
-main .top .left{
-    border: solid blue;
-    height: 100%;
-    width: 60%;
-    padding: 5pX;
-}
-main .top .right{
-    border: solid blue;
-    height: 100%;
-    width: 40%;
-   
-}
-main .top .left picture{
-    background-color: orchid;
-    padding: 20px;
+main .top .right  h5, h6{
+    padding: 4px;
+}/* Contenedor texto descripcion articulo */
+
+main .top .right  h2, h3{
+    padding: 4px;
+}/* titulos */
+
+main .top .right .modelos{
+    padding: 10px;
     display: flex;
-}
+    gap:10px;
+    flex-direction: row;
+    border: solid;
+}/* Contenedor modelos */
+main .top .right .modelos .rojo, .azul, .morado, .rosado{
+    width: 20px;
+    height: 20px;
+}/* Moedelos tamaños */
 
-main .top .left picture img{
-    width: 100%;
-    height: 20%;
-    border: solid orange;
-    
-}
+
+main .top .right .modelos .azul{
+background-color: blue;
+}/* Moedelo  */
+main .top .right .modelos .morado{
+    background-color: purple;
+}/* Modelo */
+main .top .right .modelos .rosado{
+    background-color: rgb(240, 142, 238);
+}/* Modelo */
+
+main .top .right .modelos .rojo{
+    background-color: red;
+}/* Modelo */
+
+
 
 
 
