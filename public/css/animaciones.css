@@ -6,3 +6,24 @@ header .header-right .redes .iconred i{
 header .header-right .redes .iconred:hover a i{
   color:white;
 }/* Cambio color iconos redes */
+
+main .top .right .range input{
+
+  transition-property: background-color;
+ }/* Contenedor btn listado */
+
+main .top .right .range input:hover{
+ background-color: #7ca04f;
+ transition-property: background-color;
+ transition-duration: 500ms;
+}/* Contenedor btn listado */
+
+main .top .right button{
+  transition-property: background-color;
+   transition-duration: 500ms;
+ }/* Contenedor listado */
+ 
+main .top .right button:hover{
+  background-color: #7ca04f;
+  transition-property: background-color;
+ }/* Contenedor listado */

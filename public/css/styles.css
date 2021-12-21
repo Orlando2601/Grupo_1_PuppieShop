@@ -152,6 +152,7 @@ main .top .right .range{
 
 main .top .right .range input{
     width: fit-content;
+    border-radius: 5px;
 }/* Contenedor listado */
 
 main .top .right .precio{
@@ -162,6 +163,7 @@ main .top .right .precio{
 
 main .top .right button{
 width:fit-content;
+border-radius: 5px;
 }
 main .botton{
    width: 100%;
@@ -210,6 +212,8 @@ main .botton article{
     align-items: center;
     justify-content: space-evenly;
     padding: 15px;
+    width: 100%;
+    height:100%
 }
 
 
