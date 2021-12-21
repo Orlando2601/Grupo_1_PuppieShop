@@ -71,6 +71,7 @@ main .top .right .modelos{
     gap:10px;
     flex-direction: row;
     border: solid;
+
 }/* Contenedor modelos */
 main .top .right .modelos .rojo, .azul, .morado, .rosado{
     width: 20px;
@@ -91,6 +92,15 @@ main .top .right .modelos .rosado{
 main .top .right .modelos .rojo{
     background-color: red;
 }/* Modelo */
+
+main .top .right .range .lista-cantidad{
+    border:1px solid green;
+    border-radius: 5px; 
+    background-color: white;
+
+}
+
+
 
 
 

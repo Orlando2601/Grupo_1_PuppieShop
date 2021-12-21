@@ -18,3 +18,9 @@ main .top .right  h2, h3{
     font-family: var(--fuente);
     color: var(--negro-texto);
 }/* Titulos */
+
+main .top .right .range label{
+font-family: var(--fuente);
+color: var(--negro-texto);
+
+}
