@@ -44,7 +44,6 @@ main {
    
     /* border: solid; */
     width: 77%;
-    height: 100vh;
     margin: 5px auto;
     overflow: hidden;
    
@@ -55,21 +54,49 @@ main .top{
     margin-bottom: 5px;
     padding: 5px;
     display: flex;
-    gap: 20px;
-}  /* Caja superior main */
 
-main .top .left picture{
+    align-items: center;
+    justify-content: center;
+}  /* Caja superior main */
+main .top .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .top .left .img-detalle{
     padding: 5px;
     display: flex;
-}/* Contenedor imagen */
+}/* Contenedor imagen principal */
 
-main .top .left picture img{
+main .top .left .imagen2{
+    padding:10px;
+    display: flex;
+    gap:10px;
+    flex-direction: row;
+}
+main .top .left .img2{
+    padding: 5px;
+    display: flex;
+    width: 80%;
+    height: 10%;
+    border: 1px solid rgba(155, 154, 154, 0.5);
+
+}/* Contenedor imagen principal */
+main .top .left .img2 img{ 
+
+    width: 100%;
+
+}/* Contenedor imagen principal */
+
+main .top .left .img-detalle img{
     width: 100%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }/* Imagen producto */
 
 main .top .right{
     height: 100%;
+    border:1px solid rgba(194, 191, 191, 0.5);
+    padding:5px
 }/* Contenedor derecho */
 
 main .top .right  h5, h6{
@@ -114,28 +141,76 @@ main .top .right .range .lista-cantidad{
     background-color: white;
 }/* listado cantidad */
 
+
 main .top .right .range{
     display: flex;
     flex-direction: row;
     gap:10px;
     align-items: center;
     padding: 5px;
-}
+}/* Contenedor listado */
+
+main .top .right .range input{
+    width: fit-content;
+}/* Contenedor listado */
 
 main .top .right .precio{
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
+}/* Contedor form  */
 
+main .top .right button{
+width:fit-content;
+}
 main .botton{
-    border: solid;
    width: 100%;
    height: 20%;
    margin-bottom: 5px;
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
 }/* contenedor inferior productos similares */
 
+main .botton article{
+    width: 100px;
+    height: 100px;
+    border: solid;
+    display: flex;
+    flex-direction: row;
 
+
+ }/* contenedor inferior productos similares */
+
+ main .botton article{
+
+    border: 1px solid rgba(155, 154, 154, 0.5);
+    width: 80%;
+    height: 60%;
+
+
+ }/* contenedor inferior productos similares */
+
+ main .botton article img{
+
+    width: 100%;
+    height: 100%;
+
+
+ }/* contenedor inferior productos similares */
+
+
+
+ /* FOOTER */
+
+ footer {
+    background-color: #7ca04f;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+}
 
 
 
