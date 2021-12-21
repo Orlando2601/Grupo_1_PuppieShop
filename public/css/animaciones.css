@@ -7,6 +7,18 @@ header .header-right .redes .iconred:hover a i{
   color:white;
 }/* Cambio color iconos redes */
 
+
+
+main .top .left .img2{
+  transition-property: border;
+  transition-duration: 500ms;
+
+}/* Contenedor imagen principal */
+main .top .left .img2:hover{
+  border:3px solid #7ca04f ;
+
+}/* Contenedor imagen principal */
+
 main .top .right .range input{
 
   transition-property: background-color;
@@ -27,3 +39,14 @@ main .top .right button:hover{
   background-color: #7ca04f;
   transition-property: background-color;
  }/* Contenedor listado */
+
+
+ main .botton article{
+  transition-property: border;
+  transition-duration: 500ms;
+ }
+
+ main .botton article:hover{
+  border:3px solid #7ca04f ;
+
+ }
