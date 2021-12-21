@@ -13,6 +13,10 @@ html{
 :root{
     --gris-texto:#89817F;
     --negro-texto:#334231;
-    --text-size-h2: 1.2em;
+    --font-size-XS: 1em;
+    --font-size-S: 1.2em;
+    --font-size-M: 1.4em;
+    --font-size-L: 1.9em;
+    --font-size-XL: 2em;
     --fuente:'Yanone Kaffeesatz', sans-serif;
 }/* Declaración variables */
