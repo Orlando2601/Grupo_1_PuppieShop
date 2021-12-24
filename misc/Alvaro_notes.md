@@ -15,7 +15,7 @@ http://mundo.petsy.mx
 https://coolors.co/8aea92-80ada0-5f5566-33202a-000000
 
 
-[pautas de contribución para este proyecto:] 
+## pautas de contribución para este proyecto:
 "./Propuesta tematica sitio.docx"
 
 
