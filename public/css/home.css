@@ -1,0 +1,14 @@
+@import url(/css/parametrizacion.css);
+@import url(/css/login.css);
+
+main{
+    border: none;
+}
+
+header{
+background: green;
+}
+picture img{
+    width: 50%;
+
+}

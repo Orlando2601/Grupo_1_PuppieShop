@@ -1,0 +1,41 @@
+@import url(/css/parametrizacion.css);
+@import url(/css/txt.css);
+@import url(/css/responsive.css);
+@import url(/css/animaciones.css);
+@import url(/css/styles.css);
+
+
+/*VARIABLE*/
+:root{
+    --negro:#000000;
+    --verde: #094e03e5;
+    --verde-claro: #18b31893;
+    --gris-oscuro: #666;
+    --verdemasclaro: #74e957;
+}
+/*MAIN*/
+main{
+    margin: auto;
+    border: 3px solid var(--negro);
+}
+picture.foto{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    margin-bottom: 10px;
+}
+div.formulario{
+    text-align: center;
+
+}
+div.formulario input,div.formulario button,div.formulario a{
+    margin-bottom: 15px;
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 5x;
+}
+
+div.formulario button{
+    border: 1px solid var(--gris-oscuro);
+    width: 40%;
+}

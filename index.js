@@ -6,10 +6,19 @@ app.use(express.static(publicPath));
 const port = 3030;
 
 app.listen(port, ()=>{console.log('Servidor corriendo en puerto ' + port);});
+
+
+
+app.get('', (req,res)=>{
+    res.sendFile(__dirname + '/views/home.html');
+});
+
+
+
 app.get('/detalle-producto', (req, res)=>{res.sendFile(path.join(__dirname, '/views/detalle-producto.html'))});
 
 
-/*Enlace de login */
+
 app.get('/login', (req,res)=>{
     res.sendFile(__dirname + '/views/login.html');
 });
