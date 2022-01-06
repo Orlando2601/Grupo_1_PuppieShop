@@ -19,4 +19,9 @@ html{
     --font-size-L: 1.9em;
     --font-size-XL: 2em;
     --fuente:'Yanone Kaffeesatz', sans-serif;
+    --negro:#000000;
+    --verde: #094e03e5;
+    --verde-claro: #18b31893;
+    --gris-oscuro: #666;
+    --verdemasclaro: #74e957;
 }/* Declaración variables */
