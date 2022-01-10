@@ -1,0 +1,76 @@
+@import url(/css/parametrizacion.css);
+
+main{
+    border: none;
+}
+
+header{
+background: green;
+}
+picture.logo img{
+    display: none;
+    width: 50%;
+}
+picture.logo2 img{
+    display: block;
+    width: 22%;
+    min-width: 77px;
+    min-height: 77px;
+}
+picture.logo2{
+    max-height: 77px;
+    max-width: 77px;
+}
+.cabecera{
+    display: flex;
+}
+
+form{
+    display: flex;
+}
+.cabecera2{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    width: 100%;
+}
+.input{
+   
+    background-color: white;
+    color: gray ;
+    border: 1px solid #000;
+    padding: 2px;
+    height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline;
+    display: flex;
+    margin-right: 10px;
+    width: 100%;
+  
+  }
+  .iconos{
+    display: flex;
+    justify-content: inherit;
+    font-size: 22px;
+  }
+
+/*footer*/
+footer{
+    background: var(--verdemasclaro);
+}
+
+/*ada*/
+@media (min-width:361px) 
+{ 
+    
+    picture.logo2 img{
+    display:none;
+    width: 50%;
+}
+picture.logo img{
+    display: block;
+    width: 50%;
+}
+    
+}
