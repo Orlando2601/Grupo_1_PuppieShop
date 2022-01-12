@@ -9,7 +9,7 @@ app.listen(port, ()=>{console.log('Servidor corriendo en puerto ' + port);});
 
 
 
-app.get('', (req,res)=>{
+app.get('/home', (req,res)=>{
     res.sendFile(__dirname + '/views/home.html');
 });
 
