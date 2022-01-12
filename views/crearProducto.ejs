@@ -3,8 +3,46 @@
     <%- include ('./partials/head') %>
 <body>
     <%- include ('./partials/header') %>
-    <main>
+    <main class="mainCrearProducto">
+        <div class="iconoStock">
+            <i class="fas fa-cubes"></i>
+        </div>
+        <form action="crearProducto">
+            <h1>Complete los datos del nuevo producto</h1>
+            <div>
+                <label for="tipoMascota">Perros</label>
+                <input type="radio" name="tipoMascota" value="perros">
+                <label for="tipoMascota">Gatos</label>
+                <input type="radio" name="tipoMascota"value="gatos">
+            </div>
+            <div>
+                <label for="categoria">Categoria</label>
+                <select name="categoria" id="categoria">
+                <option value="accesorios">Accesorios</option>
+                <option value="alimentos">Alimentos</option>
+                <option value="aseo">Aseo</option>
+                </select>
+            </div>
+            <div>
+                <label for="nombreProducto">Nombre Producto</label>
+                <input type="text" name="nombreProducto" placeholder="Ingrese nombre de producto" >
+            </div>
+            <div>
+                <label for="codigoProducto">Código de producto</label>
+                <input type="text" name="codigoProducto" placeholder="Ingrese codigo de producto" >
+            </div>
+            <div>
+                <label for="cantidad">Cantidad disponible</label>
+                <input type="text" name="cantidad" placeholder="Ingrese cantidad disponible" >
+            </div>
+            <div>
+                <label for="imagen">Imagen de descripción</label>
+                <input type="file" name="imagen" placeholder="Ingrese imagen de referencia" >
+            </div>
 
+            
+            
+        </form>
     </main>
     <%- include ('./partials/footer') %>
     
