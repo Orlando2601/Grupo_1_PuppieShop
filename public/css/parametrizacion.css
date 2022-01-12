@@ -13,11 +13,11 @@ html{
 :root{
     --gris-texto:#89817F;
     --negro-texto:#334231;
-    --font-size-XS: 1em;
-    --font-size-S: 1.2em;
-    --font-size-M: 1.4em;
-    --font-size-L: 1.9em;
-    --font-size-XL: 2em;
+    --font-size-XS: 1rem;
+    --font-size-S: 1.2rem;
+    --font-size-M: 1.4rem;
+    --font-size-L: 1.9rem;
+    --font-size-XL: 2rem;
     --fuente:'Yanone Kaffeesatz', sans-serif;
     --negro:#000000;
     --verde: #094e03e5;

@@ -1,5 +1,3 @@
-@import url(/css/parametrizacion.css);
-
 main{
     border: none;
 }
@@ -73,4 +71,33 @@ picture.logo img{
     width: 50%;
 }
     
+}
+
+/* MAIN */
+.mainHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.mainHome section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:15px
+}
+
+.mainHome section .imagenSeccion{
+    max-width: 30vw;
+}
+.mainHome section .imagenSeccion img{
+    width: 100%;
+}
+.mainHome section p{
+    font-family: var(--fuente);
+    font-size: var(--font-size-M);
+}
+.mainHome section h2{
+    font-family: var(--fuente);
+    font-size: var(--font-size-XL);
 }
