@@ -1,5 +1,52 @@
+.registro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.registro .iconoUser i{
+    margin-top: 15px;
+    font-size: 50px;
+    color: #7ca04f;;
+}
 .registro form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    width: 50%;
 }
+.registro form label{
+font-family: var(--fuente);
+font-size: var(--font-size-L);
+    
+}
+.registro form input{
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom:solid 1px #7ca04f;
+    width: 100%;
+    
+}
+.registro form .botones{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    
+    
+
+}
+.registro form .botones .btn{
+background-color: beige;
+border: transparent;
+padding: 10px;
+margin-top: 20px;
+}
+.registro form .botones .btn{
+    background-color: #7ca04f;
+    border: transparent;
+    padding: 10px;
+    margin-top: 20px;
+    }

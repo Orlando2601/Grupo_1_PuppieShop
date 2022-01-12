@@ -42,15 +42,23 @@
             </div><!-- Contenedor derecho de header -->
         </header>
         <main class="registro">
-            <form action="#">
+            <div class="iconoUser">
+                <i class="far fa-user"></i>
+            </div>
+            <form action="registrar">
                 <label for="nombre">Ingrese nombre</label>
-                <input type="text" name="nombre">
+                <input type="text" name="nombre" placeholder="Nombre">
                 <label for="apellido">Ingrese apellido</label>
-                <input type="text" name="apellido">
+                <input type="text" name="apellido" placeholder="Apellido">
                 <label for="correo">Ingrese Correo electrónico</label>
-                <input type="text" name="correo">
+                <input type="email" name="correo" placeholder="Correo">
                 <label for="contraseña">Ingrese Contraseña</label>
-                <input type="password" name="contraseña">
+                <input type="password" name="contraseña" placeholder="Contraseña">
+                <div class="botones">
+                    <input class="btn" type="submit" value="Registrar">
+                    <input class="btn" type="reset" value="Borrar">
+                </div>
+
             </form>
             
         </main>
