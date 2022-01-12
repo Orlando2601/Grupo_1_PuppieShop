@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/login.css"> <!-- Configuración de carpeta para diseños CSS -->
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Configuración de carpeta para diseños CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /><!-- Link para obtener iconos de la pagina enlazada, para agregar se debe ver la sintaxis que muetsra la pagina -->
     <title>Document</title>
 </head>
@@ -42,27 +42,20 @@
     </div><!-- Contenedor derecho de header -->
 
     </header>
-    <main>
+    <main class="registro">
         <!-- imagen de sin foto -->
-        <picture class="foto">
-            <img src="/images/Sin-foto.png" alt="sin-foto">
-        </picture>
+        <div class="iconoUser">
+            <i class="far fa-user"></i>
+        </div>
         <!-- formulario de login -->
-        <form action="/registro" method="POST">  
-            <div class="formulario">
-                <input type="email" name="email" id="email" placeholder="Usuario o correo electronico">
-                <br>
-                <input type="password" name="password" id="contrasena" placeholder="Contraseña">
-                <br>
-                <input type="checkbox" name="recordar" value="recordar" checked>
-                <label for="recordar">Recordar</label>
-                <br>
-                <button type="submit">Ingresar</button>
-                <br>
-                <a href="3">¿Olvidaste tu contraseña?</a>
-                <br>
-                <a href="#">Crear cuenta</a>
-                
+        <form action="/login" method="POST">  
+            <label for="correo">Ingrese Correo electrónico</label>
+            <input type="email" name="correo" placeholder="Correo">
+            <label for="contraseña">Ingrese Contraseña</label>
+            <input type="password" name="contraseña" placeholder="Contraseña">
+            <div class="botones">
+                <input class="btn" type="submit" value="Registrar">
+                <input class="btn" type="reset" value="Borrar">
             </div>
         </form>
             
