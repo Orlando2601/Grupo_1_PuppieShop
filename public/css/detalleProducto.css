@@ -1,0 +1,53 @@
+.detalleProducto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.detalleProducto .imagenDetalle{
+    width:50%
+}
+.detalleProducto .imagenDetalle img{
+    width: 100%;
+}
+
+.detalleProducto .descripcionDetalle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border-left: 1px solid #7ca04f;
+    padding-left: 10px;
+    
+}
+.detalleProducto .descripcionDetalle .formCompra{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+    
+}
+.detalleProducto .descripcionDetalle .formCompra label, h2{
+font-family: var(--fuente);
+font-size: var(--font-size-XL);
+    
+}
+.detalleProducto .descripcionDetalle .formCompra .listas{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 10px;
+    align-items: center;
+}
+.detalleProducto .descripcionDetalle .formCompra .listas select{
+color: #7ca04f;
+font-size: var(--font-size-XL);
+}
+
+.detalleProducto .descripcionDetalle .formCompra input{
+    background-color: #7ca04f;
+    padding: 3px;
+    font-family: var(--fuente);
+    font-size: var(--font-size-XL);
+}

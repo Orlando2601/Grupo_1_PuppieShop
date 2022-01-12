@@ -8,26 +8,3 @@ header .header-right .redes .iconred i{
     font-size: 2.5em;
 }/* Tamaño iconos */
 /* MAIN */
-
-main .top .right  h5, h6{
-    font-family: var(--fuente);
-    color: var(--gris-texto);
-    font-size: var(--text-size-title)
-}/* Textos */
-
-main .top .right  h2{
-    font-family: var(--fuente);
-    color: var(--negro-texto);
-    font-size: var(--font-size-L);
-}/* Titulos */
-main .top .right  h3{
-    font-family: var(--fuente);
-    color: var(--negro-texto);
-    font-size: var(--font-size-S);
-}/* Titulos */
-
-main .top .right .range label{
-font-family: var(--fuente);
-color: var(--negro-texto);
-
-}
