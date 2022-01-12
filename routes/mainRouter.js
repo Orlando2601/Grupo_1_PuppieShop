@@ -5,5 +5,6 @@ router.get('/', mainController.home)
 router.get('/login', mainController.login)
 router.get('/detalle', mainController.detalle)
 router.get('/registro', mainController.registro)
+router.get('/crear-producto', mainController.crearProducto)
 
 module.exports = router;

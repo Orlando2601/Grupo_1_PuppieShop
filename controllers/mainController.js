@@ -10,6 +10,9 @@ const controllers ={
     },
     registro:(req,res)=>{
         res.render('registro')
+    },
+    crearProducto: (req,res)=>{
+        res.render('crearProducto')
     }
 
 }
