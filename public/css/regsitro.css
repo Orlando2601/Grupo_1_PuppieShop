@@ -50,3 +50,14 @@ margin-top: 20px;
     padding: 10px;
     margin-top: 20px;
     }
+    .registro label{
+        font-family: var(--fuente);
+        font-size: var(--font-size-L);
+    }    
+
+.registro a .btn{
+    background-color: #7ca04f;
+    border: transparent;
+    padding: 10px;
+    margin-top: 5px;
+}
