@@ -1,0 +1,31 @@
+{
+  "name": "grupo_1_puppieshop",
+  "version": "1.0.0",
+  "description": "Tienda online para mascotas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orlando2601/Grupo_1_PuppieShop.git"
+  },
+  "keywords": [
+    "CSS",
+    "HTML",
+    "JS",
+    "Pets",
+    "Store",
+    "Market"
+  ],
+  "author": "A. Alvaro, B. Oswar, E. Rafael, T. Hernán",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Orlando2601/Grupo_1_PuppieShop/issues"
+  },
+  "homepage": "https://github.com/Orlando2601/Grupo_1_PuppieShop#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
