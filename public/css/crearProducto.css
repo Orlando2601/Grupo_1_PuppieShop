@@ -16,7 +16,7 @@
     flex-direction: column;
     gap: 10px;
 }
-.mainCrearProducto form h1{
+.mainCrearProducto h1{
     font-family: var(--fuente);
     font-size: var(--font-size-XL);
 }
