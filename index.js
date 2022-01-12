@@ -22,3 +22,5 @@ app.get('/detalle-producto', (req, res)=>{res.sendFile(path.join(__dirname, '/vi
 app.get('/login', (req,res)=>{
     res.sendFile(__dirname + '/views/login.html');
 });
+
+app.get('/registro', (req,res)=>{res.sendFile(path.join(__dirname, '/views/registro.html'))})
