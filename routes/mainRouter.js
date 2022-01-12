@@ -7,4 +7,5 @@ router.get('/detalle', mainController.detalle)
 router.get('/registro', mainController.registro)
 router.get('/crear-producto', mainController.crearProducto)
 router.get('/editar-producto', mainController.editarProducto)
+router.get('/comida', mainController.comida)
 module.exports = router;

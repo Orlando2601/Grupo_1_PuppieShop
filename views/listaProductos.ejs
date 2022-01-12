@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('./partials/head') %>
+<body>
+    <%- include ('./partials/header') %>
+    <main class="mainListaProductos">
+        <% lista.forEach(item=>{ %>
+            <article>
+                <img src="/images/Aliemento mascotas/Seco/Perro/ProPlan/<%= item.imagen %>" alt="">
+                <div class="vermas">
+                    <p><%= item.titulo %></p>
+                    <p><%= item.precio %></p>
+                    <a href="/detalle">Ver más detalles</a>
+                </div>
+                
+            </article>
+       <% }) %>
+        
+
+    </main>
+    <%- include ('./partials/footer') %>
+</body>
+</html>
