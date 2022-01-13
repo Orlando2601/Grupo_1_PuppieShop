@@ -33,6 +33,11 @@ font-family: var(--fuente);
 font-size: var(--font-size-XL);
     
 }
+.detalleProducto .descripcionDetalle .formCompra label, h3{
+    font-family: var(--fuente);
+    font-size: var(--font-size-M);
+        
+    }
 .detalleProducto .descripcionDetalle .formCompra .listas{
     display: flex;
     flex-direction: row;

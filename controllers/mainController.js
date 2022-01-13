@@ -1,43 +1,80 @@
 const productos=[
     {
-      mascota:'perro',
+      mascota:'Caninos',
       categoria:'alimento',
-      nombre:'chunky',
-      referencia:'REF1234',
+      nombre:'Proplan Active Mind',
+      razas:'Medianos y grandes',
+      referencia:'REF001',
       cantidad: 10,
-      precio: 5000,
-      tamaño: '2kg',
+      precio: 35000,
+      tamaño: '3kg',
       imagen: 'purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png'
     },
     {
-        mascota:'perro',
+        mascota:'Caninos',
         categoria:'alimento',
-        nombre:'chunky',
-        referencia:'REF1234',
+        nombre:'Proplan Active Mind',
+        razas:'Pequeños',
+        referencia:'REF002',
         cantidad: 10,
-        precio: 5000,
-        tamaño: '2kg',
+        precio: 35000,
+        tamaño: '3kg',
         imagen: 'purina-pro-plan-flagship-perros-active-mind-razas-pequeñas.png'
       },
       {
-        mascota:'perro',
+        mascota:'Caninos',
         categoria:'alimento',
-        nombre:'chunky',
-        referencia:'REF1234',
+        nombre:'Proplan Adultos',
+        razas:'Grandes',
+        referencia:'REF003',
         cantidad: 10,
-        precio: 5000,
-        tamaño: '2kg',
+        precio: 40000,
+        tamaño: '3kg',
         imagen: 'purina-pro-plan-flagship-perros-adult-razas-grandes.png'
       },
       {
-        mascota:'perro',
+        mascota:'Caninos',
         categoria:'alimento',
-        nombre:'chunky',
-        referencia:'REF1234',
+        nombre:'Proplan Adultos',
+        razas:'Grandes',
+        referencia:'REF004',
         cantidad: 10,
-        precio: 5000,
-        tamaño: '2kg',
+        precio: 40000,
+        tamaño: '3kg',
         imagen: 'purina-pro-plan-flagship-perros-adult-razas-medianas.png'
+      },
+      {
+        mascota:'Caninos',
+        categoria:'alimento',
+        nombre:'Proplan Delicate Structure',
+        razas:'Grandes',
+        referencia:'REF005',
+        cantidad: 10,
+        precio: 35000,
+        tamaño: '3kg',
+        imagen: '787-139 SL FLAGSHIP - PROPLAN REVAMP - MOCKUPS png_PNG EN BAJA RESOLUCION_MKP 787-139 PP FLAGSHIP PERROS DELICATE STRUCTURE.png'
+      },
+      {
+        mascota:'Caninos',
+        categoria:'alimento',
+        nombre:'Proplan Adult',
+        razas:'Pequeñas',
+        referencia:'REF005',
+        cantidad: 10,
+        precio: 35000,
+        tamaño: '3kg',
+        imagen: 'purina-pro-plan-flagship-perros-adult-razas-pequeñas.png'
+      },
+      {
+        mascota:'Caninos',
+        categoria:'alimento',
+        nombre:'Proplan Bright Mind',
+        razas:'Pequeñas',
+        referencia:'REF005',
+        cantidad: 10,
+        precio: 35000,
+        tamaño: '3kg',
+        imagen: 'Purina® Pro Plan® Bright Mind.png'
       }
       
 
@@ -52,7 +89,9 @@ const controllers ={
         res.render('login')
     },
     detalle: (req,res)=>{
-        res.render('detalle-producto')
+        let ref = req.params.referencia;
+        let detalle = productos.find(item => item.referencia == ref)
+        res.render('detalle-producto', {lista:detalle})
     },
     registro:(req,res)=>{
         res.render('registro')

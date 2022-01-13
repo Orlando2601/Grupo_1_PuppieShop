@@ -5,15 +5,19 @@
         <%- include ('./partials/header') %>
         <main class="detalleProducto">
             <section class="imagenDetalle">
-                <img src="/images/Aliemento mascotas/Seco/Perro/ProPlan/787-139 SL FLAGSHIP - PROPLAN REVAMP - MOCKUPS png_PNG EN BAJA RESOLUCION_MKP 787-139 PP FLAGSHIP PERROS DELICATE STRUCTURE.png" alt="">
+                <img src="/images/Aliemento mascotas/Seco/Perro/ProPlan/<%= lista.imagen %>" alt="">
             </section>
             <section class="descripcionDetalle">
                 <form class="formCompra" action="comprar">
-                    <h2>Alimento seco proplan</h2>
-                    <label for="referencia">Código Producto REF 9999</label>
-                    <input type="hidden" name="referencia" value="9999">
-                    <label for="precio">Precio $1000</label>
-                    <input type="hidden" name="precio" value="10000">
+                    <h2><%= lista.mascota %></h2>
+                    <h3><%= lista.nombre %></h3>
+                    <h3><%= lista.razas %></h3>
+                    <label for="referencia"><%= lista.referencia %></label>
+                    <input type="hidden" name="referencia" value="<%= lista.referencia %>">
+
+                    <label for="precio">$<%= lista.precio %></label>
+                    <input type="hidden" name="precio" value="<%= lista.precio %>">
+
                     <div class="listas">
                         <label for="cantidad">Cantidad:</label>
                         <select class="cantidad" name="cantidad" id="cantidad">

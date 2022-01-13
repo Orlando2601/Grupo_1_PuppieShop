@@ -8,9 +8,12 @@
             <article>
                 <img src="/images/Aliemento mascotas/Seco/Perro/ProPlan/<%= item.imagen %>" alt="">
                 <div class="vermas">
-                    <p><%= item.titulo %></p>
-                    <p><%= item.precio %></p>
-                    <a href="/detalle">Ver más detalles</a>
+                    <p><%= item.mascota %></p>
+                    <p><%= item.razas %></p>
+                    <p><%= item.nombre %></p>
+                    <p><%= item.tamaño %></p>
+                    <p>$<%= item.precio %></p>
+                    <a href="/detalle/<%= item.referencia %>">Ver más detalles</a>
                 </div>
                 
             </article>
