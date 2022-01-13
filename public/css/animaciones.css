@@ -7,7 +7,13 @@ header .header-right .redes .iconred:hover a i{
   color:white;
 }/* Cambio color iconos redes */
 
-
+header .caja-enlace-header .iconred i{
+  transition-property: color;
+  transition-duration: 300ms;
+}/* Iconos redes */
+header .caja-enlace-header .iconred:hover i{
+  color:white;
+}/* Iconos redes */
 
 main .top .left .img2{
   transition-property: border;
