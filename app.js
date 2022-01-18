@@ -19,8 +19,8 @@ app.use(methodOverride('_method'));
 app.use(express.static(publicPath));
 
 app.set('view engine', 'ejs'); /* Expresamos a express motor de vistas como ejs */
-
-app.listen(process.env.PORT || 3000, () => { console.log('Servidor corriendo en el puerto 3000');});/* Configuracion heroku */
+const puerto = process.env.PORT || 3030
+app.listen(puerto, () => { console.log('Servidor corriendo en el puerto '  + puerto);});/* Configuracion heroku */
 
 
 app.use(indexRouter); /* Definimos a express donde buscar las rutas */

@@ -53,5 +53,38 @@
   "precio": "35000",
   "tamaño": "3.5kg",
   "imagen": "imagen1642528755646.jpg"
+ },
+ {
+  "referencia": 6,
+  "mascota": "Caninos",
+  "categoria": "accesorios",
+  "razas": "Medianos y grandes",
+  "nombre": "Proplan active mind",
+  "cantidad": "10",
+  "precio": "53000",
+  "tamaño": "3kg",
+  "imagen": "imagen1642528963450.png"
+ },
+ {
+  "referencia": 7,
+  "mascota": "Caninos",
+  "categoria": "accesorios",
+  "razas": "Medianos y grandes",
+  "nombre": "Proplan edad mediana",
+  "cantidad": "10",
+  "precio": "53000",
+  "tamaño": "3kg",
+  "imagen": "imagen1642529022332.png"
+ },
+ {
+  "referencia": 8,
+  "mascota": "Caninos",
+  "categoria": "accesorios",
+  "razas": "Medianos y grandes",
+  "nombre": "Otro chunky",
+  "cantidad": "19",
+  "precio": "24000",
+  "tamaño": "kg",
+  "imagen": "imagen1642532215093.jpg"
  }
 ]

@@ -32,9 +32,10 @@ let multerDiskStorage = multer.diskStorage({
 let fileUpload = multer({storage:multerDiskStorage});/* Definimos el metodo que ultiizaremos en todos los formularios para subir imagenes */
 let multerImageMidleware =  fileUpload.single('imagen')
 
-
 router.post('/crear-producto/',multerImageMidleware, mainController.store)
 /* Fin Cargando imagenes en el form con multer */
+
+
 router.get('/editar-producto', mainController.editarProducto)
 router.get('/detalle/:referencia', mainController.detalle)
 
