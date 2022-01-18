@@ -1,4 +1,4 @@
-const { json } = require('body-parser');
+/* const { json } = require('body-parser'); */
 const req = require('express/lib/request');
 const fs = require('fs');
 const path = require('path')
@@ -14,8 +14,8 @@ const controllers ={
     },
     detalle: (req,res)=>{
         let ref = req.params.referencia;
-        let detalle = productos.find(item => item.referencia == ref)
-        res.render('detalle-producto', {lista:detalle})
+        let lista = productos.find(item => item.referencia == ref)
+        res.render('detalle-producto', {lista})
     },
     registro:(req,res)=>{
         res.render('registro')
@@ -25,19 +25,23 @@ const controllers ={
     },
     store:(req, res)=>{
         let newReference = productos.length
-        let formu = JSON.parse(req.body);
-        
-        console.log(formu);
-        let nuevo = {
-            referencia: newReference + 1,
-            mascota:"caninos",
-            categoria: "alimentos",
-            ...req.body,
-            imagen:"purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png"
-        }
-        productos.push(nuevo);
-        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
+        if (req.file){
+            let nuevo = {
+				referencia:newReference+1,
+                mascota:"Caninos",
+                categoria:"Alimento",
+                razas:"Medianos y grandes",
+				...req.body,
+				imagen: req.file.filename
+			}
+			
+			productos.push(nuevo)
+			fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
 			res.redirect('/')
+        }else {
+            res.redirect('/crear-producto')
+        }
+
     },
     editarProducto:(req,res)=>{
         res.render('editarProducto')

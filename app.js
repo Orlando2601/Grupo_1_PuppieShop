@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser')
+/* const bodyParser = require('body-parser') */
 
 const publicPath =path.resolve(__dirname, './public');
 const indexRouter = require('./routes/mainRouter');/* requerimos archivo de rutas */
@@ -10,8 +10,8 @@ const methodOverride = require('method-override');
 
 const app = express();
 app.use(express.urlencoded({ extended: false }));
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+/* app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json()) */
 app.use(express.json());
 app.use(methodOverride('_method'));
 
