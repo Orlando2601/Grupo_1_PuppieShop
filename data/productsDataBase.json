@@ -4,44 +4,44 @@
       "categoria":"alimento",
       "nombre":"Proplan Active Mind",
       "razas":"Medianos y grandes",
-      "referencia":"1",
+      "referencia":1,
       "cantidad": 10,
       "precio": 35000,
       "tamaño": "3kg",
-      "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.pn"
+      "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png"
     },
     {
         "mascota":"Caninos",
         "categoria":"alimento",
         "nombre":"Proplan Active Mind",
         "razas":"Medianos y grandes",
-        "referencia":"2",
+        "referencia":2,
         "cantidad": 10,
         "precio": 35000,
         "tamaño": "3kg",
-        "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.pn"
+        "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png"
       },
       {
         "mascota":"Caninos",
         "categoria":"alimento",
         "nombre":"Proplan Active Mind",
         "razas":"Medianos y grandes",
-        "referencia":"3",
+        "referencia":3,
         "cantidad": 10,
         "precio": 35000,
         "tamaño": "3kg",
-        "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.pn"
+        "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png"
       },
       {
         "mascota":"Caninos",
         "categoria":"alimento",
         "nombre":"Proplan Active Mind",
         "razas":"Medianos y grandes",
-        "referencia":"4",
+        "referencia":5,
         "cantidad": 10,
         "precio": 35000,
         "tamaño": "3kg",
-        "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.pn"
+        "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png"
       }
     
  

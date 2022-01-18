@@ -1,8 +1,8 @@
 
 const fs = require('fs');
-const path = require(path)
-const productsFilePath = path.join(__dirname, './data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const path = require('path')
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controllers ={
     home: (req,res)=>{
@@ -26,7 +26,7 @@ const controllers ={
         res.render('editarProducto')
     },
     comida:(req,res)=>{
-        res.render('listaProductos',{lista:productos})
+        res.render('listaProductos',{productos})
     }
 
 }

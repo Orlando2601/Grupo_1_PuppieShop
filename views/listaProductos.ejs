@@ -4,9 +4,9 @@
 <body>
     <%- include ('./partials/header') %>
     <main class="mainListaProductos">
-        <% lista.forEach(item=>{ %>
+        <% productos.forEach(item=>{ %>
             <article>
-                <img src="/images/Aliemento mascotas/Seco/Perro/ProPlan/<%= item.imagen %>" alt="">
+                <img src="/images/productsDB/<%= item.imagen %>" alt="">
                 <div class="vermas">
                     <p><%= item.mascota %></p>
                     <p><%= item.razas %></p>
