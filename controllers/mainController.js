@@ -1,4 +1,5 @@
-
+const { json } = require('body-parser');
+const req = require('express/lib/request');
 const fs = require('fs');
 const path = require('path')
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
@@ -22,8 +23,25 @@ const controllers ={
     crearProducto: (req,res)=>{
         res.render('crearProducto')
     },
+    store:(req, res)=>{
+        let newReference = productos.length
+        let formu = JSON.parse(req.body);
+        
+        console.log(formu);
+        let nuevo = {
+            referencia: newReference + 1,
+            mascota:"caninos",
+            categoria: "alimentos",
+            ...req.body,
+            imagen:"purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png"
+        }
+        productos.push(nuevo);
+        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
+			res.redirect('/')
+    },
     editarProducto:(req,res)=>{
         res.render('editarProducto')
+
     },
     comida:(req,res)=>{
         res.render('listaProductos',{productos})

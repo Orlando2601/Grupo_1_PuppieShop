@@ -8,13 +8,13 @@
             <i class="fas fa-cubes"></i>
         </div>
         <h1>Complete los datos del nuevo producto</h1>
-        <form action="crearProducto" method="POST" enctype="multipart/form-data">
+        <form action="/crear-producto/" method="POST" enctype="multipart/form-data">
             
             <div>
-                <label for="tipoMascota">Perros</label>
-                <input type="radio" name="tipoMascota" value="perros">
-                <label for="tipoMascota">Gatos</label>
-                <input type="radio" name="tipoMascota"value="gatos">
+                <label for="mascota">Perros</label>
+                <input type="radio"  name="mascota" value="perros">
+                <label for="mascota">Gatos</label>
+                <input type="radio" name="mascota"value="gatos">
             </div>
             <div>
                 <label for="categoria">Categoria</label>
@@ -25,20 +25,19 @@
                 </select>
             </div>
             <div>
-                <label for="nombreProducto">Nombre Producto</label>
-                <input type="text" name="nombreProducto" placeholder="Ingrese nombre de producto" >
-            </div>
-            <div>
-                <label for="codigoProducto">Código de producto</label>
-                <input type="text" name="codigoProducto" placeholder="Ingrese codigo de producto" >
+                <label for="nombre">Nombre Producto</label>
+                <input type="text" id="nombre" name="nombre"  placeholder="Ingrese nombre de producto" >
             </div>
             <div>
                 <label for="cantidad">Cantidad disponible</label>
-                <input type="text" name="cantidad" placeholder="Ingrese cantidad disponible" >
+                <input type="text" id="cantidad" name="cantidad" placeholder="Ingrese cantidad disponible" >
             </div>
             <div>
                 <label for="imagen">Imagen de descripción</label>
                 <input type="file" name="imagen" placeholder="Ingrese imagen de referencia" >
+            </div>
+            <div >
+                <input type="submit" value="Guardar">
             </div>
 
             
