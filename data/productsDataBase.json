@@ -1,90 +1,46 @@
 [
  {
-  "mascota": "Caninos",
-  "categoria": "alimento",
-  "nombre": "Proplan Active Mind",
-  "razas": "Medianos y grandes",
   "referencia": 1,
-  "cantidad": 10,
-  "precio": 35000,
-  "tamaño": "3kg",
-  "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png"
- },
- {
-  "mascota": "Caninos",
-  "categoria": "alimento",
-  "nombre": "Proplan Active Mind",
-  "razas": "Medianos y grandes",
-  "referencia": 2,
-  "cantidad": 10,
-  "precio": 35000,
-  "tamaño": "3kg",
-  "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png"
- },
- {
-  "mascota": "Caninos",
-  "categoria": "alimento",
-  "nombre": "Proplan Active Mind",
-  "razas": "Medianos y grandes",
-  "referencia": 3,
-  "cantidad": 10,
-  "precio": 35000,
-  "tamaño": "3kg",
-  "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png"
- },
- {
-  "mascota": "Caninos",
-  "categoria": "alimento",
-  "nombre": "Proplan Active Mind",
-  "razas": "Medianos y grandes",
-  "referencia": 4,
-  "cantidad": 10,
-  "precio": 35000,
-  "tamaño": "3kg",
-  "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png"
- },
- {
-  "referencia": 5,
   "mascota": "Caninos",
   "categoria": "accesorios",
   "razas": "Medianos y grandes",
-  "nombre": "Chunky pink",
+  "nombre": "para brorrar",
   "cantidad": "25",
-  "precio": "35000",
-  "tamaño": "3.5kg",
-  "imagen": "imagen1642528755646.jpg"
- },
- {
-  "referencia": 6,
-  "mascota": "Caninos",
-  "categoria": "accesorios",
-  "razas": "Medianos y grandes",
-  "nombre": "Proplan active mind",
-  "cantidad": "10",
-  "precio": "53000",
-  "tamaño": "3kg",
-  "imagen": "imagen1642528963450.png"
- },
- {
-  "referencia": 7,
-  "mascota": "Caninos",
-  "categoria": "accesorios",
-  "razas": "Medianos y grandes",
-  "nombre": "Proplan edad mediana",
-  "cantidad": "10",
-  "precio": "53000",
-  "tamaño": "3kg",
-  "imagen": "imagen1642529022332.png"
- },
- {
-  "referencia": 8,
-  "mascota": "Caninos",
-  "categoria": "accesorios",
-  "razas": "Medianos y grandes",
-  "nombre": "Otro chunky",
-  "cantidad": "19",
   "precio": "24000",
   "tamaño": "kg",
-  "imagen": "imagen1642532215093.jpg"
+  "imagen": "imagen1642542198111.jpg"
+ },
+ {
+  "referencia": "2",
+  "mascota": "Caninos",
+  "categoria": "accesorios",
+  "razas": "Medianos y grandes",
+  "nombre": "PROPLAN",
+  "cantidad": "25",
+  "precio": "24000",
+  "tamaño": "7kg",
+  "imagen": "imagen1642544187671.png"
+ },
+ {
+  "referencia": 3,
+  "mascota": "Caninos",
+  "categoria": "accesorios",
+  "razas": "Medianos y grandes",
+  "nombre": "EL QUE ACTUALICE",
+  "cantidad": "25",
+  "precio": "24000",
+  "tamaño": "kg",
+  "imagen": "imagen1642542204983.jpg"
+ },
+ {
+  "referencia": "4",
+  "mascota": "Caninos",
+  "categoria": "accesorios",
+  "razas": "Medianos y grandes",
+  "nombre": "ahora con imagen",
+  "cantidad": "25",
+  "precio": "24000",
+  "tamaño": "kg",
+  "imagen": "imagen1642544225648.png"
  }
 ]

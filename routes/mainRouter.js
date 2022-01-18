@@ -36,8 +36,12 @@ router.post('/crear-producto/',multerImageMidleware, mainController.store)
 /* Fin Cargando imagenes en el form con multer */
 
 
-router.get('/editar-producto', mainController.editarProducto)
-router.get('/detalle/:referencia', mainController.detalle)
+router.get('/editar-producto/:referencia', mainController.editarProducto)
 
+
+router.patch('/editar-producto/:referencia',multerImageMidleware, mainController.update);
+
+router.get('/detalle/:referencia', mainController.detalle)
+router.delete('/borrar-producto/:referencia', mainController.destroy)
 
 module.exports = router;

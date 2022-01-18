@@ -5,12 +5,14 @@
     gap: 10px;
     margin-bottom: 20px;
 }
-.mainCrearProducto .iconoStock i{
-    margin-top: 15px;
-    font-size: 70px;
-    color: #7ca04f;
+.mainCrearProducto .imagen-edit{
+ width: 35%;
     
 }
+.mainCrearProducto .imagen-edit img{
+    width: 100%;
+       
+   }
 .mainCrearProducto form{
     display: flex;
     flex-direction: column;
@@ -29,5 +31,10 @@ justify-content: space-between;
 .mainCrearProducto form div label{
     font-family: var(--fuente);
     font-size: var(--font-size-L);
+        
+    }
+    .image-to-edit{
+        width: 30vw;
+        height: 30vw;
         
     }
