@@ -7,17 +7,12 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controllers ={
     
-    login: (req,res)=>{
-        res.render('login')
-    },
     detalle: (req,res)=>{
         let ref = req.params.referencia;
         let lista = productos.find(item => item.referencia == ref)
         res.render('detalle-producto', {lista})
     },
-    registro:(req,res)=>{
-        res.render('registro')
-    },
+
     crearProducto: (req,res)=>{
         res.render('crearProducto')
     },
@@ -35,9 +30,9 @@ const controllers ={
 			
 			productos.push(nuevo)
 			fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-			res.redirect('/')
+			res.redirect('/productos')
         }else {
-            res.redirect('/crear-producto')
+            res.redirect('crear-producto')
         }
 
     },
@@ -64,7 +59,7 @@ const controllers ={
             }
             productos[reference -1] = update
             fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-            res.redirect('/')
+            res.redirect('/productos')
         }else {
             let update = {
                 referencia:reference,
@@ -77,7 +72,7 @@ const controllers ={
             }
             productos[reference -1] = update
             fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-            res.redirect('/')
+            res.redirect('/productos')
         }
     },
     destroy:(req,res)=>{
@@ -87,14 +82,11 @@ const controllers ={
 			element.referencia = index+1;	
 		});
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-		res.redirect('/')
-    },
-    comida:(req,res)=>{
-        res.render('listaProductos',{productos})
+		res.redirect('/productos')
     }
 
 }
 
 
 
-module.exports =controllers;
+module.exports = controllers;

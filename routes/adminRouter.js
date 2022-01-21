@@ -2,14 +2,14 @@ const express = require('express'); /* Importamos modulo express */
 const router = express.Router(); /* Definimos el método Router de express a la variable router para exportarla */
 const path = require('path')
 const multer =require('multer')
-const mainController = require('../controllers/mainController');
+const adminController = require('../controllers/adminController');
 
 /* const bodyParser = require('body-parser') */
 
 
 
 
-router.get('/comida', mainController.comida)
+
 
 
 /* Cargando imagenes en el form con multer */
@@ -31,16 +31,19 @@ let multerDiskStorage = multer.diskStorage({
 let fileUpload = multer({storage:multerDiskStorage});/* Definimos el metodo que ultiizaremos en todos los formularios para subir imagenes */
 let multerImageMidleware =  fileUpload.single('imagen')
 
-router.post('/crear-producto/',multerImageMidleware, mainController.store)
+
+
+
+router.get('/crear-producto/', adminController.crearProducto)
+router.post('/crear-producto/',multerImageMidleware, adminController.store)
 /* Fin Cargando imagenes en el form con multer */
 
 
-router.get('/editar-producto/:referencia', mainController.editarProducto)
+router.get('/editar-producto/:referencia', adminController.editarProducto)
+router.patch('/editar-producto/:referencia',multerImageMidleware, adminController.update);
 
 
-router.patch('/editar-producto/:referencia',multerImageMidleware, mainController.update);
-
-router.get('/detalle/:referencia', mainController.detalle)
-router.delete('/borrar-producto/:referencia', mainController.destroy)
+router.get('/detalle/:referencia', adminController.detalle)
+router.delete('/borrar-producto/:referencia', adminController.destroy)
 
 module.exports = router;
