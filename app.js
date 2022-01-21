@@ -4,6 +4,7 @@ const path = require('path');
 
 const publicPath =path.resolve(__dirname, './public');
 const indexRouter = require('./routes/mainRouter');/* requerimos archivo de rutas */
+const productosRouter = require('./routes/productosRouter');/* requerimos archivo de rutas */
 
 const methodOverride = require('method-override');
 
@@ -24,6 +25,7 @@ app.listen(puerto, () => { console.log('Servidor corriendo en el puerto '  + pue
 
 
 app.use(indexRouter); /* Definimos a express donde buscar las rutas */
+app.use('/productos', productosRouter)
 
 
 module.exports = app;

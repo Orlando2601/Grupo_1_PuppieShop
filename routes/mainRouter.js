@@ -3,15 +3,14 @@ const router = express.Router(); /* Definimos el método Router de express a la 
 const path = require('path')
 const multer =require('multer')
 const mainController = require('../controllers/mainController');
+
 /* const bodyParser = require('body-parser') */
 
 
 
-router.get('/', mainController.home)
+
 router.get('/comida', mainController.comida)
-router.get('/login', mainController.login)
-router.get('/registro', mainController.registro)
-router.get('/crear-producto', mainController.crearProducto)
+
 
 /* Cargando imagenes en el form con multer */
 let multerDiskStorage = multer.diskStorage({

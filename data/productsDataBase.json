@@ -4,17 +4,6 @@
   "mascota": "Caninos",
   "categoria": "accesorios",
   "razas": "Medianos y grandes",
-  "nombre": "para brorrar",
-  "cantidad": "25",
-  "precio": "24000",
-  "tamaño": "kg",
-  "imagen": "imagen1642542198111.jpg"
- },
- {
-  "referencia": "2",
-  "mascota": "Caninos",
-  "categoria": "accesorios",
-  "razas": "Medianos y grandes",
   "nombre": "PROPLAN",
   "cantidad": "25",
   "precio": "24000",
@@ -22,7 +11,7 @@
   "imagen": "imagen1642544187671.png"
  },
  {
-  "referencia": 3,
+  "referencia": 2,
   "mascota": "Caninos",
   "categoria": "accesorios",
   "razas": "Medianos y grandes",
@@ -33,14 +22,14 @@
   "imagen": "imagen1642542204983.jpg"
  },
  {
-  "referencia": "4",
+  "referencia": 3,
   "mascota": "Caninos",
   "categoria": "accesorios",
   "razas": "Medianos y grandes",
-  "nombre": "ahora con imagen",
-  "cantidad": "25",
-  "precio": "24000",
-  "tamaño": "kg",
-  "imagen": "imagen1642544225648.png"
+  "nombre": "nuevo",
+  "cantidad": "35",
+  "precio": "35000",
+  "tamaño": "7.5kg",
+  "imagen": "imagen1642722415801.png"
  }
 ]
