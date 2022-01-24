@@ -4,7 +4,8 @@
   "description": "Tienda online para mascotas",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
   "homepage": "https://github.com/Orlando2601/Grupo_1_PuppieShop#readme",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.4"
   }
 }

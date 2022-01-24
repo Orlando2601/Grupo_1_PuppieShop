@@ -1,85 +1,12 @@
-const productos=[
-    {
-      mascota:'Caninos',
-      categoria:'alimento',
-      nombre:'Proplan Active Mind',
-      razas:'Medianos y grandes',
-      referencia:'REF001',
-      cantidad: 10,
-      precio: 35000,
-      tamaño: '3kg',
-      imagen: 'purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png'
-    },
-    {
-        mascota:'Caninos',
-        categoria:'alimento',
-        nombre:'Proplan Active Mind',
-        razas:'Pequeños',
-        referencia:'REF002',
-        cantidad: 10,
-        precio: 35000,
-        tamaño: '3kg',
-        imagen: 'purina-pro-plan-flagship-perros-active-mind-razas-pequeñas.png'
-      },
-      {
-        mascota:'Caninos',
-        categoria:'alimento',
-        nombre:'Proplan Adultos',
-        razas:'Grandes',
-        referencia:'REF003',
-        cantidad: 10,
-        precio: 40000,
-        tamaño: '3kg',
-        imagen: 'purina-pro-plan-flagship-perros-adult-razas-grandes.png'
-      },
-      {
-        mascota:'Caninos',
-        categoria:'alimento',
-        nombre:'Proplan Adultos',
-        razas:'Grandes',
-        referencia:'REF004',
-        cantidad: 10,
-        precio: 40000,
-        tamaño: '3kg',
-        imagen: 'purina-pro-plan-flagship-perros-adult-razas-medianas.png'
-      },
-      {
-        mascota:'Caninos',
-        categoria:'alimento',
-        nombre:'Proplan Delicate Structure',
-        razas:'Grandes',
-        referencia:'REF005',
-        cantidad: 10,
-        precio: 35000,
-        tamaño: '3kg',
-        imagen: '787-139 SL FLAGSHIP - PROPLAN REVAMP - MOCKUPS png_PNG EN BAJA RESOLUCION_MKP 787-139 PP FLAGSHIP PERROS DELICATE STRUCTURE.png'
-      },
-      {
-        mascota:'Caninos',
-        categoria:'alimento',
-        nombre:'Proplan Adult',
-        razas:'Pequeñas',
-        referencia:'REF005',
-        cantidad: 10,
-        precio: 35000,
-        tamaño: '3kg',
-        imagen: 'purina-pro-plan-flagship-perros-adult-razas-pequeñas.png'
-      },
-      {
-        mascota:'Caninos',
-        categoria:'alimento',
-        nombre:'Proplan Bright Mind',
-        razas:'Pequeñas',
-        referencia:'REF005',
-        cantidad: 10,
-        precio: 35000,
-        tamaño: '3kg',
-        imagen: 'Purina® Pro Plan® Bright Mind.png'
-      }
-      
+const { json } = require('express/lib/response');
+const fs = require('fs');
+const path = require('path');
 
+const productsFilePath = path.join(__dirname, '../data/productos.json');
+const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-];
+const userFilePath = path.join(__dirname, '../data/user.json');
+const usuarios = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 const controllers ={
     home: (req,res)=>{
@@ -96,8 +23,32 @@ const controllers ={
     registro:(req,res)=>{
         res.render('registro')
     },
+    users:(req,res)=>{
+      let nuevousuario = {
+        ...req.body,
+       
+        
+      };
+      usuarios.push(nuevousuario);
+      fs.writeFileSync(userFilePath,JSON.stringify(usuarios,null,' '));
+
+      res.redirect('/');
+    },
     crearProducto: (req,res)=>{
         res.render('crearProducto')
+    },
+    tienda:(req,res)=>{
+      let nuevoproducto = {
+        id: productos[productos.length-1].id+1,
+        ...req.body,
+        referencia: "REF00"+(productos[productos.length-1].id+1),
+        imagen:'Purina® Pro Plan® Bright Mind.png'
+        
+      };
+      productos.push(nuevoproducto);
+      fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '));
+
+      res.redirect('/comida');
     },
     editarProducto:(req,res)=>{
         res.render('editarProducto')

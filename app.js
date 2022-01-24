@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 const publicPath =path.resolve(__dirname, './public');
 const port = 3030;
 const indexRouter = require('./routes/mainRouter');/* requerimos archivo de rutas */

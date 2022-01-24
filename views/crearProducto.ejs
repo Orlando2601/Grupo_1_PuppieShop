@@ -8,13 +8,21 @@
             <i class="fas fa-cubes"></i>
         </div>
         <h1>Complete los datos del nuevo producto</h1>
-        <form action="crearProducto">
+        <form action="/" method="post">
             
             <div>
-                <label for="tipoMascota">Perros</label>
-                <input type="radio" name="tipoMascota" value="perros">
-                <label for="tipoMascota">Gatos</label>
-                <input type="radio" name="tipoMascota"value="gatos">
+                <label for="mascota">Perros</label>
+                <input type="radio" name="mascota" id="mascota" value="Canino">
+                <label for="mascota">Gatos</label>
+                <input type="radio" name="mascota" id="mascota" value="Felino">
+            </div>
+            <div>
+                <label for="razas">Pequeña</label>
+                <input type="radio" name="razas" id="razas" value="pequeña">
+                <label for="mascota">Mediana</label>
+                <input type="radio" name="razas" id="razas" value="mediana">
+                <label for="mascota">Grande</label>
+                <input type="radio" name="razas" id="razas" value="grande">
             </div>
             <div>
                 <label for="categoria">Categoria</label>
@@ -24,24 +32,30 @@
                 <option value="aseo">Aseo</option>
                 </select>
             </div>
+            
             <div>
                 <label for="nombreProducto">Nombre Producto</label>
-                <input type="text" name="nombreProducto" placeholder="Ingrese nombre de producto" >
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese nombre de producto" >
             </div>
+            
             <div>
-                <label for="codigoProducto">Código de producto</label>
-                <input type="text" name="codigoProducto" placeholder="Ingrese codigo de producto" >
+                <label for="tamaño">Tamaño de producto</label>
+                <input type="text" name="tamaño" id="tamaño" placeholder="Ingrese tamaño del producto" >
             </div>
             <div>
                 <label for="cantidad">Cantidad disponible</label>
-                <input type="text" name="cantidad" placeholder="Ingrese cantidad disponible" >
+                <input type="number" name="cantidad" id="cantidad" placeholder="Ingrese cantidad disponible" >
+            </div>
+            <div>
+                <label for="precio">Precio</label>
+                <input type="number" name="precio" id="precio" placeholder="Ingrese precio" >
             </div>
             <div>
                 <label for="imagen">Imagen de descripción</label>
-                <input type="file" name="imagen" placeholder="Ingrese imagen de referencia" >
+                <input type="file" name="imagen" id="imagen" placeholder="Ingrese imagen de referencia" >
             </div>
-
-            
+        
+            <button type="submit" class="buton">Guardar producto</button>
             
         </form>
     </main>
