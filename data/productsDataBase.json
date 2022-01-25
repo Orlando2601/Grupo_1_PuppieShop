@@ -1,6 +1,6 @@
 [
  {
-  "referencia": "1",
+  "referencia": 1,
   "mascota": "Caninos",
   "categoria": "accesorios",
   "razas": "Medianos y grandes",
@@ -15,17 +15,6 @@
   "mascota": "Caninos",
   "categoria": "accesorios",
   "razas": "Medianos y grandes",
-  "nombre": "EL QUE ACTUALICE",
-  "cantidad": "25",
-  "precio": "24000",
-  "tamaño": "kg",
-  "imagen": "imagen1642731160456.png"
- },
- {
-  "referencia": 3,
-  "mascota": "Caninos",
-  "categoria": "accesorios",
-  "razas": "Medianos y grandes",
   "nombre": "nuevo",
   "cantidad": "35",
   "precio": "35000",
@@ -33,7 +22,7 @@
   "imagen": "imagen1642722415801.png"
  },
  {
-  "referencia": 4,
+  "referencia": 3,
   "mascota": "Caninos",
   "categoria": "accesorios",
   "razas": "Medianos y grandes",
