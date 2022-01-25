@@ -5,16 +5,13 @@
         <%- include ('./partials/header') %>
         <main class="detalleProducto">
             <section class="imagenDetalle">
-                <img src="/images/Aliemento mascotas/Seco/Perro/ProPlan/<%= lista.imagen %>" alt="">
+                <img src="/images/productsDB/<%= lista.imagen %>" alt="">
             </section>
             <section class="descripcionDetalle">
                 <form class="formCompra" action="comprar">
                     <h2><%= lista.mascota %></h2>
                     <h3><%= lista.nombre %></h3>
                     <h3><%= lista.razas %></h3>
-                    <label for="referencia"><%= lista.referencia %></label>
-                    <input type="hidden" name="referencia" value="<%= lista.referencia %>">
-
                     <label for="precio">$<%= lista.precio %></label>
                     <input type="hidden" name="precio" value="<%= lista.precio %>">
 
@@ -31,11 +28,17 @@
                             <option value="8">8</option>
                        </select>           
                     </div>
-                    <input type="submit" name="comprar" value="Añadir Carrito">
-
-
+                       <input type="submit" name="comprar" value="Añadir Carrito">
                 </form>
-
+                <div class="botones">
+                    <form class="formCompra"  action="/editar-producto/<%= lista.referencia %>">
+                        <input class="edit" type="submit"  value="Editar Producto">
+                    </form>
+                    <form class="formCompra" action="/borrar-producto/<%= lista.referencia %>?_method=delete" method="POST">
+                        <input  class="delete" type="submit"  value="Borrar Producto">
+                    </form>
+                </div>
+                
                
             </section>
             

@@ -14,7 +14,7 @@
 .detalleProducto .descripcionDetalle {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     border-left: 1px solid #7ca04f;
     padding-left: 10px;
@@ -51,8 +51,27 @@ font-size: var(--font-size-XL);
 }
 
 .detalleProducto .descripcionDetalle .formCompra input{
+    
     background-color: #7ca04f;
     padding: 3px;
     font-family: var(--fuente);
     font-size: var(--font-size-XL);
+}
+.detalleProducto .descripcionDetalle .formCompra .edit{
+    
+    background-color: orange;
+    padding: 3px;
+    font-family: var(--fuente);
+    font-size: var(--font-size-XL);
+}
+.detalleProducto .descripcionDetalle .formCompra .delete{
+    
+    background-color: red;
+    padding: 3px;
+    font-family: var(--fuente);
+    font-size: var(--font-size-XL);
+}
+.botones {
+    display: flex;
+    flex-direction: column;
 }

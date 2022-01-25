@@ -2,17 +2,30 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+/* const bodyParser = require('body-parser') */
+
 const publicPath =path.resolve(__dirname, './public');
-const port = 3030;
 const indexRouter = require('./routes/mainRouter');/* requerimos archivo de rutas */
+const productosRouter = require('./routes/productosRouter');/* requerimos archivo de rutas */
+
+const methodOverride = require('method-override');
+
+app.use(express.urlencoded({ extended: false }));
+/* app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json()) */
+app.use(express.json());
+
+
 app.use(express.static(publicPath));
-app.listen(port, ()=>{console.log('Servidor corriendo en puerto ' + port);});
+
 app.set('view engine', 'ejs'); /* Expresamos a express motor de vistas como ejs */
+const puerto = process.env.PORT || 3030
+app.listen(puerto, () => { console.log('Servidor corriendo en el puerto '  + puerto);});/* Configuracion heroku */
+
+
 app.use(indexRouter); /* Definimos a express donde buscar las rutas */
+app.use('/productos', productosRouter)
 
 
-
-
+module.exports = app;
 

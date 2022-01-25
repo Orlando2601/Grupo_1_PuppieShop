@@ -4,17 +4,17 @@
 <body>
     <%- include ('./partials/header') %>
     <main class="mainCrearProducto">
-        <div class="iconoStock">
-            <i class="fas fa-cubes"></i>
-        </div>
+        <section class="imagen-edit">
+            <img src="/images/productsDB/<%= toEdit.imagen %>" alt="">
+        </section>
         <h1>Complete los datos del nuevo producto</h1>
-        <form action="crearProducto">
+        <form action="/editar-producto/<%= toEdit.referencia %>?_method=patch" method="POST" enctype="multipart/form-data" > <!-- enctype="multipart/form-data"> --> <!-- Usar esta config cuando se va a subir imagenes en el form sino se puede quitar el elemento o configurar  enctype="application/x-www-form-urlencoded"  para solo texto -->
             
             <div>
-                <label for="tipoMascota">Perros</label>
-                <input type="radio" name="tipoMascota" value="perros">
-                <label for="tipoMascota">Gatos</label>
-                <input type="radio" name="tipoMascota"value="gatos">
+                <label for="mascota">Perros</label>
+                <input type="radio"  name="mascota" value="perros">
+                <label for="mascota">Gatos</label>
+                <input type="radio" name="mascota"value="gatos">
             </div>
             <div>
                 <label for="categoria">Categoria</label>
@@ -25,20 +25,27 @@
                 </select>
             </div>
             <div>
-                <label for="nombreProducto">Nombre Producto</label>
-                <input type="text" name="nombreProducto" placeholder="Ingrese nombre de producto" >
-            </div>
-            <div>
-                <label for="codigoProducto">Código de producto</label>
-                <input type="text" name="codigoProducto" placeholder="Ingrese codigo de producto" >
+                <label for="nombre">Nombre Producto</label>
+                <input type="text" id="nombre" name="nombre"  value="<%= toEdit.nombre %>" >
             </div>
             <div>
                 <label for="cantidad">Cantidad disponible</label>
-                <input type="text" name="cantidad" placeholder="Ingrese cantidad disponible" >
+                <input type="text" id="cantidad" name="cantidad" value="<%= toEdit.cantidad %>" >
+            </div>
+            <div>
+                <label for="precio">Precio</label>
+                <input type="text" id="precio" name="precio" value="<%= toEdit.precio %>" >
+            </div>
+            <div>
+                <label for="tamaño">Tamaño</label>
+                <input type="text" id="tamaño" name="tamaño" value="<%= toEdit.tamaño %>" >
             </div>
             <div>
                 <label for="imagen">Imagen de descripción</label>
                 <input type="file" name="imagen" placeholder="Ingrese imagen de referencia" >
+            </div>
+            <div >
+                <input type="submit" value="Guardar">
             </div>
 
             

@@ -1,0 +1,35 @@
+[
+ {
+  "referencia": 1,
+  "mascota": "Caninos",
+  "categoria": "accesorios",
+  "razas": "Medianos y grandes",
+  "nombre": "PROPLAN",
+  "cantidad": "25",
+  "precio": "24000",
+  "tamaño": "7kg",
+  "imagen": "imagen1642544187671.png"
+ },
+ {
+  "referencia": 2,
+  "mascota": "Caninos",
+  "categoria": "accesorios",
+  "razas": "Medianos y grandes",
+  "nombre": "EL QUE ACTUALICE",
+  "cantidad": "25",
+  "precio": "24000",
+  "tamaño": "kg",
+  "imagen": "imagen1642542204983.jpg"
+ },
+ {
+  "referencia": 3,
+  "mascota": "Caninos",
+  "categoria": "accesorios",
+  "razas": "Medianos y grandes",
+  "nombre": "nuevo",
+  "cantidad": "35",
+  "precio": "35000",
+  "tamaño": "7.5kg",
+  "imagen": "imagen1642722415801.png"
+ }
+]
