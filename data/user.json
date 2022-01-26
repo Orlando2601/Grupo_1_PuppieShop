@@ -1,2 +1,18 @@
 [
+ {
+  "mascota": "Canino",
+  "razas": "mediana",
+  "categoria": "accesorios",
+  "nombre": "asd",
+  "tamaño": "asd",
+  "cantidad": "1",
+  "precio": "123",
+  "imagen": "2.jpg"
+ },
+ {
+  "nombre": "",
+  "apellido": "",
+  "correo": "",
+  "contraseña": ""
+ }
 ]
