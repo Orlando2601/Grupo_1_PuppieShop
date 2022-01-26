@@ -11,12 +11,13 @@
 
 /* HEADER */
 header{
-    background-color: #7ca04f;
+    background-color: #04471b5b;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     padding: 15px;
+    padding-bottom:30px;
     
 } /* estilos header */
 
@@ -38,17 +39,7 @@ header .caja-enlace-header{
     width: 100%;
 }/* img logo */
 
-header .header-right .redes .iconred i{
-    background-color: #7ca04f ;
-    border: none;
-    color: black;
-}/* Iconos redes */
-header .caja-enlace-header .iconred i{
-    background-color: #7ca04f ;
-    border: none;
-    color: black;
-    font-size: 2.5em;
-}/* Iconos redes */
+
 
 /* MAIN */
 
