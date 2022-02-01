@@ -6,13 +6,13 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
-const productosControllers = {
-    home: (req,res)=>{
-        res.render('home')
+const userController ={
+    login: (req,res)=>{
+        res.render('login')
     },
-    comida:(req,res)=>{
-        res.render('listaProductos',{productos})
-    }
+    registro:(req,res)=>{
+        res.render('registro')
+    },
 }
 
-module.exports = productosControllers;
+module.exports = userController

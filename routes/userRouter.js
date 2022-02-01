@@ -2,9 +2,10 @@ const express = require('express'); /* Importamos modulo express */
 const router = express.Router(); /* Definimos el método Router de express a la variable router para exportarla */
 const path = require('path')
 const multer =require('multer')
-const productosController = require('../controllers/productosController');
+const userController = require('../controllers/userController');
 
-router.get('/', productosController.home)
-router.get('/comida', productosController.comida)
+
+router.get('/login/', userController.login)
+router.get('/registro/', userController.registro)
 
 module.exports = router

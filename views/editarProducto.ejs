@@ -8,7 +8,7 @@
             <img src="/images/productsDB/<%= toEdit.imagen %>" alt="">
         </section>
         <h1>Complete los datos del nuevo producto</h1>
-        <form action="/editar-producto/<%= toEdit.referencia %>?_method=patch" method="POST" enctype="multipart/form-data" > <!-- enctype="multipart/form-data"> --> <!-- Usar esta config cuando se va a subir imagenes en el form sino se puede quitar el elemento o configurar  enctype="application/x-www-form-urlencoded"  para solo texto -->
+        <form action="/admin/editar-producto/<%= toEdit.referencia %>?_method=patch" method="POST" enctype="multipart/form-data" > <!-- enctype="multipart/form-data"> --> <!-- Usar esta config cuando se va a subir imagenes en el form sino se puede quitar el elemento o configurar  enctype="application/x-www-form-urlencoded"  para solo texto -->
             
             <div>
                 <label for="mascota">Perros</label>

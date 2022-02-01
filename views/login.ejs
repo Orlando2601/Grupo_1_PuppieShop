@@ -9,7 +9,7 @@
             <i class="far fa-user"></i>
         </div>
         <!-- formulario de login -->
-        <form action="/login" method="POST">  
+        <form action="/user/login" method="POST">  
             <label for="correo">Ingrese Correo electrónico</label>
             <input type="email" name="correo" placeholder="Correo">
             <label for="contraseña">Ingrese Contraseña</label>
@@ -20,7 +20,7 @@
             </div>
         </form>
         <label for="enlaceCreaUser">¿No tienes Cuenta?</label>
-        <a href="/registro"><button class="btn" name="enlaceCreaUser">Crear Usuario</button></a>
+        <a href="/user/registro"><button class="btn" name="enlaceCreaUser">Crear Usuario</button></a>
             
     </main>
     <%- include ('./partials/footer') %>
