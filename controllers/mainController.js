@@ -10,12 +10,14 @@ const usuarios = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 const controllers ={
     
+    login: (req,res)=>{
+        res.render('login')
+    },
     detalle: (req,res)=>{
         let ref = req.params.referencia;
         let lista = productos.find(item => item.referencia == ref)
         res.render('detalle-producto', {lista})
     },
-<<<<<<< HEAD:controllers/mainController.js
     registro:(req,res)=>{
         res.render('registro')
     },
@@ -43,30 +45,6 @@ const controllers ={
       };
       productos.push(nuevoproducto);
       fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '));
-=======
-
-    crearProducto: (req,res)=>{
-        res.render('crearProducto')
-    },
-    store:(req, res)=>{
-        let newReference = productos.length
-        if (req.file){
-            let nuevo = {
-				referencia:newReference+1,
-                mascota:"Caninos",
-                categoria:"Alimento",
-                razas:"Medianos y grandes",
-				...req.body,
-				imagen: req.file.filename
-			}
-			
-			productos.push(nuevo)
-			fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-			res.redirect('/productos')
-        }else {
-            res.redirect('crear-producto')
-        }
->>>>>>> oswar:controllers/adminController.js
 
       res.redirect('/comida');
     },
@@ -93,7 +71,7 @@ const controllers ={
             }
             productos[reference -1] = update
             fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-            res.redirect('/productos')
+            res.redirect('/')
         }else {
             let update = {
                 referencia:reference,
@@ -106,7 +84,7 @@ const controllers ={
             }
             productos[reference -1] = update
             fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-            res.redirect('/productos')
+            res.redirect('/')
         }
     },
     destroy:(req,res)=>{
@@ -116,11 +94,14 @@ const controllers ={
 			element.referencia = index+1;	
 		});
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-		res.redirect('/productos')
+		res.redirect('/')
+    },
+    comida:(req,res)=>{
+        res.render('listaProductos',{productos})
     }
 
 }
 
 
 
-module.exports = controllers;
+module.exports =controllers;

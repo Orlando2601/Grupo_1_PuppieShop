@@ -34,15 +34,10 @@ let multerImageMidleware =  fileUpload.single('imagen')
 /* Fin Cargando imagenes en el form con multer */
 
 
-
-router.get('/crear-producto/', adminController.crearProducto)
-router.post('/crear-producto/',multerImageMidleware, adminController.store)
-/* Fin Cargando imagenes en el form con multer */
+router.get('/editar-producto/:referencia', mainController.editarProducto)
 
 
-router.get('/editar-producto/:referencia', adminController.editarProducto)
-router.patch('/editar-producto/:referencia',multerImageMidleware, adminController.update);
-
+router.patch('/editar-producto/:referencia',multerImageMidleware, mainController.update);
 
 router.get('/detalle/:referencia', mainController.detalle)
 

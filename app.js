@@ -5,10 +5,9 @@ const app = express();
 /* const bodyParser = require('body-parser') */
 
 const publicPath =path.resolve(__dirname, './public');
-
-const adminRouter = require('./routes/adminRouter');/* requerimos archivo de rutas */
+const indexRouter = require('./routes/mainRouter');/* requerimos archivo de rutas */
 const productosRouter = require('./routes/productosRouter');/* requerimos archivo de rutas */
-const userRouter = require('./routes/userRouter')
+
 const methodOverride = require('method-override');
 
 app.use(express.urlencoded({ extended: false }));
@@ -24,10 +23,8 @@ const puerto = process.env.PORT || 3030
 app.listen(puerto, () => { console.log('Servidor corriendo en el puerto '  + puerto);});/* Configuracion heroku */
 
 
-app.use('/admin',adminRouter); /* Definimos a express donde buscar las rutas */
+app.use(indexRouter); /* Definimos a express donde buscar las rutas */
 app.use('/productos', productosRouter)
-app.use('/user', userRouter)
 
 
 module.exports = app;
-
