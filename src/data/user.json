@@ -28,5 +28,11 @@
   "cantidad": "24",
   "precio": "1",
   "imagen": "cableado-electrico-defectuoso-inicio-incendio-caja-distribucion_351981-110.jpg"
+ },
+ {
+  "nombre": "orlando",
+  "apellido": "baez",
+  "correo": "obaez@gmail.com",
+  "contraseña": "0000"
  }
 ]

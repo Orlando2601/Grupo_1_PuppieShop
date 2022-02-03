@@ -12,6 +12,7 @@ app.use(express.json());
 const methodOverride = require('method-override');
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 app.set('views', path.resolve(__dirname, './src/views'))
+
 app.use(express.static(publicPath));
 /* CONFIGURACION RENDERIZACION VISTAS //////////////////////////////////////////////////////////////*/
 app.set('view engine', 'ejs'); /* Expresamos a express motor de vistas como ejs */
