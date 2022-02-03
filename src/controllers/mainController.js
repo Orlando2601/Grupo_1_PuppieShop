@@ -11,15 +11,15 @@ const usuarios = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 const controllers ={
     
     login: (req,res)=>{
-        res.render('login')
+        res.render('users/login')
     },
     detalle: (req,res)=>{
         let ref = req.params.referencia;
         let lista = productos.find(item => item.referencia == ref)
-        res.render('detalle-producto', {lista})
+        res.render('products/detalle-producto', {lista})
     },
     registro:(req,res)=>{
-        res.render('registro')
+        res.render('users/registro')
     },
     users:(req,res)=>{
       let nuevousuario = {
@@ -97,7 +97,7 @@ const controllers ={
 		res.redirect('/')
     },
     comida:(req,res)=>{
-        res.render('listaProductos',{productos})
+        res.render('products/listaProductos',{productos})
     }
 
 }
