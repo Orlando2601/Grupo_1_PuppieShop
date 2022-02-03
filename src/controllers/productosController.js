@@ -12,6 +12,11 @@ const productosController = {
     },
     comida:(req,res)=>{
         res.render('products/listaProductos',{productos})
+    },
+    detalle: (req,res)=>{
+        let ref = req.params.referencia;
+        let lista = productos.find(item => item.referencia == ref)
+        res.render('products/detalle-producto', {lista})
     }
 }
 

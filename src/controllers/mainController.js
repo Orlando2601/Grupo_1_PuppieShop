@@ -5,11 +5,7 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controllers ={
-    detalle: (req,res)=>{
-        let ref = req.params.referencia;
-        let lista = productos.find(item => item.referencia == ref)
-        res.render('products/detalle-producto', {lista})
-    },
+
     crearProducto: (req,res)=>{
         res.render('adminProducts/crearProducto')
     },

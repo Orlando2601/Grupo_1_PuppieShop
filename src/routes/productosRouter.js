@@ -6,5 +6,6 @@ const productosController = require('../controllers/productosController');
 
 router.get('/', productosController.home)
 router.get('/comida', productosController.comida)
+router.get('/detalle/:referencia', productosController.detalle)
 
 module.exports = router

@@ -31,7 +31,7 @@
                        <input type="submit" name="comprar" value="Añadir Carrito">
                 </form>
                 <div class="botones">
-                    <form class="formCompra"  action="/admin/editar-producto/<%= lista.referencia %>">
+                    <form class="formCompra"  action="/editar-producto/<%= lista.referencia %>">
                         <input class="edit" type="submit"  value="Editar Producto">
                     </form>
                     <form class="formCompra" action="/admin/borrar-producto/<%= lista.referencia %>?_method=delete" method="POST">
