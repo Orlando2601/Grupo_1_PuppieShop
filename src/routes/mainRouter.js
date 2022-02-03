@@ -8,7 +8,6 @@ const mainController = require('../controllers/mainController');
 
 /* ADMINISTRACION DE RUTAS */
 router.get('/editar-producto', mainController.editarProducto)
-router.get('/comida', mainController.comida)
 router.get('/editar-producto/:referencia', mainController.editarProducto)
 router.patch('/editar-producto/:referencia', mainController.update);
 router.get('/detalle/:referencia', mainController.detalle)

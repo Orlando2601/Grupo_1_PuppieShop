@@ -73,9 +73,6 @@ const controllers ={
 		});
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
 		res.redirect('/')
-    },
-    comida:(req,res)=>{
-        res.render('products/listaProductos',{productos})
     }
 
 }

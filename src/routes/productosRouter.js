@@ -5,5 +5,6 @@ const multer =require('multer')
 const productosController = require('../controllers/productosController');
 
 router.get('/', productosController.home)
+router.get('/comida', productosController.comida)
 
 module.exports = router
