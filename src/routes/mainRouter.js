@@ -1,6 +1,7 @@
 /* IMPORTACION DE MODULOS */
 const express = require('express'); /* Importamos modulo express */
 const router = express.Router(); /* Definimos el método Router de express a la variable router para exportarla */
+const path = require('path')
 const mainController = require('../controllers/mainController');
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -9,10 +10,7 @@ const mainController = require('../controllers/mainController');
 router.get('/login', mainController.login)
 router.get('/registro', mainController.registro)
 router.post('/', mainController.users)
-
 router.get('/editar-producto', mainController.editarProducto)
-const path = require('path')
-/* const bodyParser = require('body-parser') */
 router.get('/comida', mainController.comida)
 
 
