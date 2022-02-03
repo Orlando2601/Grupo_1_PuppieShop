@@ -1,12 +1,4 @@
 @media (max-width: 599px) {
-    /* HEADER */
-    header{
-        flex-direction: column;
-    } 
-    header .header-right{
-        display:none
-    }
-
     /* MAIN */
     main .top{
         flex-direction: column;
@@ -17,17 +9,6 @@
     }/* Contenedor derecho */
 }
 @media (min-width: 600px) and (max-width:799px){
-
-    header .header-right{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-    }
-    header .caja-logo{
-        width: 80%;
-    }
-
     /* MAIN */
     main .top{
         flex-direction: row;
@@ -38,15 +19,6 @@
 
 @media (min-width:800px){
 
-    header .header-right{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-    }
-
-    header .caja-logo{
-        width: 40%;
-    }
  /* MAIN */
     main .top{
         flex-direction: row;

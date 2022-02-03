@@ -34,5 +34,11 @@
   "apellido": "baez",
   "correo": "obaez@gmail.com",
   "contraseña": "0000"
+ },
+ {
+  "nombre": "nuevo usuario",
+  "apellido": "usuario nuevo",
+  "correo": "usuer@gmail.com",
+  "contraseña": "0000"
  }
 ]
