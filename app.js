@@ -5,6 +5,7 @@ const app = express();
 const publicPath =path.resolve(__dirname, './src/public');
 const mainRouter = require('./src/routes/mainRouter');/* requerimos archivo de rutas */
 const productosRouter = require('./src/routes/productosRouter');/* requerimos archivo de rutas */
+const userRouter = require('./src/routes/userRouter');/* requerimos archivo de rutas */
 
 /* CONFIGURACION PARA EXTRAER INFORMACION DE LOS FORM///////////////////////////////////////////// */
 app.use(express.urlencoded({ extended: false }));
@@ -22,8 +23,10 @@ app.listen(puerto, () => { console.log('Servidor corriendo en el puerto '  + pue
 /* //////////////////////////////////////////////////////////////////////////////////// */
 
 /* RUTAS PRINCIPALES //////////////////////////////////////////////////////////////////////////// */
-app.use(mainRouter); 
-app.use('/', productosRouter)
+app.use(productosRouter);
+app.use('/user', userRouter);
+app.use('/admin',mainRouter); 
+
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 
 

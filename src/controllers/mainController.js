@@ -4,36 +4,14 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-const userFilePath = path.join(__dirname, '../data/user.json');
-const usuarios = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-
 const controllers ={
-    
-    login: (req,res)=>{
-        res.render('users/login')
-    },
     detalle: (req,res)=>{
         let ref = req.params.referencia;
         let lista = productos.find(item => item.referencia == ref)
         res.render('products/detalle-producto', {lista})
     },
-    registro:(req,res)=>{
-        res.render('users/registro')
-    },
-    users:(req,res)=>{
-      let nuevousuario = {
-        ...req.body,
-       
-        
-      };
-      usuarios.push(nuevousuario);
-      fs.writeFileSync(userFilePath,JSON.stringify(usuarios,null,' '));
-
-      res.redirect('/');
-    },
     crearProducto: (req,res)=>{
-        res.render('crearProducto')
+        res.render('adminProducts/crearProducto')
     },
     tienda:(req,res)=>{
       let nuevoproducto = {
@@ -46,13 +24,13 @@ const controllers ={
       productos.push(nuevoproducto);
       fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '));
 
-      res.redirect('/comida');
+      res.redirect('/');
     },
     editarProducto:(req,res)=>{
         let reference = req.params.referencia
         
         let toEdit = productos.find(element => element.referencia == reference)
-        res.render('editarProducto',{toEdit})
+        res.render('adminProducts/editarProducto',{toEdit})
 
     },
     update:(req,res)=>{
