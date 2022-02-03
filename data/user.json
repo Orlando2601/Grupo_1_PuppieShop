@@ -14,5 +14,19 @@
   "apellido": "",
   "correo": "",
   "contraseña": ""
+ },
+ {
+  "nombre": "oswar ",
+  "apellido": "baez",
+  "correo": "oswar@gmail",
+  "contraseña": "1234"
+ },
+ {
+  "categoria": "accesorios",
+  "nombre": "gggg",
+  "tamaño": "gggg",
+  "cantidad": "24",
+  "precio": "1",
+  "imagen": "cableado-electrico-defectuoso-inicio-incendio-caja-distribucion_351981-110.jpg"
  }
 ]
