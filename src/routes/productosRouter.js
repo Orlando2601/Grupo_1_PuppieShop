@@ -3,9 +3,13 @@ const router = express.Router(); /* Definimos el método Router de express a la 
 const path = require('path')
 const multer =require('multer')
 const productosController = require('../controllers/productosController');
+const req = require('express/lib/request');
+
 
 router.get('/', productosController.home)
 router.get('/comida', productosController.comida)
 router.get('/detalle/:referencia', productosController.detalle)
+
+
 
 module.exports = router

@@ -24,8 +24,8 @@ app.listen(puerto, () => { console.log('Servidor corriendo en el puerto '  + pue
 
 /* RUTAS PRINCIPALES //////////////////////////////////////////////////////////////////////////// */
 app.use(productosRouter);
-app.use('/user', userRouter);
-app.use('/admin',mainRouter); 
+app.use( userRouter);
+app.use(mainRouter); 
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 

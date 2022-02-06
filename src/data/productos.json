@@ -10,5 +10,17 @@
   "precio": 35000,
   "tamaño": "3kg",
   "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png"
+ },
+ {
+  "id": 2,
+  "mascota": "Canino",
+  "razas": "grande",
+  "categoria": "alimentos",
+  "nombre": "melizza",
+  "tamaño": "3kg",
+  "cantidad": "10",
+  "precio": "45000",
+  "referencia": "REF002",
+  "imagen": "1644129557740-purina-pro-plan-flagship-perros-adult-razas-medianas.png"
  }
 ]
