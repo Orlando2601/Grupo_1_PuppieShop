@@ -1,14 +1,14 @@
 [
  {
   "id": 1,
+  "referencia": "REF001",
   "mascota": "Canino",
   "razas": "grande",
   "categoria": "alimentos",
   "nombre": "Proplan Active Mind",
-  "tamaño": "3kg",
   "cantidad": "10",
-  "precio": "47000",
-  "referencia": "REF001",
+  "precio": "45000",
+  "tamaño": "3kg",
   "imagen": "1644190207808-purina-pro-plan-flagship-perros-adult-razas-pequeñas.png"
  },
  {
@@ -22,5 +22,17 @@
   "precio": "47000000",
   "tamaño": "3kg",
   "imagen": "1644371700850-purina-pro-plan-flagship-perros-adult-razas-pequeñas.png"
+ },
+ {
+  "id": 3,
+  "mascota": "Canino",
+  "razas": "grande",
+  "categoria": "alimentos",
+  "nombre": "purina proplan flagship perros adult",
+  "tamaño": "5kg",
+  "cantidad": "20",
+  "precio": "35000",
+  "referencia": "REF003",
+  "imagen": "1644375603655-purina-pro-plan-flagship-perros-adult-razas-grandes.png"
  }
 ]

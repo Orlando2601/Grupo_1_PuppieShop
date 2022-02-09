@@ -12,24 +12,24 @@
             
             <div>
                 <label for="mascota">Perros</label>
-                <input type="radio" name="mascota" id="mascota" value="Canino">
+                <input type="radio" name="mascota" id="mascota" value="Canino" <% if(toEdit.mascota=="Canino") { %> checked <% }%> >
                 <label for="mascota">Gatos</label>
-                <input type="radio" name="mascota" id="mascota" value="Felino">
+                <input type="radio" name="mascota" id="mascota" value="Felino" <% if(toEdit.mascota=="Felino") { %> checked <% }%> >
             </div>
             <div>
                 <label for="razas">Pequeña</label>
-                <input type="radio" name="razas" id="razas" value="pequeña">
+                <input type="radio" name="razas" id="razas" value="pequeña" <% if(toEdit.razas=="pequeña") { %> checked <% }%>>
                 <label for="mascota">Mediana</label>
-                <input type="radio" name="razas" id="razas" value="mediana">
+                <input type="radio" name="razas" id="razas" value="mediana" <% if(toEdit.razas=="mediana") { %> checked <% }%>>
                 <label for="mascota">Grande</label>
-                <input type="radio" name="razas" id="razas" value="grande">
+                <input type="radio" name="razas" id="razas" value="grande" <% if(toEdit.razas=="grande") { %> checked <% }%>>
             </div>
             <div>
                 <label for="categoria">Categoria</label>
                 <select name="categoria" id="categoria">
-                <option value="accesorios">Accesorios</option>
-                <option value="alimentos">Alimentos</option>
-                <option value="aseo">Aseo</option>
+                <option value="accesorios" <% if(toEdit.categoria=="accesorios") { %> selected <% }%>>Accesorios</option>
+                <option value="alimentos" <% if(toEdit.categoria=="alimentos") { %> selected <% }%>>Alimentos</option>
+                <option value="aseo" <% if(toEdit.categoria=="aseo") { %> selected <% }%>>Aseo</option>
                 </select>
             </div>
             <div>

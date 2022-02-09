@@ -43,6 +43,7 @@ const controllers ={
                 imagen: req.file.filename
                 
             }
+            
             productos[toStore.id -1] = update
             fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
             res.redirect('/')
@@ -54,17 +55,22 @@ const controllers ={
                 imagen: toStore.imagen
                 
             }
+
+            
             productos[toStore.id -1] = update
             fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
             res.redirect('/')
         }
     },
     destroy:(req,res)=>{
-        let reference = req.params.referencia
-        productos.splice((reference-1),1);
+        let referencia = req.params.referencia;
+        
+        productos.splice((referencia-1),1)
+    
         productos.forEach((element, index) => {
-			element.referencia = index+1;	
+			element.id = index+1;
 		});
+
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
 		res.redirect('/')
     }
