@@ -32,33 +32,29 @@ const controllers ={
 
     },
     update:(req,res)=>{
-        let reference = req.params.referencia
-        let toStore = productos.find(element => element.referencia == reference)
-        
+        let referencia = req.params.referencia
+        let toStore = productos.find(element => element.referencia == referencia)
         if (req.file){
             let update = {
-                referencia:reference,
-                mascota:"Caninos",
-                categoria:"Alimento",
-                razas:"Medianos y grandes",
+                id: toStore.id,
+                referencia:referencia,
+    
                 ...req.body,
                 imagen: req.file.filename
                 
             }
-            productos[reference -1] = update
+            productos[toStore.id -1] = update
             fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
             res.redirect('/')
         }else {
             let update = {
-                referencia:reference,
-                mascota:"Caninos",
-                categoria:"Alimento",
-                razas:"Medianos y grandes",
+                id: toStore.id,
+                referencia:referencia,
                 ...req.body,
                 imagen: toStore.imagen
                 
             }
-            productos[reference -1] = update
+            productos[toStore.id -1] = update
             fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
             res.redirect('/')
         }

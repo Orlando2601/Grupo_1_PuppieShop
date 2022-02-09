@@ -4,11 +4,23 @@
   "mascota": "Canino",
   "razas": "grande",
   "categoria": "alimentos",
-  "nombre": "melizza",
+  "nombre": "Proplan Active Mind",
   "tamaño": "3kg",
   "cantidad": "10",
-  "precio": "45000",
+  "precio": "47000",
+  "referencia": "REF001",
+  "imagen": "1644190207808-purina-pro-plan-flagship-perros-adult-razas-pequeñas.png"
+ },
+ {
+  "id": 2,
   "referencia": "REF002",
-  "imagen": "1644129557740-purina-pro-plan-flagship-perros-adult-razas-medianas.png"
+  "mascota": "Felino",
+  "razas": "grande",
+  "categoria": "aseo",
+  "nombre": "melizza",
+  "cantidad": "10",
+  "precio": "47000000",
+  "tamaño": "3kg",
+  "imagen": "1644371700850-purina-pro-plan-flagship-perros-adult-razas-pequeñas.png"
  }
 ]

@@ -11,6 +11,7 @@ const userRouter = require('./src/routes/userRouter');/* requerimos archivo de r
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 const methodOverride = require('method-override');
+app.use(methodOverride("_method"));
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 app.set('views', path.resolve(__dirname, './src/views'))
 

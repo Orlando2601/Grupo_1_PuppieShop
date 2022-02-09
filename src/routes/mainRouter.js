@@ -8,13 +8,6 @@ const multer =require('multer')
 
 
 /* ADMINISTRACION DE RUTAS */
-router.get('/editar-producto', mainController.editarProducto)
-router.get('/editar-producto/:referencia', mainController.editarProducto)
-router.patch('/editar-producto/:referencia', mainController.update);
-router.get('/crear-producto', mainController.crearProducto)
-
-router.delete('/borrar-producto/:referencia', mainController.destroy)
-
 //***MULTER**//
 
 let storage = multer.diskStorage({
@@ -26,5 +19,13 @@ let storage = multer.diskStorage({
 var upload=multer({storage});
 
 router.post('/',upload.single('imagen'),mainController.tienda)
+router.get('/editar-producto', mainController.editarProducto)
+router.get('/editar-producto/:referencia', mainController.editarProducto)
+router.patch('/editar-producto/:referencia',upload.single('imagen'), mainController.update);
+router.get('/crear-producto', mainController.crearProducto)
+
+router.delete('/borrar-producto/:referencia', mainController.destroy)
+
+
 
 module.exports = router;
