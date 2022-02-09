@@ -1,18 +1,6 @@
 [
  {
   "id": 1,
-  "mascota": "Caninos",
-  "categoria": "alimento",
-  "nombre": "Proplan Active Mind",
-  "razas": "Medianos y grandes",
-  "referencia": "REF001",
-  "cantidad": 10,
-  "precio": 35000,
-  "tamaño": "3kg",
-  "imagen": "purina-pro-plan-flagship-perros-active-mind-razas-medianas-y-grandes.png"
- },
- {
-  "id": 2,
   "mascota": "Canino",
   "razas": "grande",
   "categoria": "alimentos",
