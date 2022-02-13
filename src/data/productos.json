@@ -13,18 +13,6 @@
  },
  {
   "id": 2,
-  "referencia": "REF002",
-  "mascota": "Felino",
-  "razas": "grande",
-  "categoria": "aseo",
-  "nombre": "melizza",
-  "cantidad": "10",
-  "precio": "47000000",
-  "tamaño": "3kg",
-  "imagen": "1644371700850-purina-pro-plan-flagship-perros-adult-razas-pequeñas.png"
- },
- {
-  "id": 3,
   "mascota": "Canino",
   "razas": "grande",
   "categoria": "alimentos",

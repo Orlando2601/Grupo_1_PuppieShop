@@ -40,5 +40,25 @@
   "apellido": "usuario nuevo",
   "correo": "usuer@gmail.com",
   "contraseña": "0000"
+ },
+ {
+  "nombre": "User",
+  "apellido": "baez",
+  "correo": "user@gmail.com",
+  "contraseña": "1234"
+ },
+ {
+  "nombre": "",
+  "apellido": "",
+  "correo": "",
+  "contraseña": ""
+ },
+ {
+  "id": 9,
+  "nombre": "loco",
+  "apellido": "loco",
+  "correo": "loco@gmail.com",
+  "contraseña": "$2a$10$ikL7oCbWSpQl1OJcANTTxez4jpkGwP9Pf98whtHD/wZ77H2S8XRMu",
+  "imagen": "imagen1644754668303.jpg"
  }
 ]
