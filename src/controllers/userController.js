@@ -3,12 +3,25 @@ const path = require('path');
 const userFilePath = path.join(__dirname, '../data/user.json');
 const usuarios = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 const { validationResult } = require('express-validator')
-const bcryptjs = require('bcryptjs')
+const bcryptjs = require('bcryptjs');
+const { render } = require('express/lib/response');
+
 
 const userController ={
     
     login: (req,res)=>{
-        res.render('users/login')
+
+        if(req.session.correo!=undefined){
+            let a=2;
+            let usercookie = usuarios.find(user => user.correo == req.session.correo);
+            res.render('users/login',{usercookie,a});
+              
+        } else{
+            let a=1;
+        let usercookie=[];
+        res.render('users/login',{usercookie,a});
+
+        }  
     },
 
     registro:(req,res)=>{
@@ -43,9 +56,19 @@ const userController ={
               old: req.body
           })
       }
+  },
 
-  }
+    logged:(req, res)=>{
+            
+            if(req.body.recordame!=undefined){
+            res.cookie('correo',req.body.correo,{maxAge:3000});
+            req.session.correo=req.body.correo;
     
+            }
+            
+        res.render("products/home");
+
+    }
 }
 
 

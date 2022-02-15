@@ -5,6 +5,9 @@ const userController = require('../controllers/userController');
 const path = require('path')
 const {body} = require('express-validator')
 const multer = require('multer')
+
+
+
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* VALIDACIONES DE CAMPOS //////////////////////////////////////////////////////////////////*/
@@ -35,14 +38,16 @@ let multerDiskStorageUser = multer.diskStorage({
 })
 let fileUploadUser = multer({storage:multerDiskStorageUser});
 let multerImageMidlewareUser = fileUploadUser.single('imagen')
-
+/* MIDDLEWARE //////////////////////////////////////////////////////////////////*/
+let recordarmiddleware=require('../middleware/recordarmiddleware');
 
 /* //////////////////////////////////////////////////////////////////////// */
 
 
 /* ADMINISTRACION DE RUTAS */
-router.get('/login', userController.login)
+router.get('/login',recordarmiddleware, userController.login)
 router.get('/registro',validaciones, userController.registro)
 router.post('/registro',multerImageMidlewareUser, userController.users)
+router.post('/login',userController.logged)
 
 module.exports = router;

@@ -4,7 +4,11 @@ const path = require('path')
 const multer =require('multer')
 const productosController = require('../controllers/productosController');
 const req = require('express/lib/request');
+/* MIDDLEWARE //////////////////////////////////////////////////////////////////*/
+let recordarmiddleware=require('../middleware/recordarmiddleware');
 
+
+/*//////////////////////////////////////////////////////////////////*/
 
 router.get('/', productosController.home)
 router.get('/comida', productosController.comida)
