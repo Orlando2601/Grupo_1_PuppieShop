@@ -5,8 +5,6 @@ const path = require('path')
 const mainController = require('../controllers/mainController');
 const multer =require('multer')
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
-/* MIDDLEWARE //////////////////////////////////////////////////////////////////*/
-let recordarmiddleware=require('../middleware/recordarmiddleware')
 
 /* ADMINISTRACION DE RUTAS */
 //***MULTER**//

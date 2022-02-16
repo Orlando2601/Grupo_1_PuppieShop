@@ -61,7 +61,7 @@ const userController ={
     logged:(req, res)=>{
             
             if(req.body.recordame!=undefined){
-            res.cookie('correo',req.body.correo,{maxAge:3000});
+            res.cookie('correo',req.body.correo,{maxAge:30000});
             req.session.correo=req.body.correo;
     
             }

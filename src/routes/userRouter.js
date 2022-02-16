@@ -38,16 +38,15 @@ let multerDiskStorageUser = multer.diskStorage({
 })
 let fileUploadUser = multer({storage:multerDiskStorageUser});
 let multerImageMidlewareUser = fileUploadUser.single('imagen')
-/* MIDDLEWARE //////////////////////////////////////////////////////////////////*/
-let recordarmiddleware=require('../middleware/recordarmiddleware');
 
 /* //////////////////////////////////////////////////////////////////////// */
 
 
 /* ADMINISTRACION DE RUTAS */
-router.get('/login',recordarmiddleware, userController.login)
+
+router.get('/login', userController.login)
 router.get('/registro',validaciones, userController.registro)
-router.post('/registro',multerImageMidlewareUser, userController.users)
+router.post('/registro', userController.users)
 router.post('/login',userController.logged)
 
 module.exports = router;
