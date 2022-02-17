@@ -7,7 +7,7 @@ const mainRouter = require('./src/routes/mainRouter');/* requerimos archivo de r
 const productosRouter = require('./src/routes/productosRouter');/* requerimos archivo de rutas */
 const userRouter = require('./src/routes/userRouter');/* requerimos archivo de rutas */
 const session = require('express-session');/* requerimos archivo de session */
-let recordarmiddleware=require('./src/middleware/recordarmiddleware');
+
 
 /* CONFIGURACION PARA EXTRAER INFORMACION DE LOS FORM///////////////////////////////////////////// */
 app.use(express.urlencoded({ extended: false }));
@@ -31,7 +31,6 @@ app.use(session({secret:'?'}));/* middleware que recorre cada vista */
 app.use(cookieParser());
 
 /* //////////////////////////////////////////////////////////////////////////////////// */
-app.use(recordarmiddleware);
 
 /* RUTAS PRINCIPALES //////////////////////////////////////////////////////////////////////////// */
 app.use(productosRouter);
