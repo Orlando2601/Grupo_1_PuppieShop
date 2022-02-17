@@ -15,8 +15,9 @@ const userController ={
         res.render('users/registro')
     },
     users:(req, res)=>{
-      console.log("no hay archivo imagen" + req.file);
+      /* console.log("no hay archivo imagen" + req.file); */
       const errors = validationResult(req)
+      console.log(errors)
       let newReference = usuarios.length
       if(errors.isEmpty()){
           let userInDB = usuarios.find(user => user.correo == req.body.correo);
@@ -39,7 +40,7 @@ const userController ={
           
           res.render('users/registro',{
           
-              errors: errors.array(),
+              errors: errors.mapped(),
               old: req.body
           })
       }
