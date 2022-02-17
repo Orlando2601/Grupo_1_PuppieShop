@@ -3,7 +3,7 @@ const express = require('express'); /* Importamos modulo express */
 const router = express.Router(); /* Definimos el método Router de express a la variable router para exportarla */
 const userController = require('../controllers/userController');
 const path = require('path')
-const {body} = require('express-validator')
+const {body, check} = require('express-validator')
 const multer = require('multer')
 
 
@@ -12,10 +12,10 @@ const multer = require('multer')
 
 /* VALIDACIONES DE CAMPOS //////////////////////////////////////////////////////////////////*/
 const validaciones = [
-    body('nombre').notEmpty().withMessage('Debes ingresar tu nombre'),
-    body('apellido').notEmpty().withMessage('Debes ingresar tu apellido'),
-    body('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
-    body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia')
+    check('nombre').notEmpty().withMessage('Debes ingresar tu nombre'),
+    check('apellido').notEmpty().withMessage('Debes ingresar tu apellido'),
+    check('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
+    check('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia')
 ];
 const validacionesLog = [
     body('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
