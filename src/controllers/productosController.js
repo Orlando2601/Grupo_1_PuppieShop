@@ -10,6 +10,10 @@ const productosController = {
     home: (req,res)=>{
         res.render('products/home')
     },
+    userhome:(req,res)=>{
+        res.render('users/homeuser')
+
+    },
     comida:(req,res)=>{
         res.render('products/listaProductos',{productos})
     },

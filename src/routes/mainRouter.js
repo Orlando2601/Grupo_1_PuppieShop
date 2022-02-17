@@ -6,7 +6,6 @@ const mainController = require('../controllers/mainController');
 const multer =require('multer')
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 
-
 /* ADMINISTRACION DE RUTAS */
 //***MULTER**//
 
