@@ -4,12 +4,15 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const controllers ={
 
-    crearProducto: (req,res)=>{
+
+
+
+const crearProducto = (req,res)=>{
         res.render('adminProducts/crearProducto')
-    },
-    tienda:(req,res)=>{
+    }
+
+const tienda = (req,res)=>{
       
         let imagen =  req.file? req.file.filename:'defaul.png';
       let nuevoproducto = {
@@ -23,15 +26,17 @@ const controllers ={
       fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '));
 
       res.redirect('/comida');
-    },
-    editarProducto:(req,res)=>{
+    }
+
+const editarProducto = (req,res)=>{
         let reference = req.params.referencia
         
         let toEdit = productos.find(element => element.referencia == reference)
         res.render('adminProducts/editarProducto',{toEdit})
 
-    },
-    update:(req,res)=>{
+    }
+
+const update = (req,res)=>{
         let referencia = req.params.referencia
         let toStore = productos.find(element => element.referencia == referencia)
         if (req.file){
@@ -61,8 +66,9 @@ const controllers ={
             fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
             res.redirect('/')
         }
-    },
-    destroy:(req,res)=>{
+    }
+
+const destroy = (req,res)=>{
         let referencia = req.params.referencia;
         
         productos.splice((referencia-1),1)
@@ -74,9 +80,11 @@ const controllers ={
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
 		res.redirect('/')
     }
-
+    
+module.exports ={
+    crearProducto,
+    tienda,
+    editarProducto,
+    update,
+    destroy
 }
-
-
-
-module.exports =controllers;
