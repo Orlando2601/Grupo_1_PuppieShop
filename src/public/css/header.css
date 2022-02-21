@@ -1,0 +1,142 @@
+header{
+    background-color: #04471b60 ;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    
+} /* estilos header */
+
+header .header-right .redes{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 20px;
+
+}/* Contenedor redes */
+header .caja-enlace-header{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 20px;
+}/* Contenedor enlaces header */
+
+.caja-logo a {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}/* img logo */
+
+.caja-logo img{
+    width:100%;
+}/* img logo */
+
+header .header-right .redes .iconred i{
+    
+    border: none;
+    color: #3E6B1C;
+}/* Iconos redes */
+header .caja-enlace-header .iconred i{
+   
+    border: none;
+    color: #3E6B1C;
+    font-size: 2.5em;
+}/* Iconos redes */
+
+header .div-btn-header .a-btn-header{
+    font-size: 2em;
+    color: #3E6B1C;
+    text-decoration: none;
+}/* Eenlaces navegación */
+
+header .header-right .redes .iconred i{
+    font-size: var( --font-size-M);
+}/* Tamaño iconos */
+
+header .header-right .caja-enlace-header .iconred a i {
+
+    font-size: var(--font-size-M);
+}
+/* RESPONSIVE */
+@media (max-width: 599px) {
+    /* HEADER */
+    header{
+        display: flex;
+        flex-direction: column;
+        
+    } 
+    header .caja-logo{
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+    } 
+    header .caja-logo a{
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    header .header-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+    }
+    header .header-right .caja-enlace-header a{
+        font-family: var(--fuente);
+        font-size: var(var(--font-size-S));
+    }
+
+    
+
+
+}
+
+@media (min-width: 600px) and (max-width:799px){
+    header{
+        flex-direction: column;
+    }
+    header .header-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+    header .caja-logo{
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+    } 
+    header .caja-logo a {
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+    } 
+    header .header-right .caja-enlace-header a{
+        font-family: var(--fuente);
+        font-size:var(var(--font-size-M));
+    }
+
+}
+
+@media (min-width:800px){
+
+    header .header-right{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    header .caja-logo{
+        width: 40%;
+    }
+ /* PROPIEDADES TEXTOS HEADER */
+header .header-right .caja-enlace-header a{
+    font-family: var(--fuente);
+    font-size:var(--font-size-L);
+}
+
+}
+
+

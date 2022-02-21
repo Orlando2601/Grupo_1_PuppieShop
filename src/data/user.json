@@ -14,5 +14,21 @@
   "correo": "oswar@gmail.com",
   "contraseña": "$2a$10$FdWy3nKMoNM3TGb2klPWF.0b/q95Gu/ANfW1J6SKLnuWY.NKzkAYK",
   "imagen": "imagen1645454745270.png"
+ },
+ {
+  "id": 3,
+  "nombre": "orlando",
+  "apellido": "baez",
+  "correo": "orlando@gmail.com",
+  "contraseña": "$2a$10$jSnn3JpKxouC291QEbnL9.j/p5cGS18KquBQOajTG0qM.gjUeVAVK",
+  "imagen": "imagen1645455489037.png"
+ },
+ {
+  "id": 4,
+  "nombre": "orlando",
+  "apellido": "corredor",
+  "correo": "admin@gmail.com",
+  "contraseña": "$2a$10$Uxu0egkD6Vm1PfouEFR8KeqkQiwttF9U7GHQctzFx2BHAuEpBnPEa",
+  "imagen": "imagen1645455898986.png"
  }
 ]
