@@ -1,54 +1,18 @@
 [
  {
-  "nombre": "",
-  "apellido": "",
-  "correo": "",
-  "contraseña": ""
- },
- {
-  "nombre": "oswar ",
-  "apellido": "baez",
-  "correo": "oswar@gmail",
-  "contraseña": "1234"
- },
- {
-  "nombre": "orlando",
-  "apellido": "baez",
-  "correo": "obaez@gmail.com",
-  "contraseña": "0000"
- },
- {
-  "nombre": "nuevo usuario",
-  "apellido": "usuario nuevo",
-  "correo": "usuer@gmail.com",
-  "contraseña": "0000"
- },
- {
-  "nombre": "User",
-  "apellido": "baez",
-  "correo": "user@gmail.com",
-  "contraseña": "1234"
- },
- {
-  "nombre": "",
-  "apellido": "",
-  "correo": "",
-  "contraseña": ""
- },
- {
-  "id": 7,
-  "nombre": "loco",
-  "apellido": "loco",
-  "correo": "loco@gmail.com",
-  "contraseña": "$2a$10$ikL7oCbWSpQl1OJcANTTxez4jpkGwP9Pf98whtHD/wZ77H2S8XRMu",
-  "imagen": "imagen1644754668303.jpg"
- },
- {
-  "id": 8,
+  "id": 1,
   "nombre": "rafael",
   "apellido": "estraa",
   "correo": "prueba@hotmail.com",
   "contraseña": "$2a$10$PBCpbspKvkW2tcjUfYrQyuD7OWKcxmGEXysBhuwlhRp06fIfIRPlu",
   "imagen": "imagen1644941530038.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "oswar",
+  "apellido": "baez",
+  "correo": "oswar@gmail.com",
+  "contraseña": "$2a$10$FdWy3nKMoNM3TGb2klPWF.0b/q95Gu/ANfW1J6SKLnuWY.NKzkAYK",
+  "imagen": "imagen1645454745270.png"
  }
 ]

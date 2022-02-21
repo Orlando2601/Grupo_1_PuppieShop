@@ -9,42 +9,45 @@
                 </div><!-- icono usuario-->
         
                 <form action="/user/registro" method="POST" enctype="multipart/form-data">
-        
+
                     <label for="nombre">Ingrese nombre</label>
                     <input type="text" name="nombre" id="nombre"  value="<%= locals.old && old.nombre ? old.nombre : '' %>">
-                    <% if (locals.errors){let errorname = errors.find(error => error.param == 'nombre')%>
-                        <p class="showError"><%= errorname.msg%></p>
-            
-                    <%  } %> <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
+                    
+                        <% if(locals.errors && errors.nombre){ %>                   
+                                <p class="showError"><%= errors.nombre.msg%></p>             
+                        <% }%>
+        
+                    <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
                     <label for="apellido">Ingrese apellido</label>
                     <input type="text" name="apellido" id="apellido" value="<%= locals.old && old.apellido ? old.apellido : '' %>">
-                    <% if (locals.errors){let errorname = errors.find(error => error.param == 'apellido')%>
-                        <p class="showError"><%= errorname.msg%></p>
+                    <% if(locals.errors && errors.apellido){ %>                   
+                        <p class="showError"><%= errors.apellido.msg%></p>             
+                    <% }%>
             
-                    <%  } %> <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
+                    <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
                     <label for="correo">Ingrese Correo electrónico</label>
                     <input type="email" name="correo" id="correo" value="<%= locals.old && old.correo ? old.correo : ' ' %>">
-                    <% if (locals.errors){let errorname = errors.find(error => error.param == 'correo')%>
-                        <p class="showError"><%= errorname.msg%></p>
+                    <% if(locals.errors && errors.correo){ %>                   
+                        <p class="showError"><%= errors.correo.msg%></p>             
+                    <% }%>
+        
             
-                    <%  } %> <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
+                   <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
                     <label for="contraseña">Ingrese Contraseña</label>
                     <input type="password" name="contraseña" id="contraseña" >
-                    
+
                     <label for="imagen">Imagen de usuario</label>
                     <input type="file" id="imagenUser" name="imagen" placeholder="Ingrese imagen de usuario" >
-                    
-                    <% if (locals.errors){let errorname = errors.find(error => error.param == 'contraseña')%>
-                        <p class="showError"><%= errorname.msg%></p>
+                
             
-                    <%  } %> <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
+                     <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
                     <div class="botones">
                         <input class="btn" type="submit" value="Registrar">
                         <input class="btn" type="reset" value="Borrar">
                     </div><!-- caja botones formulario -->
         
                 </form><!-- formulario de carga de datos de registro -->
-        </main>
+        
         <%- include ('../partials/footer') %>
     </body>
 </html>

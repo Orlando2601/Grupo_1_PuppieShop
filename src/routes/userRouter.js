@@ -12,10 +12,10 @@ const multer = require('multer')
 
 /* VALIDACIONES DE CAMPOS //////////////////////////////////////////////////////////////////*/
 const validaciones = [
-    check('nombre').notEmpty().withMessage('Debes ingresar tu nombre'),
-    check('apellido').notEmpty().withMessage('Debes ingresar tu apellido'),
-    check('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
-    check('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia')
+    body('nombre').notEmpty().withMessage('Debes ingresar tu nombre'),
+    body('apellido').notEmpty().withMessage('Debes ingresar tu apellido'),
+    body('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
+    body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia')
 ];
 const validacionesLog = [
     body('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
@@ -46,7 +46,7 @@ let recordarmiddleware=require('../middleware/recordarmiddleware');
 
 router.get('/login', userController.login)
 router.get('/registro',validaciones, userController.registro)
-router.post('/registro', userController.users)
+router.post('/registro',multerImageMidlewareUser, validaciones,  userController.users)
 router.post('/login',recordarmiddleware,userController.logged)
 
 module.exports = router;
