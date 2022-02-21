@@ -1,6 +1,6 @@
 /* IMPORTACION DE MODULOS */
-const express = require('express'); /* Importamos modulo express */
-const router = express.Router(); /* Definimos el método Router de express a la variable router para exportarla */
+const express = require('express');
+const router = express.Router();
 const path = require('path')
 const mainController = require('../controllers/mainController');
 const multer =require('multer')

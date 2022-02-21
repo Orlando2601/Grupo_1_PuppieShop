@@ -6,8 +6,6 @@ const path = require('path')
 const {body, check} = require('express-validator')
 const multer = require('multer')
 
-
-
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* VALIDACIONES DE CAMPOS //////////////////////////////////////////////////////////////////*/
@@ -22,16 +20,16 @@ const validacionesLog = [
     body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia')
 ];
 /* ////////////////////////////////////////////////////////////////////////////////////////// */
-/* CONFIGURACION MULTER */
+/* CONFIGURACION MULTER PARA GUARDAR ARCHIVOS*/
 let multerDiskStorageUser = multer.diskStorage({
     destination: (req, file, cb)=>{
-                    let folder = path.join(__dirname, '../public/images/dbUsers');
+                    let folder = path.join(__dirname, '../public/images/dbUsers'); //Destino de archivos guardados
                     cb(null, folder)
                     
     },
     filename:(req, file, cb)=>{
                     console.log(file);
-                    const imageName = ('imagen' + Date.now() + path.extname(file.originalname))
+                    const imageName = ('imagen' + Date.now() + path.extname(file.originalname)) // configuración del nombre del archivo
                     cb(null, imageName);
                     
     }
@@ -43,10 +41,12 @@ let recordarmiddleware=require('../middleware/recordarmiddleware');
 
 
 /* ADMINISTRACION DE RUTAS */
-
 router.get('/login', userController.login)
 router.get('/registro',validaciones, userController.registro)
 router.post('/registro',multerImageMidlewareUser, validaciones,  userController.users)
 router.post('/login',recordarmiddleware,userController.logged)
+
+
+
 
 module.exports = router;

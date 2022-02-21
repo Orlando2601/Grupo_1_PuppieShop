@@ -20,7 +20,6 @@ const userController ={
             let a=1;
         let usercookie=[];
         res.render('users/login',{usercookie,a});
-    
         }  
     },
 
