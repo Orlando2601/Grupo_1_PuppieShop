@@ -20,8 +20,8 @@ var upload=multer({storage});
 router.post('/',upload.single('imagen'),mainController.tienda)
 router.get('/editar-producto', mainController.editarProducto)
 router.get('/editar-producto/:referencia', mainController.editarProducto)
-router.patch('/editar-producto/:referencia',upload.single('imagen'), mainController.update);
 router.get('/crear-producto', mainController.crearProducto)
+router.patch('/editar-producto/:referencia',upload.single('imagen'), mainController.update);
 
 router.delete('/borrar-producto/:referencia', mainController.destroy)
 

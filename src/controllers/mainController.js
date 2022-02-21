@@ -22,7 +22,7 @@ const controllers ={
       productos.push(nuevoproducto);
       fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '));
 
-      res.redirect('/');
+      res.redirect('/comida');
     },
     editarProducto:(req,res)=>{
         let reference = req.params.referencia

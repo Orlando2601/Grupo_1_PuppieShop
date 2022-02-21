@@ -38,7 +38,7 @@ let multerDiskStorageUser = multer.diskStorage({
 })
 let fileUploadUser = multer({storage:multerDiskStorageUser});
 let multerImageMidlewareUser = fileUploadUser.single('imagen')
-
+let recordarmiddleware=require('../middleware/recordarmiddleware');
 /* //////////////////////////////////////////////////////////////////////// */
 
 
@@ -47,6 +47,6 @@ let multerImageMidlewareUser = fileUploadUser.single('imagen')
 router.get('/login', userController.login)
 router.get('/registro',validaciones, userController.registro)
 router.post('/registro', userController.users)
-router.post('/login',userController.logged)
+router.post('/login',recordarmiddleware,userController.logged)
 
 module.exports = router;

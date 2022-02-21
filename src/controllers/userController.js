@@ -20,7 +20,7 @@ const userController ={
             let a=1;
         let usercookie=[];
         res.render('users/login',{usercookie,a});
-
+    
         }  
     },
 
@@ -62,9 +62,13 @@ const userController ={
     logged:(req, res)=>{
             
             if(req.body.recordame!=undefined){
+            let user = usuarios.find(user => user.correo == req.body.correo);
+        
+            if(user){
             res.cookie('correo',req.body.correo,{maxAge:30000});
             req.session.correo=req.body.correo;
-    
+            
+              }
             }
             
         res.render("products/home");
