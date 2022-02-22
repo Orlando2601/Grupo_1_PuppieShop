@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <%- include ('../partials/head') %>
 <body>
-    <h1>
-        este es el usuario <%= 
-    </h1>
-    
+    <%- include ('../partials/header') %>
+    <main class="mainAdminPerfil" >
+        <section class="imagenUser">
+            <img src="/images/dbUsers/<%= user.imagen %>" alt="">
+        </section>
+        <div class="infoUser">
+            <h1>Bienvenido a este espacio administrador de productos <%= user.nombre %></h1>
+        </div>
+        <button> <a href="/crear-producto">Crear Nuevo Producto</a> </button> <!-- button de cerrar sesion -->
+        <div class="articulo">
+            <% lista.forEach(item => { %> <!-- codigo js para rcorrer el objeto enviado en el controlador -->
+            <article>
+                <div class="divImg">
+                    <img src="/images/productsDB/<%= item.imagen %>" alt=""><!-- imagen del articulo -->
+
+                </div>
+       
+               <div class="vermas">
+                   <p class="titulo"><%= item.nombre %></p>
+                   <p class="precio">COP$<%= item.precio %></p>
+                   <div class="botones">
+                    <form class="formCompra"  action="/editar-producto/<%=item.referencia %>">
+                        <input class="edit" type="submit"  value="Editar Producto">
+                    </form> <!-- control de button para editar producto-->
+                    <form class="formCompra" action="/borrar-producto/<%= item.id %>?_method=delete" method="POST">
+                        <input  class="delete" type="submit"  value="Borrar Producto">
+                    </form><!-- control de button para eliminar producto -->
+                </div>
+               </div><!-- Caja desplegable de cada articulo, par aver descripcion rapida -->
+               
+            </article><!-- vista de cada articulo -->
+            <% }); %><!-- cierre codigo js anterior -->
+        </div>
+        
+        <button> <a href="/user/cerrarSesion">Logout</a> </button> <!-- button de cerrar sesion -->
+    </main>
+    <%- include ('../partials/footer') %>
 </body>
 </html>
