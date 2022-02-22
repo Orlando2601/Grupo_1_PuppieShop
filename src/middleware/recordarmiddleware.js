@@ -7,7 +7,7 @@ function recordarmiddleware(req,res,next){
     
     if(req.cookies.correo!=undefined){
         
-        let usercookie = usuarios.find(user => user.correo == req.cookies.correo);
+        let usercookie = usuarios.find(user => user.correo == req.session.correo);
         usercookie? res.redirect('/'):next(); 
     }else{
     next();}

@@ -4,7 +4,8 @@ const router = express.Router(); /* Definimos el método Router de express a la 
 const path = require('path')
 const mainController = require('../controllers/mainController');
 const multer =require('multer')
-/* //////////////////////////////////////////////////////////////////////////////////////////// */
+/* MIDDLEWARE//////////////////////////////////////////////////////////////////////////////////////////// */
+let recordarmiddleware=require('../middleware/recordarmiddleware');
 
 /* ADMINISTRACION DE RUTAS */
 //***MULTER**//
@@ -18,12 +19,12 @@ let storage = multer.diskStorage({
 var upload=multer({storage});
 
 router.post('/',upload.single('imagen'),mainController.tienda)
-router.get('/editar-producto', mainController.editarProducto)
-router.get('/editar-producto/:referencia', mainController.editarProducto)
-router.get('/crear-producto', mainController.crearProducto)
+router.get('/editar-producto',recordarmiddleware, mainController.editarProducto)
+router.get('/editar-producto/:referencia',recordarmiddleware, mainController.editarProducto)
+router.get('/crear-producto',recordarmiddleware, mainController.crearProducto)
 router.patch('/editar-producto/:referencia',upload.single('imagen'), mainController.update);
 
-router.delete('/borrar-producto/:referencia', mainController.destroy)
+router.delete('/borrar-producto/:referencia',recordarmiddleware, mainController.destroy)
 
 
 

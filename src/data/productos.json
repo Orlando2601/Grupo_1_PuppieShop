@@ -13,14 +13,26 @@
  },
  {
   "id": 2,
+  "referencia": "REF003",
   "mascota": "Canino",
   "razas": "grande",
   "categoria": "alimentos",
   "nombre": "purina proplan flagship perros adult",
-  "tamaño": "5kg",
   "cantidad": "20",
-  "precio": "35000",
-  "referencia": "REF003",
+  "precio": "35000000",
+  "tamaño": "5kg",
   "imagen": "1644375603655-purina-pro-plan-flagship-perros-adult-razas-grandes.png"
+ },
+ {
+  "id": 3,
+  "mascota": "Canino",
+  "razas": "mediana",
+  "categoria": "alimentos",
+  "nombre": "Purina",
+  "tamaño": "5kg",
+  "cantidad": "10",
+  "precio": "47000",
+  "referencia": "REF003",
+  "imagen": "1645191028454-Purina® Proplan® Adult Carne en salsa brasil.png"
  }
 ]
