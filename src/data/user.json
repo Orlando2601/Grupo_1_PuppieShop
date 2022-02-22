@@ -30,5 +30,22 @@
   "correo": "admin@gmail.com",
   "contraseña": "$2a$10$Uxu0egkD6Vm1PfouEFR8KeqkQiwttF9U7GHQctzFx2BHAuEpBnPEa",
   "imagen": "imagen1645455898986.png"
+ },
+ {
+  "id": 5,
+  "nombre": "corredor",
+  "apellido": "corredor",
+  "correo": "corredor@gmail.com",
+  "contraseña": "$2a$10$/ECp5QI7xjmOD0hvDGqY0euC5bdID7WHVKbwbY0hspAjqlCIuUzYW",
+  "imagen": "imagen1645481524309.png"
+ },
+ {
+  "id": 6,
+  "nombre": "orlando",
+  "apellido": "baez",
+  "correo": "rocko@gmail.com",
+  "contraseña": "$2a$10$hFOL/g6SteoS5HYCcEZRW.0UZptVSEGw2fuBKVS9YPh4WjHhf2vw.",
+  "repiteContraseña": "0000",
+  "imagen": "imagen1645549929185.png"
  }
 ]

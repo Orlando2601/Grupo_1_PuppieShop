@@ -13,8 +13,20 @@ const validaciones = [
     body('nombre').notEmpty().withMessage('Debes ingresar tu nombre'),
     body('apellido').notEmpty().withMessage('Debes ingresar tu apellido'),
     body('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
-    body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia')
+    body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia'),
+    body('repiteContraseña').custom((val, {req})=>{
+        if (val !== req.body.contraseña){
+            throw new Error('Password confirmation does not match password');
+        } 
+        return true
+    })
+
+
+    
+   
 ];
+
+
 const validacionesLog = [
     body('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
     body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia')
@@ -42,9 +54,11 @@ let recordarmiddleware=require('../middleware/recordarmiddleware');
 
 /* ADMINISTRACION DE RUTAS */
 router.get('/login', userController.login)
-router.get('/registro',validaciones, userController.registro)
-router.post('/registro',multerImageMidlewareUser, validaciones,  userController.users)
 router.post('/login',recordarmiddleware,userController.logged)
+router.get('/registro',validaciones, userController.registro)
+router.post('/registro',multerImageMidlewareUser, validaciones, userController.users)
+router.get('/adminPerfil', userController.adminPefil)
+
 
 
 
