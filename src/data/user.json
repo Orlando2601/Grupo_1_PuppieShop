@@ -1,54 +1,51 @@
 [
  {
-  "nombre": "",
-  "apellido": "",
-  "correo": "",
-  "contraseña": ""
- },
- {
-  "nombre": "oswar ",
-  "apellido": "baez",
-  "correo": "oswar@gmail",
-  "contraseña": "1234"
- },
- {
-  "nombre": "orlando",
-  "apellido": "baez",
-  "correo": "obaez@gmail.com",
-  "contraseña": "0000"
- },
- {
-  "nombre": "nuevo usuario",
-  "apellido": "usuario nuevo",
-  "correo": "usuer@gmail.com",
-  "contraseña": "0000"
- },
- {
-  "nombre": "User",
-  "apellido": "baez",
-  "correo": "user@gmail.com",
-  "contraseña": "1234"
- },
- {
-  "nombre": "",
-  "apellido": "",
-  "correo": "",
-  "contraseña": ""
- },
- {
-  "id": 7,
-  "nombre": "loco",
-  "apellido": "loco",
-  "correo": "loco@gmail.com",
-  "contraseña": "$2a$10$ikL7oCbWSpQl1OJcANTTxez4jpkGwP9Pf98whtHD/wZ77H2S8XRMu",
-  "imagen": "imagen1644754668303.jpg"
- },
- {
-  "id": 8,
+  "id": 1,
   "nombre": "rafael",
   "apellido": "estraa",
   "correo": "prueba@hotmail.com",
   "contraseña": "$2a$10$PBCpbspKvkW2tcjUfYrQyuD7OWKcxmGEXysBhuwlhRp06fIfIRPlu",
   "imagen": "imagen1644941530038.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "oswar",
+  "apellido": "baez",
+  "correo": "oswar@gmail.com",
+  "contraseña": "$2a$10$FdWy3nKMoNM3TGb2klPWF.0b/q95Gu/ANfW1J6SKLnuWY.NKzkAYK",
+  "imagen": "imagen1645454745270.png"
+ },
+ {
+  "id": 3,
+  "nombre": "orlando",
+  "apellido": "baez",
+  "correo": "orlando@gmail.com",
+  "contraseña": "$2a$10$jSnn3JpKxouC291QEbnL9.j/p5cGS18KquBQOajTG0qM.gjUeVAVK",
+  "imagen": "imagen1645455489037.png"
+ },
+ {
+  "id": 4,
+  "nombre": "orlando",
+  "apellido": "corredor",
+  "correo": "admin@gmail.com",
+  "contraseña": "$2a$10$Uxu0egkD6Vm1PfouEFR8KeqkQiwttF9U7GHQctzFx2BHAuEpBnPEa",
+  "imagen": "imagen1645455898986.png"
+ },
+ {
+  "id": 5,
+  "nombre": "corredor",
+  "apellido": "corredor",
+  "correo": "corredor@gmail.com",
+  "contraseña": "$2a$10$/ECp5QI7xjmOD0hvDGqY0euC5bdID7WHVKbwbY0hspAjqlCIuUzYW",
+  "imagen": "imagen1645481524309.png"
+ },
+ {
+  "id": 6,
+  "nombre": "orlando",
+  "apellido": "baez",
+  "correo": "rocko@gmail.com",
+  "contraseña": "$2a$10$hFOL/g6SteoS5HYCcEZRW.0UZptVSEGw2fuBKVS9YPh4WjHhf2vw.",
+  "repiteContraseña": "0000",
+  "imagen": "imagen1645549929185.png"
  }
 ]

@@ -6,22 +6,30 @@ const productsFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
-const productosController = {
-    home: (req,res)=>{
+
+
+const home = (req,res)=>{
         res.render('products/home')
-    },
-    userhome:(req,res)=>{
+    }
+
+const userhome = (req,res)=>{
         res.render('users/homeuser')
 
-    },
-    comida:(req,res)=>{
+    }
+
+const comida = (req,res)=>{
         res.render('products/listaProductos',{productos})
-    },
-    detalle: (req,res)=>{
+    }
+const detalle = (req,res)=>{
         let ref = req.params.referencia;
         let lista = productos.find(item => item.referencia == ref)
         res.render('products/detalle-producto', {lista})
     }
-}
 
-module.exports = productosController;
+
+module.exports = {
+    home,
+    userhome,
+    comida,
+    detalle
+}

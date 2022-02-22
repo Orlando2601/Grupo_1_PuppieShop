@@ -1,84 +1,9 @@
-/*-------------> NORMALIZACION <------------------ */
-*{
-    margin : 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html {
-    font-size: 62.5%;
 
-
-}
-#body{
-background-color: #D2D9D1;
-}
-header{
-    background-color:#04471b5b ;
-    overflow:hidden;
-    width: 100%;
-    padding: 25px 0px;
-    margin-bottom:20px;
-    
-}
 #footer{
     background-color: #04471b60;
     width:100%;
     padding: 25px 0px;   
 }
-
-.wrapper{
-    width:90%;
-    max-width: 1200px;
-    margin:auto;
-    overflow:hidden;
-}
-
-/*--------------------> ESTILOS PROPIOS <---------------------------- */
-/*--------------------> HEADER <-------------------------------------*/
-.logo{
-    float:left;
-   
-}
-.Container-header {
-    width:90%;
-    max-width: 1200px;
-    margin:auto;
-   
-   
-}
-header nav{
-    float:right;
-    line-height:100px;
-  
-   
-}
-header nav a{
-    display: inline-block;
-    color: rgba(0, 0, 0, 0.507);
-    text-decoration:none;
-    padding:10px 20px;
-    font-size:20px;
-    line-height: normal;
-    -webkit-transition:all 500 ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;;
-    
-}
-header nav a:hover{
-    background-color: #7ca04f;
-    border-radius:50px;
-    color:black;
-}
-    
-
-
-/*--------------------> FIN DEL HEADER <-----------------------------*/
-/* ---------------> carrousel <------------------*/
-
-
-
-
-/* ---------------> FIN carrousel <------------------*/
 
 /*--------------> FOOOTER <-------------------------*/
 .Container_footer{

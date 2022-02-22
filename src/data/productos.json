@@ -1,19 +1,6 @@
 [
  {
   "id": 1,
-  "referencia": "REF001",
-  "mascota": "Canino",
-  "razas": "grande",
-  "categoria": "alimentos",
-  "nombre": "Proplan Active Mind",
-  "cantidad": "10",
-  "precio": "45000",
-  "tamaño": "3kg",
-  "imagen": "1644190207808-purina-pro-plan-flagship-perros-adult-razas-pequeñas.png"
- },
- {
-  "id": 2,
-  "referencia": "REF003",
   "mascota": "Canino",
   "razas": "grande",
   "categoria": "alimentos",
@@ -24,15 +11,13 @@
   "imagen": "1644375603655-purina-pro-plan-flagship-perros-adult-razas-grandes.png"
  },
  {
-  "id": 3,
-  "mascota": "Canino",
-  "razas": "mediana",
-  "categoria": "alimentos",
-  "nombre": "Purina",
-  "tamaño": "5kg",
-  "cantidad": "10",
-  "precio": "47000",
-  "referencia": "REF003",
-  "imagen": "1645191028454-Purina® Proplan® Adult Carne en salsa brasil.png"
+  "id": 2,
+  "categoria": "accesorios",
+  "nombre": "chunky",
+  "tamaño": "3kg",
+  "cantidad": "20",
+  "precio": "25000",
+  "referencia": "REF002",
+  "imagen": "1645547013963-purina-pro-plan-flagship-perros-adult-razas-medianas.png"
  }
 ]

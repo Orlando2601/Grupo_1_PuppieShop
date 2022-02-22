@@ -5,16 +5,13 @@ main{
 
 /*------------ INICIO ESTILOS CARROUSEL -----------*/
 
-h4,h2,small,a{
-    margin:0;
-    padding:0;
-}
-a{
-    text-decoration:none;
-}
+
 .Carousel{
+    display: flex;
     width:100%;
-    margin:0px 60px;
+    margin:0px;
+    align-items: center;
+    flex-direction: column;
 }
 .Carousel h2{
   font-size:26px;
@@ -25,108 +22,7 @@ a{
   letter-spacing: 10px;
   text-align:center;  
 }
-/* images*/
-.slick-list{
-    position:relative;
-    display:flex;
-    align-items: center;
-    width:fit-content;
-    height: 304px;
-    padding: 10px 0px;
-    margin:0px auto;
-    max-width: 90vw;
-    overflow: hidden;
-}
-.slick-track{
-    position:relative;
-    top:0;
-    left:0;
-    display:flex;
-    justify-content: center;
-    transition: .5s ease-in-out;
-}
-.slick{
-    position:relative;
-    width:275px;
-    padding: 0px 18px;
-    float: left;
-    box-sizing: border-box;
-    display:flex;
-    height: 100%;
-    opacity: 1;
-}
 
-.slick h4{
-    position:absolute;
-    z-index:1;
-    font-size:22px;
-    line-height: 23px;
-    color: rgb(17, 12, 12);
-    padding:15px;
-    background-color: rgba(221, 190, 13, 0.719);
-    opacity: 1;
-}
- h4:hover{ 
-opacity: 1;
-    /*---------- ESTE AUN NO ME SIRVE --------*/
-
-}
-.slick h4 small{
-    font-size:15px;
-    display:block;
-    opacity: none;
-}
-
-
-.slick a img{
-    object-fit: cover;
-    height: 300px;
-    width:100%;
-    border-radius:4px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
-    transition: .3s ease-in-out;
-   
-}
-.slick a img:hover{
-    opacity: 0.3;
-    
-}
-/* buttons */
-.slick-arrow{
-    border-radius: 30px;
-    background-color: #fff;
-    position:absolute;
-    z-index:4;
-    width:48px;
-    height: 48px;
-    text-align:center;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
-    border:0px;
-    cursor:pointer;
-}
-.slick-arrow:focus{
-    outline:0;
-}
-.slick-arrow svg{
-    width:12px;
-    height:100%;
-    color: rgba(0,0,0,.7);
-}
-.slick-prev{
-    left:0px;
-}
-.slick-next{
-    right:0px;
-}
-/* barra de busqueda */
-form .search-header{
-    display:flex;
-    justify-content: stretch;
-    align-items: end;
-    border-radius:20px;
-}
-
-/*------------ FIN ESTILOS CARROUSEL -----------*/
 picture.logo img{
     display: none;
     width: 50%;
