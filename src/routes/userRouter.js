@@ -53,7 +53,7 @@ let recordarmiddleware=require('../middleware/recordarmiddleware');
 
 /* ADMINISTRACION DE RUTAS */
 router.get('/login',guestMiddleware, userController.login)
-router.post('/login',recordarmiddleware,userController.logged)
+router.post('/login',recordarmiddleware, validacionesLog,userController.logged)
 router.get('/registro',guestMiddleware, validaciones, userController.registro)
 router.post('/registro',multerImageMidlewareUser, validaciones, userController.users)
 router.get('/adminPerfil',notLogMiddleware, userController.adminPefil)

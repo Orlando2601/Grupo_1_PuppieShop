@@ -8,76 +8,39 @@ const userFilePath = path.join(__dirname, '../data/user.json');
 const usuarios = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
    
 const login = (req,res)=>{
+        console.log(" este es el correo en sesion")
         console.log(req.session.correo)
+        let a;
         if(req.session.correo!=undefined){
-            let a=2;
+             a=2;
             let usercookie = usuarios.find(user => user.correo == req.session.correo);
             res.render('users/login',{usercookie,a});
               
         }else{
-             if(req.session.correo == undefined){
-            let a=1;
+             
+             a=1;
             let usercookie=[];
             res.render('users/login',{usercookie,a});
-            }
+            
         }
+        console.log(req.body)
     }  
     
 const logged =(req, res)=>{
         const errors = validationResult(req);
         const errores = errors.mapped();
-        if(req.body.recordame!=undefined){
-            let user = usuarios.find(user => user.correo == req.body.correo);
+        console.log(errores)
+        let user = new Object();
+        if (errors.isEmpty()){
+
+        }else{
+            res.redirect('/user/login')
+        }
         
-            if(user){
-            res.cookie('correo',req.body.correo,{maxAge:30000});
-            req.session.correo=req.body.correo;
-            
-            }
+
+}
+
   
-            if(errors.isEmpty()){
-                for (let i=0; i < usuarios.length; i++){
-                    if(usuarios[i].correo == req.body.correo){
-                        if(bcryptjs.compareSync(req.body.contraseña, usuarios[i].contraseña)){
-                            let usuarioAloguearse = usuarios[i];
-                           delete usuarioAloguearse.repiteContraseña
-                           delete usuarioAloguearse.contraseña 
-                           
-                           req.session.usuarioLogueado = usuarioAloguearse;
-                           
-                            
-                                }
-                           console.log('el usuario es ' + req.session.usuarioLogueado)
-                           console.log('Datos de usuario', req.session)
-                           return res.redirect('/user/adminPerfil')
-                           
-                        } else{
-                            res.render('users/login', {
-                            
-                            old:req.body})
-                        }                   
-                    }
-                }
-                if(usuarioAloguearse == undefined){
-                    console.log('No existe usuario')
-                    return res.render('/user/login',{
-                        errors:[correo.msg]
-                    })                
-                }
-
-
-            }else{
-            
-                res.render('users/login', {
-                    errors:errores,
-                    old:req.body
-                })
-                console.log(errores)
-            }
-
-
-
-    }
 
 const registro = (req,res)=>{
         res.render('users/registro')
