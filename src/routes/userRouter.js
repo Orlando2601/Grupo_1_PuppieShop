@@ -5,7 +5,8 @@ const userController = require('../controllers/userController');
 const path = require('path')
 const {body, check} = require('express-validator')
 const multer = require('multer')
-
+const notLogMiddleware =require('../middleware/notLogMiddleware')
+const guestMiddleware = require('../middleware/guestMiddleware')
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* VALIDACIONES DE CAMPOS //////////////////////////////////////////////////////////////////*/
@@ -16,13 +17,11 @@ const validaciones = [
     body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia'),
     body('repiteContraseña').custom((val, {req})=>{
         if (val !== req.body.contraseña){
-            throw new Error('Password confirmation does not match password');
+            throw new Error('Las contraseñas no coinciden');
         } 
         return true
     })
-
-
-    
+ 
    
 ];
 
@@ -53,11 +52,12 @@ let recordarmiddleware=require('../middleware/recordarmiddleware');
 
 
 /* ADMINISTRACION DE RUTAS */
-router.get('/login', userController.login)
+router.get('/login',guestMiddleware, userController.login)
 router.post('/login',recordarmiddleware,userController.logged)
-router.get('/registro',validaciones, userController.registro)
+router.get('/registro',guestMiddleware, validaciones, userController.registro)
 router.post('/registro',multerImageMidlewareUser, validaciones, userController.users)
-router.get('/adminPerfil', userController.adminPefil)
+router.get('/adminPerfil',notLogMiddleware, userController.adminPefil)
+router.post('/cerrarSesion', userController.cerrarSesion)
 
 
 

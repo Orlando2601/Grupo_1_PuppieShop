@@ -25,7 +25,8 @@ const tienda = (req,res)=>{
       productos.push(nuevoproducto);
       fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '));
 
-      res.redirect('/comida');
+      res.redirect('/');
+      console.log(req.session)
     }
 
 const editarProducto = (req,res)=>{

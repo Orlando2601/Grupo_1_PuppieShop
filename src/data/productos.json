@@ -1,24 +1,34 @@
 [
  {
   "id": 1,
+  "referencia": "REF003",
   "mascota": "Canino",
   "razas": "grande",
   "categoria": "alimentos",
-  "nombre": "purina proplan flagship perros adult",
-  "tamaño": "5kg",
+  "nombre": "flagship perros adult",
   "cantidad": "20",
   "precio": "35000",
-  "referencia": "REF003",
+  "tamaño": "5kg",
   "imagen": "1644375603655-purina-pro-plan-flagship-perros-adult-razas-grandes.png"
  },
  {
   "id": 2,
   "categoria": "accesorios",
-  "nombre": "chunky",
-  "tamaño": "3kg",
+  "nombre": "Proplan Flagship",
+  "tamaño": "3.5 kg",
+  "cantidad": "25",
+  "precio": "100000",
+  "referencia": "REF003",
+  "imagen": "1645568021185-purina-pro-plan-flagship-perros-adult-razas-pequeñas.png"
+ },
+ {
+  "id": 3,
+  "categoria": "accesorios",
+  "nombre": "One Adultos",
+  "tamaño": "3.5 kg",
   "cantidad": "20",
-  "precio": "25000",
-  "referencia": "REF002",
-  "imagen": "1645547013963-purina-pro-plan-flagship-perros-adult-razas-medianas.png"
+  "precio": "70000",
+  "referencia": "REF004",
+  "imagen": "1645568121580-Purina_ONE_Ar-Adultos-Minis-y-Pequeños-Pollo-y-cordero.png"
  }
 ]

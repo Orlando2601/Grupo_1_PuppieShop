@@ -47,5 +47,22 @@
   "contraseña": "$2a$10$hFOL/g6SteoS5HYCcEZRW.0UZptVSEGw2fuBKVS9YPh4WjHhf2vw.",
   "repiteContraseña": "0000",
   "imagen": "imagen1645549929185.png"
+ },
+ {
+  "id": 7,
+  "nombre": "Oswar",
+  "apellido": "Baez",
+  "correo": "oswar.baez26@gmail.com",
+  "contraseña": "$2a$10$cVSeLQJmGcf3hJOlVXNK1edEPVw3VHl0RF40p3oHJphOJRxwJbXeC",
+  "repiteContraseña": "0000",
+  "imagen": "imagen1645582177399.png"
+ },
+ {
+  "id": 8,
+  "nombre": "rocko",
+  "apellido": "baez",
+  "correo": "rockoloco@gmail.com",
+  "contraseña": "$2a$10$nL15C8OLr9vg4moYI5kk.u9F3saNtorWgWANpui4yh9eMHxSkF./G",
+  "imagen": "imagen1645582363547.png"
  }
 ]
