@@ -51,6 +51,17 @@ header .header-right .caja-enlace-header .iconred a i {
 
     font-size: var(--font-size-M);
 }
+header .header-right .caja-enlace-header .imgUser{
+    width: 5vw;
+    height: 5vw;
+}
+header .header-right .caja-enlace-header .imgUser a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 360px) {
     header{

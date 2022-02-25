@@ -83,8 +83,10 @@ const users = (req, res)=>{
   }
     
   const cerrarSesion = (req,res)=>{   
-
-        req.session.destroy();    
+        
+        req.session.destroy();
+        delete res.locals
+        
         return res.render('users/login')
 }
 

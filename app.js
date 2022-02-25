@@ -10,18 +10,21 @@ const session = require('express-session');/* requerimos archivo de session */
 const { cookie } = require('express/lib/response');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
+const userLoggedMiddelware = require('./src/middleware/userLoggedMiddleware')
+
 
 
 
 /* ALMACENAR DATOS DE NAVEGACION/////////////////////////////////////////////////////////////////// */
 app.use(session({secret:'?',resave:false,saveUninitialized:false}));/* middleware que recorre cada vista */
 app.use(cookieParser());
+
 /* CONFIGURACION PARA EXTRAER INFORMACION DE LOS FORM///////////////////////////////////////////// */
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
-
+app.use(userLoggedMiddelware)
 /* CONFIGURACION CARPETA DE VISTAS Y PARCHIVOS PUBLICOS */
 app.set('views', path.resolve(__dirname, './src/views'))
 app.use(express.static(publicPath));
