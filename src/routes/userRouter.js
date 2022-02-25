@@ -6,7 +6,7 @@ const path = require('path')
 const {body, check} = require('express-validator')
 const multer = require('multer')
 const notLogMiddleware =require('../middleware/notLogMiddleware')
-const guestMiddleware = require('../middleware/guestMiddleware')
+const guestMiddleware = require('../middleware/guestMiddleware'); //middleware
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* VALIDACIONES DE CAMPOS //////////////////////////////////////////////////////////////////*/
@@ -20,9 +20,7 @@ const validaciones = [
             throw new Error('Las contraseñas no coinciden');
         } 
         return true
-    })
- 
-   
+    })   
 ];
 
 
@@ -53,7 +51,7 @@ let recordarmiddleware=require('../middleware/recordarmiddleware');
 
 /* ADMINISTRACION DE RUTAS */
 router.get('/login',guestMiddleware, userController.login)
-router.post('/login',recordarmiddleware, validacionesLog,userController.logged)
+router.post('/login',validacionesLog, userController.logged)
 router.get('/registro',guestMiddleware, validaciones, userController.registro)
 router.post('/registro',multerImageMidlewareUser, validaciones, userController.users)
 router.get('/adminPerfil',notLogMiddleware, userController.adminPefil)

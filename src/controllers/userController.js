@@ -7,36 +7,25 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const userFilePath = path.join(__dirname, '../data/user.json');
 const usuarios = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
    
-const login = (req,res)=>{
-        console.log(" este es el correo en sesion")
-        console.log(req.session.correo)
-        let a;
-        if(req.session.correo!=undefined){
-             a=2;
-            let usercookie = usuarios.find(user => user.correo == req.session.correo);
-            res.render('users/login',{usercookie,a});
-              
-        }else{
-             
-             a=1;
-            let usercookie=[];
-            res.render('users/login',{usercookie,a});
-            
+const login = async (req,res)=>{
+        try {
+           
+                return res.render('users/login')
+        } catch (error) {
+            res.send("Error")
         }
-        console.log(req.body)
     }  
     
-const logged =(req, res)=>{
-        const errors = validationResult(req);
-        const errores = errors.mapped();
-        console.log(errores)
-        let user = new Object();
-        if (errors.isEmpty()){
-
-        }else{
-            res.redirect('/user/login')
-        }
-        
+const logged = (req, res)=>{
+            const userFilePath = path.join(__dirname, '../data/user.json');
+            const usuarios = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+            const errores = validationResult(req);
+            let user;
+            (errores.errors.length > 0) ? res.render('users/login',{errors:errores.mapped(),old:req.body}) : user =  usuarios.find(ele => ele.correo == req.body.correo);              
+            let validacionPassword;
+            !user ? res.render('users/login',{errors:{correo:{msg:'No se encontro el correo'}}}) : validacionPassword =  bcryptjs.compareSync(req.body.contraseña, user.contraseña);
+            !validacionPassword ? res.render('users/login',{errors:{contraseña:{msg:"Tu contrasena no coincide"}}}): delete user.contraseña; req.session.usuarioLogueado = user;               
+            return res.redirect('/user/adminPerfil');
 
 }
 
@@ -83,20 +72,20 @@ const users = (req, res)=>{
         }
 }
 
-  const adminPefil = (req, res)=>{
-        
-      res.render('users/adminPerfil',{
-        user: req.session.usuarioLogueado,
-        lista: productos
-    })
+  const adminPefil = (req, res)=>{  
+        console.log("estas en perfil")
+        console.log(req.session)
+
+        return     res.render('users/adminPerfil',{
+            user: req.session.usuarioLogueado,
+            lista: productos
+        })
   }
     
-  const cerrarSesion = (req,res)=>{
-    
-        req.session.destroy();  
-        console.log(req.locals)
-      
-        return res.render('products/home.ejs')
+  const cerrarSesion = (req,res)=>{   
+
+        req.session.destroy();    
+        return res.render('users/login')
 }
 
 

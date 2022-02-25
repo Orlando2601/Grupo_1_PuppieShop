@@ -14,7 +14,7 @@ const methodOverride = require('method-override');
 
 
 /* ALMACENAR DATOS DE NAVEGACION/////////////////////////////////////////////////////////////////// */
-app.use(session({secret:'?'}));/* middleware que recorre cada vista */
+app.use(session({secret:'?',resave:false,saveUninitialized:false}));/* middleware que recorre cada vista */
 app.use(cookieParser());
 /* CONFIGURACION PARA EXTRAER INFORMACION DE LOS FORM///////////////////////////////////////////// */
 app.use(express.urlencoded({ extended: false }));
