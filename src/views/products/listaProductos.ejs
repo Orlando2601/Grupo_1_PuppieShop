@@ -9,12 +9,17 @@
             <article>
                 <img src="/images/productsDB/<%= item.imagen %>" alt="">
                 <div class="vermas">
-                    <p><%= item.mascota %></p>
-                    <p><%= item.razas %></p>
-                    <p><%= item.nombre %></p>
-                    <p><%= item.tamaño %></p>
-                    <p>$<%= item.precio %></p>
-                    <a href="/detalle/<%= item.referencia %>">Ver más detalles</a>
+                    <div class="descripcionMas">
+                        <p>Tipo: <%= item.mascota %></p>
+                        <p>Razas: <%= item.razas %></p>
+                        <p>Descripcion: <%= item.nombre %></p>
+                        <p>Tamanio: <%= item.tamaño %> kg</p>
+                        <p>Precio: $<%= item.precio %></p>
+                    </div>
+                    
+
+                    <button><a href="/detalle/<%= item.referencia %>">DETALLES</a></button>
+                    
                 </div>
                 
             </article>

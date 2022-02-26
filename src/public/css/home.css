@@ -20,11 +20,12 @@
 }
 .mainHome section p{
     font-family: var(--fuente);
+    font-size:2.8vw;
    
 }
 .mainHome section h2{
     font-family: var(--fuente);
-   
+    font-size:4vw;
 }
 .mainHome .descripcionSeccion{
     width: 50vw;
@@ -35,7 +36,7 @@
 
     .descripcionSeccion p{
         display: none;
-        font-size: var(--font-size-M);
+        font-size: var(--font-size-L);
     }
     .descripcionSeccion h2{
         font-size: var(--font-size-M);
