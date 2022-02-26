@@ -35,8 +35,9 @@
             </article><!-- vista de cada articulo -->
             <% }); %><!-- cierre codigo js anterior -->
         </div>
-        
-        <button> <a href="/user/cerrarSesion">Logout</a> </button> <!-- button de cerrar sesion -->
+        <form action="/user/cerrarSesion" method="POST">
+        <input type="submit" value="Cerrar sesion"> <!-- button de cerrar sesion -->
+    </form>
     </main>
     <%- include ('../partials/footer') %>
 </body>

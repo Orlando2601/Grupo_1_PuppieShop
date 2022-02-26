@@ -17,6 +17,7 @@
                 <a href="https://www.google.com/" target="blank"><i class="fab fa-whatsapp"></i>
             </div>
 
+
         </div><!-- Contenedor Redes Sociales -->
 
         <div class="caja-enlace-header">
@@ -26,11 +27,20 @@
             <div class="div-btn-header">
                 <a class="a-btn-header" href="#">Contactanos</a>
             </div><!-- div link contactenos -->
-            <div class="div-btn-header">
-            <a class="a-btn-header" href="/user/login">Login</a>
-            </div><!-- div link login -->
+            <% if (!locals.logueado) { %>
+                <div class="iconred">
+                    <a href="/user/login"target="blank"><i class="fa-solid fa-user"></i>
+                </div><!-- div link login -->
+
+            <% }else{ %>
+                <div class="imgUser">
+                    <a href="/user/login"target="blank"><img src="/images/dbUsers/<%= locals.usuarioLogueado.imagen %>" alt="">
+                </div>
+                
+                
+            <% }; %>
             <div class="iconred">
-                <a href="#" target="blank"><i class="fas fa-shopping-cart"></i></i></a>
+                <a href="#" target="blank"><i class="fas fa-shopping-cart"></i></a>
             </div><!-- div link login -->
         </div><!-- Contenedor enlaces header -->
     </div><!-- Contenedor derecho de header -->

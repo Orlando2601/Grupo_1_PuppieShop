@@ -11,11 +11,17 @@
         <!-- formulario de login -->
         <form action="/user/login" method="POST">  
             <label for="correo">Ingrese Correo electrónico</label>
-            <input type="email" name="correo" placeholder="Correo" <% if (a==2){ %> value="<%= usercookie.correo %>" <% } %> >
+            <input type="email" name="correo" placeholder="Correo" value="<%= locals.old && old.correo ? old.correo : '' %>" >
+            <% if (locals.errors && errors.correo) { %>
+                <p><%= errors.correo.msg %></p>
+                <% }; %>
             <label for="contraseña">Ingrese Contraseña</label>
-            <input type="password" name="contraseña" placeholder="Contraseña" <% if (a==2){ %> value="<%= usercookie.contraseña %>" <% } %>>
+            <input type="password" name="contraseña" placeholder="Contraseña">
+            <% if (locals.errors && errors.contraseña) { %>
+                <p><%= errors.contraseña.msg %></p>
+                <% }; %>
             <label for="recordame">Recordame</label>
-            <input type="checkbox" name="recordame" checked>
+            <input type="checkbox" name="recordame"  checked>
 
             <div class="botones">
                 <input class="btn" type="submit" value="Ingresar">

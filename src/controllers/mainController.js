@@ -15,7 +15,7 @@ const crearProducto = (req,res)=>{
 const tienda = (req,res)=>{
       
         let imagen =  req.file? req.file.filename:'defaul.png';
-      let nuevoproducto = {
+        let nuevoproducto = {
         id: productos[productos.length-1].id+1,
         ...req.body,
         referencia: "REF00"+(productos[productos.length-1].id+1),
@@ -25,7 +25,8 @@ const tienda = (req,res)=>{
       productos.push(nuevoproducto);
       fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '));
 
-      res.redirect('/comida');
+      res.redirect('/');
+      console.log(req.session)
     }
 
 const editarProducto = (req,res)=>{

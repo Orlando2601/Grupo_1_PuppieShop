@@ -20,18 +20,10 @@ header .caja-enlace-header{
     justify-content: flex-end;
     gap: 15px;
     margin-bottom: 20px;
+    align-items: center;
 }/* Contenedor enlaces header */
 
-.caja-logo a {
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    
-}/* img logo */
 
-.caja-logo img{
-    width:100%;
-}/* img logo */
 
 header .header-right .redes .iconred i{
     
@@ -59,8 +51,55 @@ header .header-right .caja-enlace-header .iconred a i {
 
     font-size: var(--font-size-M);
 }
+header .header-right .caja-enlace-header .imgUser{
+    width: 5vw;
+    height: 5vw;
+}
+header .header-right .caja-enlace-header .imgUser a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
 /* RESPONSIVE */
-@media (max-width: 599px) {
+@media (max-width: 360px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        
+    } 
+    header .caja-logo{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    } 
+    header .caja-logo a{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    header .header-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+    }
+    header .header-right .caja-enlace-header a{
+        font-family: var(--fuente);
+        font-size: var(var(--font-size-S));
+    }
+    .caja-logo img{
+        width:100%;
+    }/* img logo */
+}
+
+
+
+
+
+
+@media (min-width: 361px) and (max-width:600px) {
     /* HEADER */
     header{
         display: flex;
@@ -68,7 +107,7 @@ header .header-right .caja-enlace-header .iconred a i {
         
     } 
     header .caja-logo{
-        width: 60%;
+        width: 100%;
         display: flex;
         justify-content: space-evenly;
     } 
@@ -87,13 +126,15 @@ header .header-right .caja-enlace-header .iconred a i {
         font-family: var(--fuente);
         font-size: var(var(--font-size-S));
     }
-
+    .caja-logo img{
+        width:100%;
+    }/* img logo */
     
 
 
 }
 
-@media (min-width: 600px) and (max-width:799px){
+@media (min-width: 601px) and (max-width:799px){
     header{
         flex-direction: column;
     }
@@ -104,7 +145,7 @@ header .header-right .caja-enlace-header .iconred a i {
         width: 50%;
     }
     header .caja-logo{
-        width: 60%;
+        width: 80%;
         display: flex;
         justify-content: space-evenly;
     } 
@@ -117,6 +158,9 @@ header .header-right .caja-enlace-header .iconred a i {
         font-family: var(--fuente);
         font-size:var(var(--font-size-M));
     }
+    .caja-logo img{
+        width:100%;
+    }/* img logo */
 
 }
 
@@ -129,7 +173,7 @@ header .header-right .caja-enlace-header .iconred a i {
     }
 
     header .caja-logo{
-        width: 40%;
+        width: 50%;
     }
  /* PROPIEDADES TEXTOS HEADER */
 header .header-right .caja-enlace-header a{
@@ -137,6 +181,15 @@ header .header-right .caja-enlace-header a{
     font-size:var(--font-size-L);
 }
 
+.caja-logo img{
+    width:100%;
+}/* img logo */
+
 }
+
+
+
+
+
 
 

@@ -5,25 +5,31 @@ const userController = require('../controllers/userController');
 const path = require('path')
 const {body, check} = require('express-validator')
 const multer = require('multer')
-
+const notLogMiddleware =require('../middleware/notLogMiddleware')
+const guestMiddleware = require('../middleware/guestMiddleware'); 
+const recordarmiddleware = require('../middleware/recordarmiddleware')
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* VALIDACIONES DE CAMPOS //////////////////////////////////////////////////////////////////*/
 const validaciones = [
-    body('nombre').notEmpty().withMessage('Debes ingresar tu nombre'),
-    body('apellido').notEmpty().withMessage('Debes ingresar tu apellido'),
-    body('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
-    body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia'),
-    body('repiteContraseña').custom((val, {req})=>{
-        if (val !== req.body.contraseña){
-            throw new Error('Password confirmation does not match password');
-        } 
-        return true
-    })
-
-
-    
-   
+    body('nombre')
+        .notEmpty().withMessage('Debes ingresar tu nombre'),
+    body('apellido')
+        .notEmpty().withMessage('Debes ingresar tu apellido'),
+    body('correo')
+        .notEmpty().withMessage('No has ingresado ningun correo')
+        .isEmail().withMessage('Debes ingresar un correoo valido'),
+    body('contraseña')
+        .isLength({min:6, max:12}).withMessage('caracteres')
+        .notEmpty().withMessage('Debes ingresar una contrasenia entre 6 y 12 caracteres')
+        .isAlphanumeric().withMessage('Ingresaste un caracter no valido'),
+    body('repiteContraseña')
+        .custom((val, {req})=>{
+            if (val !== req.body.contraseña){
+                throw new Error('Las contraseñas no coinciden');
+            } 
+            return true
+        })   
 ];
 
 
@@ -48,23 +54,16 @@ let multerDiskStorageUser = multer.diskStorage({
 })
 let fileUploadUser = multer({storage:multerDiskStorageUser});
 let multerImageMidlewareUser = fileUploadUser.single('imagen')
-let recordarmiddleware=require('../middleware/recordarmiddleware');
 /* //////////////////////////////////////////////////////////////////////// */
 
 
 /* ADMINISTRACION DE RUTAS */
-<<<<<<< HEAD
-
-router.get('/login',recordarmiddleware, userController.login)
-router.get('/registro',recordarmiddleware,validaciones, userController.registro)
-router.post('/registro', userController.users)
-=======
-router.get('/login', userController.login)
->>>>>>> 4c0241b37bf99128e421d8358590e0a9c6a7c27e
-router.post('/login',recordarmiddleware,userController.logged)
-router.get('/registro',validaciones, userController.registro)
+router.get('/login',guestMiddleware,recordarmiddleware, userController.login)
+router.post('/login',validacionesLog, userController.logged)
+router.get('/registro',guestMiddleware, validaciones, userController.registro)
 router.post('/registro',multerImageMidlewareUser, validaciones, userController.users)
-router.get('/adminPerfil', userController.adminPefil)
+router.get('/adminPerfil',notLogMiddleware, userController.adminPefil)
+router.post('/cerrarSesion', userController.cerrarSesion)
 
 
 
