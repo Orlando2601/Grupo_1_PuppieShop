@@ -15,7 +15,7 @@ const crearProducto = (req,res)=>{
 const tienda = (req,res)=>{
       
         let imagen =  req.file? req.file.filename:'defaul.png';
-      let nuevoproducto = {
+        let nuevoproducto = {
         id: productos[productos.length-1].id+1,
         ...req.body,
         referencia: "REF00"+(productos[productos.length-1].id+1),

@@ -1,68 +1,10 @@
 [
  {
   "id": 1,
-  "nombre": "rafael",
-  "apellido": "estraa",
-  "correo": "prueba@hotmail.com",
-  "contraseña": "$2a$10$PBCpbspKvkW2tcjUfYrQyuD7OWKcxmGEXysBhuwlhRp06fIfIRPlu",
-  "imagen": "imagen1644941530038.jpg"
- },
- {
-  "id": 2,
-  "nombre": "oswar",
-  "apellido": "baez",
-  "correo": "oswar@gmail.com",
-  "contraseña": "$2a$10$FdWy3nKMoNM3TGb2klPWF.0b/q95Gu/ANfW1J6SKLnuWY.NKzkAYK",
-  "imagen": "imagen1645454745270.png"
- },
- {
-  "id": 3,
-  "nombre": "orlando",
-  "apellido": "baez",
-  "correo": "orlando@gmail.com",
-  "contraseña": "$2a$10$jSnn3JpKxouC291QEbnL9.j/p5cGS18KquBQOajTG0qM.gjUeVAVK",
-  "imagen": "imagen1645455489037.png"
- },
- {
-  "id": 4,
-  "nombre": "orlando",
-  "apellido": "corredor",
-  "correo": "admin@gmail.com",
-  "contraseña": "$2a$10$Uxu0egkD6Vm1PfouEFR8KeqkQiwttF9U7GHQctzFx2BHAuEpBnPEa",
-  "imagen": "imagen1645455898986.png"
- },
- {
-  "id": 5,
-  "nombre": "corredor",
-  "apellido": "corredor",
-  "correo": "corredor@gmail.com",
-  "contraseña": "$2a$10$/ECp5QI7xjmOD0hvDGqY0euC5bdID7WHVKbwbY0hspAjqlCIuUzYW",
-  "imagen": "imagen1645481524309.png"
- },
- {
-  "id": 6,
-  "nombre": "orlando",
-  "apellido": "baez",
-  "correo": "rocko@gmail.com",
-  "contraseña": "$2a$10$hFOL/g6SteoS5HYCcEZRW.0UZptVSEGw2fuBKVS9YPh4WjHhf2vw.",
-  "repiteContraseña": "0000",
-  "imagen": "imagen1645549929185.png"
- },
- {
-  "id": 7,
   "nombre": "Oswar",
   "apellido": "Baez",
-  "correo": "oswar.baez26@gmail.com",
-  "contraseña": "$2a$10$cVSeLQJmGcf3hJOlVXNK1edEPVw3VHl0RF40p3oHJphOJRxwJbXeC",
-  "repiteContraseña": "0000",
-  "imagen": "imagen1645582177399.png"
- },
- {
-  "id": 8,
-  "nombre": "rocko",
-  "apellido": "baez",
-  "correo": "rockoloco@gmail.com",
-  "contraseña": "$2a$10$nL15C8OLr9vg4moYI5kk.u9F3saNtorWgWANpui4yh9eMHxSkF./G",
-  "imagen": "imagen1645582363547.png"
+  "correo": "oswar@gmail.com",
+  "contraseña": "$2a$10$npI2AuveykOqT0I4WIwFLO7rmtYLcwYFb9VtPN5DZHejjJ65wKt1q",
+  "imagen": "imagen1645885848674.png"
  }
 ]

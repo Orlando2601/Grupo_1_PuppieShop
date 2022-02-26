@@ -7,14 +7,10 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const userFilePath = path.join(__dirname, '../data/user.json');
 const usuarios = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
    
-const login = async (req,res)=>{
-        try {
-           
-                return res.render('users/login')
-        } catch (error) {
-            res.send("Error")
-        }
-    }  
+const login =(req,res)=>{      
+            return res.render('users/login')
+    
+}  
     
 const logged = (req, res)=>{
             const userFilePath = path.join(__dirname, '../data/user.json');
@@ -25,56 +21,39 @@ const logged = (req, res)=>{
             let validacionPassword;
             !user ? res.render('users/login',{errors:{correo:{msg:'No se encontro el correo'}}}) : validacionPassword =  bcryptjs.compareSync(req.body.contraseña, user.contraseña);
             !validacionPassword ? res.render('users/login',{errors:{contraseña:{msg:"Tu contrasena no coincide"}}}): delete user.contraseña; req.session.usuarioLogueado = user;               
+            req.body.recordame ? res.cookie('correo', req.body.correo,{maxAge:30000}): res.redirect('/user/adminPerfil');
             return res.redirect('/user/adminPerfil');
-
-}
-
-  
+}//Guardar usurio en Json, y agregarlo a las cookies
 
 const registro = (req,res)=>{
-        res.render('users/registro')
+        res.render('users/registro') 
     }
 
 const users = (req, res)=>{
-        const errors = validationResult(req)
-        const errores = errors.mapped();
-        console.log("Mensaje body")
-        console.log(req.body.correo)
-        console.log("Mensaje body")
-
+    const errores = validationResult(req);
+    let user
+   
+    (errores.errors.length > 0) ? res.render('users/registro',{errors:errores.mapped(),old:req.body}) : user =  usuarios.find(ele => ele.correo == req.body.correo);
+    user ? res.render('users/registro',{errors:{correo:{msg:"este correo ya se encuentra registrado"}},old:req.body}): user = false;
+    if(user === false && req.file && errores.errors.length === 0){
         let newReference = usuarios.length
-        if(errors.isEmpty()){
-            let userInDB = usuarios.find(user => user.correo == req.body.correo);
-            
-            if(userInDB === undefined && req.file){
-                
-                let nuevoUser = {
-                    id: newReference + 1,
-                    ...req.body,
-                    contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
-                    repiteContraseña: undefined,
-                    imagen:req.file.filename
-                }
-                usuarios.push(nuevoUser)
-                fs.writeFileSync(userFilePath, JSON.stringify(usuarios, null, ' '))
-                res.redirect('/user/login') 
-            }else{
-                res.render('users/registro')
-                console.log('Usuario registrado')
-            }
-        }else{ 
-            console.log(errores)
-            res.render('users/registro',{
-            
-                errors: errores,
-                old: req.body
-            })
+        
+        let nuevoUser = {
+            id: newReference + 1,
+            ...req.body,
+            contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
+            imagen:req.file.filename
         }
+        delete nuevoUser.repiteContraseña;
+        usuarios.push(nuevoUser)
+        fs.writeFileSync(userFilePath, JSON.stringify(usuarios, null, ' '))
+        res.redirect('/user/login') 
+    }
 }
 
   const adminPefil = (req, res)=>{  
         console.log("estas en perfil")
-        console.log(req.session)
+        console.log(req.cookies.correo)
 
         return     res.render('users/adminPerfil',{
             user: req.session.usuarioLogueado,
@@ -83,7 +62,7 @@ const users = (req, res)=>{
   }
     
   const cerrarSesion = (req,res)=>{   
-        
+        res.clearCookie('correo')
         req.session.destroy();
         delete res.locals
         

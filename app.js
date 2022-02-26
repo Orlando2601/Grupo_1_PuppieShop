@@ -11,7 +11,7 @@ const { cookie } = require('express/lib/response');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 const userLoggedMiddelware = require('./src/middleware/userLoggedMiddleware')
-
+//const recordarmiddleware = require('./src/middleware/recordarmiddleware')
 
 
 
@@ -24,6 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+//app.use(recordarmiddleware)
 app.use(userLoggedMiddelware)
 /* CONFIGURACION CARPETA DE VISTAS Y PARCHIVOS PUBLICOS */
 app.set('views', path.resolve(__dirname, './src/views'))
