@@ -13,20 +13,20 @@ const crearProducto = (req,res)=>{
     }
 
 const tienda = (req,res)=>{
-      
+        let nuevoTamano;
+        (productos.length === 0 )? nuevoTamano = 1 : nuevoTamano = productos[productos.length-1].id+1
         let imagen =  req.file? req.file.filename:'defaul.png';
         let nuevoproducto = {
-        id: productos[productos.length-1].id+1,
+        id: nuevoTamano,
         ...req.body,
-        referencia: "REF00"+(productos[productos.length-1].id+1),
+        referencia: "REF00" + nuevoTamano,
         imagen:imagen
-        
       };
       productos.push(nuevoproducto);
       fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '));
 
-      res.redirect('/');
-      console.log(req.session)
+      res.render('users/adminPerfil',{lista:productos, user: req.session.usuarioLogueado});
+      
     }
 
 const editarProducto = (req,res)=>{

@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "id": 1,
+  "mascota": "Canino",
+  "razas": "mediana",
+  "categoria": "alimentos",
+  "nombre": "Pollo y carne",
+  "tamaño": "3.5 kg",
+  "cantidad": "10",
+  "precio": "65000",
+  "referencia": "REF001",
+  "imagen": "1645890154645-Adultos-medianos-y-grandes-pollo-y-carne.png"
+ },
+ {
+  "id": 2,
+  "mascota": "Canino",
+  "razas": "pequeña",
+  "categoria": "alimentos",
+  "nombre": "Pollo y carne",
+  "tamaño": "3.5 kg",
+  "cantidad": "20",
+  "precio": "65000",
+  "referencia": "REF002",
+  "imagen": "1645891045056--Adultos-Minis-y-Pequeños-pollo-y-carne.png"
+ },
+ {
+  "id": 3,
+  "razas": "pequeña",
+  "categoria": "alimentos",
+  "nombre": "Pollo y salmon",
+  "tamaño": "3.5 kg",
+  "cantidad": "20",
+  "precio": "75000",
+  "referencia": "REF003",
+  "imagen": "1645891132960-adultos-minis-y-pequeños-pollo-y-salmon.png"
+ },
+ {
+  "id": 4,
+  "categoria": "accesorios",
+  "nombre": "Pollo y cordero",
+  "tamaño": "3.5",
+  "cantidad": "20",
+  "precio": "75000",
+  "referencia": "REF004",
+  "imagen": "1645891256647-Purina_ONE_Ar-Adultos-Minis-y-Pequeños-Pollo-y-cordero.png"
+ },
+ {
+  "id": 5,
+  "categoria": "accesorios",
+  "nombre": "Delicate Structure",
+  "tamaño": "3.5",
+  "cantidad": "20",
+  "precio": "125000",
+  "referencia": "REF005",
+  "imagen": "1645891348976-787-139 SL FLAGSHIP - PROPLAN REVAMP - MOCKUPS png_PNG EN BAJA RESOLUCION_MKP 787-139 PP FLAGSHIP PERROS DELICATE STRUCTURE.png"
+ },
+ {
+  "id": 6,
+  "categoria": "accesorios",
+  "nombre": "Delicate Structure",
+  "tamaño": "3.5",
+  "cantidad": "20",
+  "precio": "125000",
+  "referencia": "REF006",
+  "imagen": "1645891360135-787-139 SL FLAGSHIP - PROPLAN REVAMP - MOCKUPS png_PNG EN BAJA RESOLUCION_MKP 787-139 PP FLAGSHIP PERROS DELICATE STRUCTURE.png"
+ },
+ {
+  "id": 7,
+  "categoria": "accesorios",
+  "nombre": "optyhealth",
+  "tamaño": "3.5",
+  "cantidad": "20",
+  "precio": "135000",
+  "referencia": "REF007",
+  "imagen": "1645891523665-purina-pro-plan-flagship-perros-adult-razas-grandes.png"
+ }
+]

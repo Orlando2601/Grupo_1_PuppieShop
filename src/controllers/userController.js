@@ -21,7 +21,7 @@ const logged = (req, res)=>{
             let validacionPassword;
             !user ? res.render('users/login',{errors:{correo:{msg:'No se encontro el correo'}}}) : validacionPassword =  bcryptjs.compareSync(req.body.contraseña, user.contraseña);
             !validacionPassword ? res.render('users/login',{errors:{contraseña:{msg:"Tu contrasena no coincide"}}}): delete user.contraseña; req.session.usuarioLogueado = user;               
-            req.body.recordame ? res.cookie('correo', req.body.correo,{maxAge:30000}): res.redirect('/user/adminPerfil');
+            req.body.recordame ? res.cookie('correo', req.body.correo,{maxAge:60000*60*12}): res.redirect('/user/adminPerfil');
             return res.redirect('/user/adminPerfil');
 }//Guardar usurio en Json, y agregarlo a las cookies
 

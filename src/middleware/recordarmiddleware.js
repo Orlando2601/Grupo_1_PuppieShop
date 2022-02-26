@@ -4,7 +4,13 @@ const userFilePath = path.join(__dirname, '../data/user.json');
 const usuarios = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 function recordarmiddleware(req,res,next){
-    console.log(res.locals.recordame)
+    
+    if(req.cookies.correo!=undefined){
+        
+        let usercookie = usuarios.find(user => user.correo == req.cookies.correo);
+        usercookie ? res.redirect('/user/adminPerfil'):next(); 
+    }else{
+    next();}
 
 }
 
