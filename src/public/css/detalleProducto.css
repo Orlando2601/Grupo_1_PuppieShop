@@ -1,11 +1,17 @@
+
+
 .detalleProducto{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 5px;
 }
 
 .detalleProducto .imagenDetalle{
-    width:50%
+    width:30%;
+    display: flex;
+    align-items: center;
+    
 }
 .detalleProducto .imagenDetalle img{
     width: 100%;
@@ -14,28 +20,36 @@
 .detalleProducto .descripcionDetalle {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     border-left: 1px solid #7ca04f;
-    padding-left: 10px;
+    width: 50%;
     
 }
 .detalleProducto .descripcionDetalle .formCompra{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 25px;
+    gap: 10px;
+    background-color:var(--verdeOpaco);
+    
+    border-radius:10px;
+    padding: 10px;
+    
+    
     
 }
 .detalleProducto .descripcionDetalle .formCompra label, h2{
 font-family: var(--fuente);
-font-size: var(--font-size-XL);
+font-size: var(--font-size-XXL);
+font-weight: 100;
     
 }
 .detalleProducto .descripcionDetalle .formCompra label, h3{
     font-family: var(--fuente);
-    font-size: var(--font-size-M);
+    font-size: var(--font-size-L);
+    font-weight: 100;
         
     }
 .detalleProducto .descripcionDetalle .formCompra .listas{
@@ -51,26 +65,23 @@ font-size: var(--font-size-XL);
 }
 
 .detalleProducto .descripcionDetalle .formCompra input{
-    
-    background-color: #7ca04f;
+       
     padding: 3px;
     font-family: var(--fuente);
     font-size: var(--font-size-XL);
-}
-.detalleProducto .descripcionDetalle .formCompra .edit{
+    background-color: var(--verde);
+    color:aliceblue ;
+    border-radius: 10px;
+    transition-property: background-color color;
+    transition-duration: 500ms;
     
-    background-color: orange;
-    padding: 3px;
-    font-family: var(--fuente);
-    font-size: var(--font-size-XL);
 }
-.detalleProducto .descripcionDetalle .formCompra .delete{
-    
-    background-color: red;
-    padding: 3px;
-    font-family: var(--fuente);
-    font-size: var(--font-size-XL);
+.detalleProducto .descripcionDetalle .formCompra input:hover{
+ 
+    color: var(--verde);
+    background-color:aliceblue;
 }
+
 .botones {
     display: flex;
     flex-direction: column;

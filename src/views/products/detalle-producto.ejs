@@ -4,16 +4,16 @@
     <body>
         <%- include ('../partials/header') %>
         
-        <main class="detalleProducto">
+        <main id="main"  class="detalleProducto">
             <section class="imagenDetalle">
                 <img src="/images/productsDB/<%= lista.imagen %>" alt="">
             </section>
             <section class="descripcionDetalle">
                 <form class="formCompra" action="#">
                     <h2><%= lista.mascota %></h2>
-                    <h3><%= lista.nombre %></h3>
-                    <h3><%= lista.razas %></h3>
-                    <label for="precio">$<%= lista.precio %></label>
+                    <h3>Descripcion: <%= lista.nombre %></h3>
+                    <h3>Tamaño mascotas: <%= lista.razas %></h3>
+                    <label for="precio">Precio: $<%= lista.precio %></label>
                     <input type="hidden" name="precio" value="<%= lista.precio %>">
 
                     <div class="listas">

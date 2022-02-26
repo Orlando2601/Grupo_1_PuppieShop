@@ -4,7 +4,7 @@
 <body>
     <%- include ('../partials/header') %>
     
-    <main class="mainListaProductos">
+    <main id="main"  class="mainListaProductos">
         <% productos.forEach(item=>{ %>
             <article>
                 <img src="/images/productsDB/<%= item.imagen %>" alt="">
