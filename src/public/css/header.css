@@ -1,10 +1,19 @@
+
 header{
-    background-color: #04471b60 ;
+    background-color: #b4c2a4 ;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     padding: 15px;
+    position: fixed;
+    left:0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+ 
+    
     
 } /* estilos header */
 

@@ -3,16 +3,17 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center; 
+    padding: 10vw;
 }
 .mainListaProductos article{
-    width: 25%;
-    height: 25%;
+
     position: relative;
     overflow:hidden;
+    padding: 15PX;
     
 }
 .mainListaProductos article:hover img{
-    opacity: 12%;
+    opacity: 35%;
     
 }
 .mainListaProductos article img{
@@ -28,19 +29,23 @@
     
     
     
+    
 }
 
-.mainListaProductos article .vermas{
+.mainListaProductos article .vermas {
     opacity: 0%;
     width: 30px;
     height: 30px;
     top: 0px;
+    left: 0px;
     position: absolute;
     transition-property: opacity;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 1px solid green;
+    
 
 }
 
@@ -48,21 +53,95 @@
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     
 }
+.mainListaProductos article .vermas .descripcionMas{
+  display: flex;
+  align-items:center ;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--verde);
+  width: auto;
+  padding: 10px;
+
+}
 
 
 .mainListaProductos article .vermas p{
     font-family: var(--fuente);
     font-size: var(--font-size-XL);
-    color: black;
-    font-weight: bold;
+    color:aliceblue;
+    font-weight: 200;
 }
 
 
-.mainListaProductos article .vermas a{
+.mainListaProductos article .vermas button a{
     font-family: var(--fuente);
     font-size: var(--font-size-XL);
     color: black;
-    font-weight: bold;
+    font-weight: 100;
+    text-decoration: none;
+    padding: 5px;
+
+    
+
+}
+.mainListaProductos article .vermas button{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    transition-property: background-color;
+    transition-duration: 300ms;
+    border-radius: 10px;
+   
+   
+   }
+.mainListaProductos article .vermas button:hover{
+ background-color: var(--verde);
+ border-radius: 10px;
+ 
+
+
+}
+.mainListaProductos article .vermas button:hover a{
+color:aliceblue
+    
 
 }
 
+
+@media (max-width: 480px) {
+
+    .mainListaProductos article{
+        width: 100%;
+        height: 100%;
+    }
+
+
+}
+@media (min-width: 481px)  and (max-width:600px) {
+
+    .mainListaProductos article{
+        width: 50%;
+        height: 50%;
+    }
+
+
+}
+@media (min-width: 601px)  and (max-width:900px) {
+
+    .mainListaProductos article{
+        width: 33%;
+        height: 33%;
+    }
+
+
+}
+@media (min-width: 901px) {
+
+    .mainListaProductos article{
+        width: 25%;
+        height:25%;
+    }
+
+
+}
