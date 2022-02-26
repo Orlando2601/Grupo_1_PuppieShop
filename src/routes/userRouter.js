@@ -7,7 +7,7 @@ const {body, check} = require('express-validator')
 const multer = require('multer')
 const notLogMiddleware =require('../middleware/notLogMiddleware')
 const guestMiddleware = require('../middleware/guestMiddleware'); 
-const recordarmiddleware = require('../middleware/recordarmiddleware')
+//const recordarmiddleware = require('../middleware/recordarmiddleware')
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* VALIDACIONES DE CAMPOS //////////////////////////////////////////////////////////////////*/
@@ -58,7 +58,7 @@ let multerImageMidlewareUser = fileUploadUser.single('imagen')
 
 
 /* ADMINISTRACION DE RUTAS */
-router.get('/login',guestMiddleware,recordarmiddleware, userController.login)
+router.get('/login',guestMiddleware, userController.login)
 router.post('/login',validacionesLog, userController.logged)
 router.get('/registro',guestMiddleware, validaciones, userController.registro)
 router.post('/registro',multerImageMidlewareUser, validaciones, userController.users)
