@@ -59,7 +59,7 @@
   flex-direction: column;
   justify-content: center;
   border-radius: 10px;
-  background-color: #04471b60;
+  background-color: var(--verde);
   width: auto;
   padding: 10px;
 
@@ -69,7 +69,7 @@
 .mainListaProductos article .vermas p{
     font-family: var(--fuente);
     font-size: var(--font-size-XL);
-    color: black;
+    color:aliceblue;
     font-weight: 200;
 }
 
@@ -91,14 +91,20 @@
     align-items: center;
     transition-property: background-color;
     transition-duration: 300ms;
-    border-radius: 5px;
+    border-radius: 10px;
    
    
    }
 .mainListaProductos article .vermas button:hover{
- background-color: #04471b60;
- border-radius: 3px;
+ background-color: var(--verde);
+ border-radius: 10px;
+ 
 
+
+}
+.mainListaProductos article .vermas button:hover a{
+color:aliceblue
+    
 
 }
 
@@ -130,4 +136,12 @@
 
 
 }
+@media (min-width: 901px) {
 
+    .mainListaProductos article{
+        width: 25%;
+        height:25%;
+    }
+
+
+}

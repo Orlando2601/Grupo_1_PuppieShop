@@ -10,7 +10,7 @@
         <div class="infoUser">
             <h1>Hola!!! <%= user.nombre %></h1>
         </div>
-        <button> <a href="/crear-producto">Crear Nuevo Producto</a> </button> <!-- button de cerrar sesion -->
+        <button id="crearProducto"> <a href="/crear-producto">Crear Nuevo Producto</a> </button> <!-- button de cerrar sesion -->
         <div class="articulo">
             <% lista.forEach(item => { %> <!-- codigo js para rcorrer el objeto enviado en el controlador -->
             <article>
@@ -22,12 +22,12 @@
                <div class="vermas">
                    <p class="titulo"><%= item.nombre %></p>
                    <p class="precio">COP$<%= item.precio %></p>
-                   <div class="botones">
+                   <div id="botones">
                     <form class="formCompra"  action="/editar-producto/<%=item.referencia %>">
-                        <input class="edit" type="submit"  value="Editar Producto">
+                        <input id="edit" type="submit"  value="Editar Producto">
                     </form> <!-- control de button para editar producto-->
                     <form class="formCompra" action="/borrar-producto/<%= item.id %>?_method=delete" method="POST">
-                        <input  class="delete" type="submit"  value="Borrar Producto">
+                        <input  id="delete" type="submit"  value="Borrar Producto">
                     </form><!-- control de button para eliminar producto -->
                 </div>
                </div><!-- Caja desplegable de cada articulo, par aver descripcion rapida -->
@@ -36,8 +36,8 @@
             <% }); %><!-- cierre codigo js anterior -->
         </div>
         <form action="/user/cerrarSesion" method="POST">
-        <input type="submit" value="Cerrar sesion"> <!-- button de cerrar sesion -->
-    </form>
+            <input id="cerrarSesion" type="submit" value="Cerrar sesion"> <!-- button de cerrar sesion -->
+        </form>
     </main>
     <%- include ('../partials/footer') %>
 </body>
