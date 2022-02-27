@@ -1,5 +1,4 @@
 @import url(/css/parametrizacion.css);
-@import url(/css/txt.css);
 @import url(/css/responsive.css);
 @import url(/css/animaciones.css);
 @import url(/css/footer.css);
@@ -10,6 +9,7 @@
 @import url(/css/detalleProducto.css);
 @import url(/css/crearProducto.css);
 @import url(/css/listaProductos.css);
+@import url(/css/error.css);
 
 
 

@@ -37,7 +37,7 @@ font-family: var(--fuente);
 font-size: var(--font-size-L);
 border-radius: 10px;
 
-transition: background-color color;
+transition: background-color, color;
 transition-duration: 300ms;
 }
 
@@ -52,7 +52,7 @@ transition-duration: 300ms;
     background-color: rgb(223, 42, 42);
     padding:10px;
     border-radius: 5px;
-    transition: background-color color;
+    transition: background-color, color;
     transition-duration: 300ms;
     font-family: var(--fuente);
     font-size: var(--font-size-L);
