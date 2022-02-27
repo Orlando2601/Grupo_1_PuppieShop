@@ -61,3 +61,8 @@ margin-top: 20px;
     padding: 10px;
     margin-top: 5px;
 }
+#showError{
+    font-family: var(--fuente);
+    font-size: var(--font-size-S);
+    color: red;
+}

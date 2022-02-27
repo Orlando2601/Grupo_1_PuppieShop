@@ -14,21 +14,21 @@
                     <input type="text" name="nombre" id="nombre"  value="<%= locals.old && old.nombre ? old.nombre : '' %>">
                     
                         <% if(locals.errors && errors.nombre){ %>                   
-                                <p class="showError"><%= errors.nombre.msg%></p>             
+                                <p id="showError"><%= errors.nombre.msg%></p>             
                         <% }%>
         
                     <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
                     <label for="apellido">Ingrese apellido</label>
                     <input type="text" name="apellido" id="apellido" value="<%= locals.old && old.apellido ? old.apellido : '' %>">
                     <% if(locals.errors && errors.apellido){ %>                   
-                        <p class="showError"><%= errors.apellido.msg%></p>             
+                        <p id="showError"><%= errors.apellido.msg%></p>             
                     <% }%>
             
                     <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
                     <label for="correo">Ingrese Correo electrónico</label>
                     <input type="email" name="correo" id="correo" value="<%= locals.old && old.correo ? old.correo : ' ' %>">
                     <% if(locals.errors && errors.correo){ %>                   
-                        <p class="showError"><%= errors.correo.msg%></p>             
+                        <p id="showError"><%= errors.correo.msg%></p>             
                     <% }%>
         
             
@@ -36,12 +36,12 @@
                     <label for="contraseña">Ingrese Contraseña</label>
                     <input type="password" name="contraseña" id="contraseña" minlength="8" maxlength="12">
                     <% if(locals.errors && errors.contraseña){ %>                   
-                        <p class="showError"><%= errors.contraseña.msg%></p>             
+                        <p id="showError"><%= errors.contraseña.msg%></p>             
                     <% }%>
                     <label for="repiteContraseña">Repite la contraseña</label>
                     <input type="password" name="repiteContraseña" id="contraseña" minlength="8" maxlength="12">
                     <% if(locals.errors && errors.repiteContraseña){ %>                   
-                        <p class="showError"><%= errors.repiteContraseña.msg%></p>             
+                        <p id="showError"><%= errors.repiteContraseña.msg%></p>             
                     <% }%>
                     <label for="imagen">Imagen de usuario</label>
                     <input type="file" id="imagenUser" name="imagen" placeholder="Ingrese imagen de usuario" >
