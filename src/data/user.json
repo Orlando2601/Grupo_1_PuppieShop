@@ -6,5 +6,13 @@
   "correo": "oswar@gmail.com",
   "contraseña": "$2a$10$npI2AuveykOqT0I4WIwFLO7rmtYLcwYFb9VtPN5DZHejjJ65wKt1q",
   "imagen": "imagen1645885848674.png"
+ },
+ {
+  "id": 2,
+  "nombre": "Rafael ",
+  "apellido": "estrada",
+  "correo": "prueba@hotmail.com",
+  "contraseña": "$2a$10$8lvdiYc4Jb/mrUBzUsfhNuiefvDcOx9pkYV0Amz55.EFM/VdkC46u",
+  "imagen": "imagen1645918117518.png"
  }
 ]

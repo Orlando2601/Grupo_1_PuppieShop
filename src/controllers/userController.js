@@ -23,7 +23,7 @@ const logged = (req, res)=>{
             !validacionPassword ? res.render('users/login',{errors:{contraseña:{msg:"Tu contrasena no coincide"}}}): delete user.contraseña; req.session.usuarioLogueado = user;               
             req.body.recordame ? res.cookie('correo', req.body.correo,{maxAge:60000*60*12}): res.redirect('/user/adminPerfil');
             return res.redirect('/user/adminPerfil');
-}//Guardar usurio en Json, y agregarlo a las cookies
+}//Guardar usuario en Json, y agregarlo a las cookies
 
 const registro = (req,res)=>{
         res.render('users/registro') 
