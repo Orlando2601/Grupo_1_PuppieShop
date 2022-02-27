@@ -6,10 +6,14 @@ const mainController = require('../controllers/mainController');
 const multer =require('multer')
 const notLogMiddleware =require('../middleware/notLogMiddleware')
 /* MIDDLEWARE//////////////////////////////////////////////////////////////////////////////////////////// */
-//let recordarmiddleware=require('../middleware/recordarmiddleware');
+let productosvalidation=require('../validation/productosvalidation');
+let validationMiddleware=require('../middleware/validationMiddleware')
 
 /* ADMINISTRACION DE RUTAS */
 //***MULTER**//
+
+const app = express();
+app.set('view engine', 'ejs');
 
 let storage = multer.diskStorage({
     destination: (req,file ,cb)=>cb(null,'src/public/images/productsDB'),
@@ -18,8 +22,9 @@ let storage = multer.diskStorage({
 
 });
 var upload=multer({storage});
+const { validationResult } = require('express-validator')
 
-router.post('/',upload.single('imagen'),mainController.tienda)
+router.post('/',upload.single('imagen'),productosvalidation,validationMiddleware,mainController.tienda)
 router.get('/editar-producto',notLogMiddleware, mainController.editarProducto)
 router.get('/editar-producto/:referencia',notLogMiddleware, mainController.editarProducto)
 router.get('/crear-producto',notLogMiddleware, mainController.crearProducto)

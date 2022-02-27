@@ -13,43 +13,44 @@
             
             <div>
                 <label for="mascota">Perros</label>
-                <input type="radio" name="mascota" id="mascota" value="Canino">
+                <input type="radio" name="mascota" id="mascota" value="Canino" <% if((locals.old && old.mascota)=="Canino") { %> checked <% }%>>
                 <label for="mascota">Gatos</label>
-                <input type="radio" name="mascota" id="mascota" value="Felino">
+                <input type="radio" name="mascota" id="mascota" value="Felino" <% if((locals.old && old.mascota)=="Felino") { %> checked <% }%>>
             </div>
             <div>
                 <label for="razas">Pequeña</label>
-                <input type="radio" name="razas" id="razas" value="pequeña">
+                <input type="radio" name="razas" id="razas" value="pequeña" <% if((locals.old && old.razas)=="pequeña") { %> checked <% }%>>
                 <label for="mascota">Mediana</label>
-                <input type="radio" name="razas" id="razas" value="mediana">
+                <input type="radio" name="razas" id="razas" value="mediana" <% if((locals.old && old.razas)=="mediana") { %> checked <% }%>>
                 <label for="mascota">Grande</label>
-                <input type="radio" name="razas" id="razas" value="grande">
+                <input type="radio" name="razas" id="razas" value="grande" <% if((locals.old && old.razas)=="grande") { %> checked <% }%>>
             </div>
             <div>
                 <label for="categoria">Categoria</label>
                 <select name="categoria" id="categoria">
-                <option value="accesorios">Accesorios</option>
-                <option value="alimentos">Alimentos</option>
-                <option value="aseo">Aseo</option>
+                <option value="accesorios" <% if((locals.old && old.categoria)=="accesorios") { %> selected <% }%> >Accesorios</option>
+                <option value="alimentos" <% if((locals.old && old.categoria)=="alimentos") { %> selected <% }%> >Alimentos</option>
+                <option value="aseo" <% if((locals.old && old.categoria)=="aseo") { %> selected <% }%> >Aseo</option>
                 </select>
             </div>
             
             <div>
                 <label for="nombreProducto">Nombre Producto</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ingrese nombre de producto" >
+                <input type="text" name="nombre" id="nombre" placeholder="Ingrese nombre de producto" value="<%= locals.old && old.nombre ? old.nombre : '' %>">
+                
             </div>
             
             <div>
                 <label for="tamaño">Tamaño de producto</label>
-                <input type="text" name="tamaño" id="tamaño" placeholder="Ingrese tamaño del producto" >
+                <input type="text" name="tamaño" id="tamaño" placeholder="Ingrese tamaño del producto" value="<%= locals.old && old.tamaño ? old.tamaño : '' %>">
             </div>
             <div>
                 <label for="cantidad">Cantidad disponible</label>
-                <input type="number" name="cantidad" id="cantidad" placeholder="Ingrese cantidad disponible" >
+                <input type="number" name="cantidad" id="cantidad" placeholder="Ingrese cantidad disponible" value="<%= locals.old && old.cantidad ? old.cantidad : '' %>">
             </div>
             <div>
                 <label for="precio">Precio</label>
-                <input type="number" name="precio" id="precio" placeholder="Ingrese precio" >
+                <input type="number" name="precio" id="precio" placeholder="Ingrese precio" value="<%= locals.old && old.precio ? old.precio : '' %>">
             </div>
             <div>
                 <label for="imagen">Imagen de descripción</label>
@@ -59,8 +60,22 @@
             <button type="submit" class="buton">Guardar producto</button>
             
         </form>
+        
+
+ <!--                       alerta de errores               --> 
+        <%  if(typeof validacion != 'undefined') {   %>
+        <% validacion.forEach((val)=>{ %>
+        <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+              <div class="toast-body">
+              <h1><%= val.msg %></h1>
+          </div>
+          <% }); %>
+          <%}%>
+          
     </main>
     <%- include ('../partials/footer') %>
     
 </body>
 </html>
+
