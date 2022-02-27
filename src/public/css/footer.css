@@ -1,6 +1,6 @@
 
 #footer{
-    background-color: #04471b60;
+    background-color: #b4c2a4;
     width:100%;
     padding: 25px 0px;   
 }
@@ -9,7 +9,7 @@
 .Container_footer{
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1200px;
     margin: auto;
     margin-top:8px;
@@ -37,31 +37,6 @@ div .logo img{
     opacity: 0.8;
 }
 
-.box_footer h2{
-    margin-top: 21px;
-    max-width: 350px;
-    margin-bottom: 25px;
-    color:#343434;
-    font-weight:400;  
-    font-size:18px;
-    text-align: justify;
-}
-.box_footer a{
-  
-    margin-top:10px;
-    font-weight: 400;
-    font-size:11px;
-    text-decoration: none;
-    color:rgba(0, 0, 0, 0.507);
-  
-}
-.box_footer a:hover{
-    opacity: 0.8;
-}
-.box_footer a .fab{
-    font-size:20px;
-    margin-right:7px;
-}
 .box_copyright{
     max-width: 1200px;
     margin:auto;
@@ -79,84 +54,4 @@ div .logo img{
     background-color: white;
     font-weight: 700;
 }
-/*----------------> FIN FOOTER <----------------------------*/
-/*-----------------> MEDIAQUERIES <-------------------------*/
-@media (max-width:360px){
-    .logo{
-        float:none;
-        text-align: center;   
-    }
-
-    header nav{
-       display:flex;
-        line-height:25px;
-        padding:none;
-        text-align: center;
-        width:335px;
-        position: relative;
-        left:15px;
-        gap:7px;
-        margin:10px; 
-    }
-
-    header nav a{
-        color: rgba(0, 0, 0, 0.507);
-        text-decoration:none;
-        padding:0px;
-        line-height: normal;
-        display: inline-block;
-        list-style-type: none;
-/*         -webkit-transition:all 500 ease;
-        -o-transition: all 500ms ease; */
-        transition: all 500ms ease;;
-    }
-
-    .social{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items:baseline;
-    }
-    .social h2{
-        margin:none;
-        align-self: flex-start;
-    }
-    .social a{
-        align-self: flex-end;
-        display:flex;
-        align-self: flex-end;
-    }
-    div.box_footer.social{
-    
-        margin-top:-19px;
-        width:359px;
-        height:154px;
-    }
-    .social a.facebook{
-       
-        position: absolute;
-        bottom:-1021px;
-    }
-  
-    .social a.youtube{
-    
-      position: absolute;
-      bottom:-1021px;
-      left:117px;
-    }
-    .social a.twitter{
-     
-      position: absolute;
-      bottom:-1021px;
-      right:18px;
-    }
-    .social a.instagram{
-      
-      position: absolute;
-      bottom:-1021px;
-      left: 197px;
-    }
-}
-/*----------------> FIN MEDIAQUERIES<--------------------------*/
-
 

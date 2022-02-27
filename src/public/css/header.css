@@ -96,7 +96,7 @@ header .header-right .caja-enlace-header .imgUser a img{
     }
     header .header-right .caja-enlace-header a{
         font-family: var(--fuente);
-        font-size: var(var(--font-size-S));
+        font-size: var(--font-size-S);
     }
     .caja-logo img{
         width:100%;
@@ -133,7 +133,7 @@ header .header-right .caja-enlace-header .imgUser a img{
     }
     header .header-right .caja-enlace-header a{
         font-family: var(--fuente);
-        font-size: var(var(--font-size-S));
+        font-size: var(--font-size-S);
     }
     .caja-logo img{
         width:100%;
@@ -165,7 +165,7 @@ header .header-right .caja-enlace-header .imgUser a img{
     } 
     header .header-right .caja-enlace-header a{
         font-family: var(--fuente);
-        font-size:var(var(--font-size-M));
+        font-size:var(--font-size-M);
     }
     .caja-logo img{
         width:100%;

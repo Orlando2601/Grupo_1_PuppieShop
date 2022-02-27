@@ -9,21 +9,21 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const home = (req,res)=>{
-        res.render('products/home')
+       return res.render('products/home')
     }
 
 const userhome = (req,res)=>{
-        res.render('users/homeuser')
+        return res.render('users/homeuser')
 
     }
 
 const comida = (req,res)=>{
-        res.render('products/listaProductos',{productos})
+       return res.render('products/listaProductos',{productos})
     }
 const detalle = (req,res)=>{
         let ref = req.params.referencia;
         let lista = productos.find(item => item.referencia == ref)
-        res.render('products/detalle-producto', {lista})
+        return res.render('products/detalle-producto', {lista})
     }
 
 

@@ -11,6 +11,7 @@ const { cookie } = require('express/lib/response');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 const userLoggedMiddelware = require('./src/middleware/userLoggedMiddleware')
+const error404 = require('./src/middleware/errorMiddleware')
 //const recordarmiddleware = require('./src/middleware/recordarmiddleware')
 
 
@@ -23,6 +24,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
+
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 //app.use(recordarmiddleware)
 app.use(userLoggedMiddelware)
@@ -39,6 +41,7 @@ app.listen(puerto, () => { console.log('Servidor corriendo en el puerto '  + pue
 app.use(productosRouter);
 app.use('/user', userRouter);
 app.use(mainRouter); 
+app.use(error404)
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 
 
