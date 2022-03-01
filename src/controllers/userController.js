@@ -35,19 +35,25 @@ const users = (req, res)=>{
    
     (errores.errors.length > 0) ? res.render('users/registro',{errors:errores.mapped(),old:req.body}) : user =  usuarios.find(ele => ele.correo == req.body.correo);
     user ? res.render('users/registro',{errors:{correo:{msg:"este correo ya se encuentra registrado"}},old:req.body}): user = false;
-    if(user === false && req.file && errores.errors.length === 0){
-        let newReference = usuarios.length
+    if(user === false && errores.errors.length === 0){
+
+        if(req.file ){
+            let newReference = usuarios.length
         
-        let nuevoUser = {
-            id: newReference + 1,
-            ...req.body,
-            contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
-            imagen:req.file.filename
+            let nuevoUser = {
+                id: newReference + 1,
+                ...req.body,
+                contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
+                imagen:req.file.filename
+            }
+            delete nuevoUser.repiteContraseña;
+            usuarios.push(nuevoUser)
+            fs.writeFileSync(userFilePath, JSON.stringify(usuarios, null, ' '))
+            res.redirect('/user/login') 
+        }else{
+            res.render('users/registro',{errors:errores.mapped(),old:req.body})
         }
-        delete nuevoUser.repiteContraseña;
-        usuarios.push(nuevoUser)
-        fs.writeFileSync(userFilePath, JSON.stringify(usuarios, null, ' '))
-        res.redirect('/user/login') 
+       
     }
 }
 

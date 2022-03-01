@@ -8,7 +8,7 @@ const productosRouter = require('./src/routes/productosRouter');/* requerimos ar
 const userRouter = require('./src/routes/userRouter');/* requerimos archivo de rutas */
 const session = require('express-session');/* requerimos archivo de session */
 const { cookie } = require('express/lib/response');
-const cookieParser = require('cookie-parser');
+const cookies = require('cookie-parser');
 const methodOverride = require('method-override');
 const userLoggedMiddelware = require('./src/middleware/userLoggedMiddleware')
 const error404 = require('./src/middleware/errorMiddleware')
@@ -18,7 +18,7 @@ const error404 = require('./src/middleware/errorMiddleware')
 
 /* ALMACENAR DATOS DE NAVEGACION/////////////////////////////////////////////////////////////////// */
 app.use(session({secret:'?',resave:false,saveUninitialized:false}));/* middleware que recorre cada vista */
-app.use(cookieParser());
+app.use(cookies());
 
 /* CONFIGURACION PARA EXTRAER INFORMACION DE LOS FORM///////////////////////////////////////////// */
 app.use(express.urlencoded({ extended: false }));
