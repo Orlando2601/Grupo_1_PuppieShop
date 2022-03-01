@@ -1,0 +1,45 @@
+.maincarrito{
+    margin-top: 200px;
+
+}
+
+.articlecarrito{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.picturecarrito img{
+    width: 100px;
+}
+
+.divcarrito{
+    gap: 6px;
+    align-self: center;
+}
+.preciocarrito{
+    align-self: center;
+}
+
+.vaciocarrito{
+    text-align: center;
+}
+.preciototal{
+display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width:500px){
+    
+    .articlecarrito{
+        display: flex;
+        justify-content:center;
+        padding-bottom: 10px;
+        gap:30px;
+    }
+    .preciototal{
+        display: flex;
+    justify-content: space-around;
+
+    }
+
+}

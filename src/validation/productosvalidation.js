@@ -9,10 +9,6 @@ const productosvalidation = [
     body('tamaño').notEmpty().withMessage('Debes ingresar un tamaño valido'),
     body('cantidad').notEmpty().withMessage('Debes ingresar una cantidad valida'),
     body('precio','Debes ingresar un precio valido').notEmpty().isNumeric().withMessage('Solo numeros'),
-
    ]
-   
-
-
 
   module.exports=productosvalidation;

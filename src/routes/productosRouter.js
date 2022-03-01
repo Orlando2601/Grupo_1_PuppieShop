@@ -14,6 +14,10 @@ router.get('/user/home', productosController.userhome)
 router.get('/comida', productosController.comida)
 router.get('/detalle/:referencia', productosController.detalle)
 
+router.get('/carrito', productosController.carritodecompra)
+router.post('/carrito/:referencia', productosController.listacarrito)
+router.delete('/borrar-carrito/:id', productosController.destroy)
+
 
 
 module.exports = router
