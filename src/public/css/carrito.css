@@ -1,12 +1,18 @@
+@import url(/css/parametrizacion.css);
 .maincarrito{
     margin-top: 200px;
-
+    border-style: solid ;
+    border-color:var(--verde-claro);
+    border-radius: 40px;
+    
+    
 }
 
 .articlecarrito{
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
+    align-self: center
 }
 .picturecarrito img{
     width: 100px;
@@ -19,16 +25,36 @@
 .preciocarrito{
     align-self: center;
 }
-
+.articlevaciocarrito{
+    margin: 10%;
+    align-self: center;
+}
 .vaciocarrito{
+
     text-align: center;
 }
+
 .preciototal{
 display: flex;
     justify-content: space-between;
 }
+.divcarrito p{
+    font-family: var(--fuente);
+    font-size: var(--font-size-M);
+}
+
+/* Responsive*/
 
 @media (min-width:500px){
+    .maincarrito{
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-right: 8%;
+        margin-left: 8%;
+    
+    }
     
     .articlecarrito{
         display: flex;
@@ -39,7 +65,25 @@ display: flex;
     .preciototal{
         display: flex;
     justify-content: space-around;
+    align-self: stretch;
 
     }
+    .articlevaciocarrito{
+        display: flex;
+        margin: 10%;
+        align-self: center;
+        
+    }
 
+}
+@media (min-width:800px){
+    .maincarrito{
+        margin-top: 175px;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .articlevaciocarrito{
+        align-self: baseline;
+        
+    }
 }

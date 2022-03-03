@@ -29,24 +29,42 @@ const detalle = (req,res)=>{
     }
     
 const carritodecompra=(req,res)=>{
+    let totalprecio=carrito.map(li=>li.total).reduce((acum,num)=>
+       parseInt(acum)+parseInt(num)
+   ,0)
 
-    res.render("products/carrito",{carrito})
+    res.render("products/carrito",{carrito,totalprecio})
 
     }
+
 const listacarrito=(req,res)=>{
     let ref = req.params.referencia;
     let lista = productos.find(item => item.referencia == ref)
     let indice = carrito.findIndex(el=>el.id==lista.id)
     let lleva=req.body.cantidad2;
+    if(indice!=-1){
+    if(parseInt(carrito[indice].lleva)+parseInt(lleva)>lista.cantidad){return res.redirect('/carrito')}}
+    let total=indice!=-1?parseInt(carrito[indice].lleva)*parseInt(lista.precio):lista.precio
     let nuevo={
         ...lista,
-        lleva:lleva
+        lleva:lleva,
+        total:total
     }
     let up={}
+
     
-   indice!=-1?carrito[indice] = up={...lista,lleva:parseInt(lleva)+parseInt(carrito[indice].lleva)}:carrito.push(nuevo)
+   indice!=-1?carrito[indice] = up={...lista,lleva:parseInt(lleva)+parseInt(carrito[indice].lleva),total:
+    parseInt(nuevo.precio)*(parseInt(lleva)+parseInt(carrito[indice].lleva))}:carrito.push(nuevo);
+
+
+    let totalprecio=carrito.map(li=>li.total).reduce((acum,num)=>
+    parseInt(acum)+parseInt(num)
+    ,0)
+
+
     fs.writeFileSync(carritoFilePath, JSON.stringify(carrito, null, ' '))
-    res.render("products/carrito",{carrito,lleva})
+    res.render("products/carrito",{carrito,totalprecio})
+
 
 }
 const destroy=(req,res)=>{

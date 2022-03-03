@@ -13,6 +13,7 @@
             <div class="divcarrito">
                 <h3>Descripcion:<%= carrito.nombre%></h3>
                 <p>Disponible:<%= carrito.cantidad%></p>
+                <p>Cantidad:<%= carrito.lleva%></p>
                     <form class="formCompra" action="/borrar-carrito/<%=i++ %>?_method=delete" method="POST">  
                       <input  id="delete" type="submit"  value="Borrar Producto">
                       
@@ -26,18 +27,16 @@
                    
         </article>
         <%}})%>
-        <% carrito.reduce((acum,num)=>{ %>
         <article class="preciototal">
-            <button>Comprar</button>
+            <button id="delete">Comprar</button>
             <div>
-                <h2>Precio total:<%= (acum.precio*acum.lleva)+(num.precio*num.lleva) %></h2>
+                <h2>Precio total:<%= totalprecio %></h2>
             </div>
-             <% })%>
              
  
         </article>
            <%} else{%>
-            <article>
+            <article class="articlevaciocarrito">
                 <div class="vaciocarrito">
                     <h2>Tu carrito está vacío</h2>
                     <h3>¿No sabes qué comprar? <a href="/comida">mire las opciones</a></h3>

@@ -10,7 +10,8 @@
   "precio": "65000",
   "referencia": "REF002",
   "imagen": "1645891045056--Adultos-Minis-y-Pequeños-pollo-y-carne.png",
-  "lleva": 7
+  "lleva": 3,
+  "total": 195000
  },
  {
   "id": 5,
@@ -23,6 +24,7 @@
   "precio": "125000",
   "tamaño": "3.5",
   "imagen": "1645891348976-787-139 SL FLAGSHIP - PROPLAN REVAMP - MOCKUPS png_PNG EN BAJA RESOLUCION_MKP 787-139 PP FLAGSHIP PERROS DELICATE STRUCTURE.png",
-  "lleva": 2
+  "lleva": "1",
+  "total": "125000"
  }
 ]
