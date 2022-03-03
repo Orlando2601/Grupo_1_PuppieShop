@@ -8,7 +8,7 @@
         <%let i=0; carrito.forEach(carrito=>{%>
         <article class="articlecarrito">
             <picture class="picturecarrito">
-                <img src="/images/productsDB/<%=carrito.imagen%>" alt="">
+                <a href="/Editcarrito/<%=carrito.referencia%>"><img src="/images/productsDB/<%=carrito.imagen%>" alt=""></a>
             </picture>
             <div class="divcarrito">
                 <h3>Descripcion:<%= carrito.nombre%></h3>

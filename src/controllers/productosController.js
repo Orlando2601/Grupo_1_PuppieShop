@@ -52,21 +52,18 @@ const listacarrito=(req,res)=>{
     }
     let up={}
 
-    
    indice!=-1?carrito[indice] = up={...lista,lleva:parseInt(lleva)+parseInt(carrito[indice].lleva),total:
     parseInt(nuevo.precio)*(parseInt(lleva)+parseInt(carrito[indice].lleva))}:carrito.push(nuevo);
-
 
     let totalprecio=carrito.map(li=>li.total).reduce((acum,num)=>
     parseInt(acum)+parseInt(num)
     ,0)
 
-
     fs.writeFileSync(carritoFilePath, JSON.stringify(carrito, null, ' '))
     res.render("products/carrito",{carrito,totalprecio})
 
-
 }
+
 const destroy=(req,res)=>{
     indice=req.params.id;
     carrito.splice((indice),1)

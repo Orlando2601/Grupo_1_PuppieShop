@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %>
+</head>
+<body>
+    <%- include ('../partials/header') %>
+    <main>main id="main"  class="detalleProducto">
+        <section class="imagenDetalle">
+            <img src="/images/productsDB/<%= lista.imagen %>" alt="">
+        </section>
+        <section class="descripcionDetalle">
+            <form class="formCompra" action="/carrito/<%=lista.referencia%>" method="POST">>
+                <h2><%= lista.mascota %></h2>
+                <h3>Descripcion: <%= lista.nombre %></h3>
+                <h3>Tamaño mascotas: <%= lista.razas %></h3>
+                <label for="precio">Precio: $<%= lista.precio %></label>
+                <input type="hidden" name="precio" value="<%= lista.precio %>">
+                <div class="listas">
+                    <label for="cantidad2">Cantidad:</label>
+                    <select class="cantidad2" name="cantidad2" id="cantidad2" >
+                        <%for(let i=1;i<=lista.cantidad;i++){%>
+                        <option value="<%= i %>"><%= i %></option>
+                        <%}%>
+                   </select> 
+                </div>
+                </div>
+                   <input type="submit" name="comprar" value="Añadir Carrito">
+            </form>
+            <div class="botones">
+               
+            </div>
+            
+           
+        </section>
+        
+    </main>
+
+   
+
+    
+</body>
+</html>
