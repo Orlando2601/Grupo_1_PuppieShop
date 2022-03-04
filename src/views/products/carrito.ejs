@@ -7,9 +7,15 @@
         <%if (carrito.length!=0){%>
         <%let i=0; carrito.forEach(carrito=>{%>
         <article class="articlecarrito">
-            <picture class="picturecarrito">
-                <a href="/Editcarrito/<%=carrito.referencia%>"><img src="/images/productsDB/<%=carrito.imagen%>" alt=""></a>
-            </picture>
+
+            <div>
+                <picture class="picturecarrito">
+                    <a href="/Editcarrito/<%=carrito.referencia%>"><img src="/images/productsDB/<%=carrito.imagen%>" alt=""></a>
+                </picture>
+                <div class="botoneditar">
+                    <a href="/Editcarrito/<%=carrito.referencia%>"><button>Editar cantidad</button></a>
+                </div>
+            </div>
             <div class="divcarrito">
                 <h3>Descripcion:<%= carrito.nombre%></h3>
                 <p>Disponible:<%= carrito.cantidad%></p>
@@ -17,7 +23,8 @@
                     <form class="formCompra" action="/borrar-carrito/<%=i++ %>?_method=delete" method="POST">  
                       <input  id="delete" type="submit"  value="Borrar Producto">
                       
-                      </form><!-- control de button para eliminar producto -->
+                    </form>
+
               </div>
             </div>
         <% if(typeof carrito.lleva!="undefined"){%>
@@ -43,6 +50,8 @@
                 </div>
             </article>
             <%}%>
+            
+            
             
 
     </main>

@@ -10,21 +10,21 @@
   "precio": "65000",
   "referencia": "REF002",
   "imagen": "1645891045056--Adultos-Minis-y-Pequeños-pollo-y-carne.png",
-  "lleva": 3,
-  "total": 195000
+  "lleva": "11",
+  "total": 715000
  },
  {
-  "id": 5,
-  "referencia": "REF005",
+  "id": 1,
+  "referencia": "REF001",
   "mascota": "Canino",
-  "razas": "grande",
-  "categoria": "accesorios",
-  "nombre": "Delicate Structure",
-  "cantidad": "20",
-  "precio": "125000",
-  "tamaño": "3.5",
-  "imagen": "1645891348976-787-139 SL FLAGSHIP - PROPLAN REVAMP - MOCKUPS png_PNG EN BAJA RESOLUCION_MKP 787-139 PP FLAGSHIP PERROS DELICATE STRUCTURE.png",
-  "lleva": "1",
-  "total": "125000"
+  "razas": "mediana",
+  "categoria": "alimentos",
+  "nombre": "Pollo y carne",
+  "cantidad": "10",
+  "precio": "65000",
+  "tamaño": "3.5 kg",
+  "imagen": "1645890154645-Adultos-medianos-y-grandes-pollo-y-carne.png",
+  "lleva": "10",
+  "total": 650000
  }
 ]

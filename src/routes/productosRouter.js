@@ -18,7 +18,8 @@ router.get('/detalle/:referencia', productosController.detalle)
 
 router.get('/carrito',notLogMiddleware, productosController.carritodecompra)
 router.post('/carrito/:referencia',notLogMiddleware, productosController.listacarrito)
-router.get('/Editcarrito/:referencia',editarCarrito)
+router.get('/Editcarrito/:referencia',notLogMiddleware,productosController.editarCarrito)
+router.patch('/Editcarrito/:referencia',notLogMiddleware,productosController.actualizarCarrito)
 router.delete('/borrar-carrito/:id',notLogMiddleware, productosController.destroy)
 
 
