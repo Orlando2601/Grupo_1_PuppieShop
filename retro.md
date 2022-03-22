@@ -10,3 +10,8 @@
 # Conclusiones Sprint 4 JSON mas métodos HTTP
 ###  Se fortaleze mas la comunicacion y se reparte mejor la tareas sin sobrecargar a compañeros. Se realizo las bases de datos tanto de productos como de usuarios ademas de poder editarlos.
 
+# Conclusiones Sprint bases de datos
+###  Comunicacion ok, se crean las bases mysql y las relaciones
+
+
+
