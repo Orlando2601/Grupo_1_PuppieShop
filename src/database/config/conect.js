@@ -1,7 +1,7 @@
 // modulos
 const mysql = require('mysql2');
 const config = require('./config')
-const {crearTablaProductos} = require('./createTable')
+const {crearTablas} = require('./createTable')
 const {username, password, database, host, dialect} = {...config.development}
 
 //
@@ -18,7 +18,7 @@ const crearDB = ()=>{
   connection.connect(function(error){
     if(error){
        console.log(error);
-       return (crearTablaProductos())
+       return (crearTablas())
     }else{
        console.log('Conexion correcta.');
     }
@@ -26,7 +26,7 @@ const crearDB = ()=>{
       connection.query("CREATE DATABASE " + database, function (err, result) {
         if(!err){
           console.log('creada base')
-          return (crearTablaProductos())
+          return (crearTablas())
         }else{
           if(err.errno === 1007) {
             console.log("ya existe")
@@ -40,7 +40,7 @@ const crearDB = ()=>{
       
 
 }
- crearTablaProductos()
+ crearTablas()
 
 
 module.exports = {
