@@ -43,6 +43,7 @@ module.exports = (sequelize, dataTypes)=>{
             otherKey:"id_producto",
             timestamps: false
         })
+        
     } */
    
     return Carrito
