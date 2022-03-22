@@ -35,7 +35,7 @@ module.exports = (sequelize, dataTypes)=>{
     }
 
     const Carrito = sequelize.define(alias, cols, config);
-    Carrito.associate = function (models) {
+    /* Carrito.associate = function (models) {
         Carrito.belongsToMany(models.Productos, {
             as: "productos",
             through: "relacioncarrito",
@@ -43,7 +43,7 @@ module.exports = (sequelize, dataTypes)=>{
             otherKey:"id_producto",
             timestamps: false
         })
-    }
+    } */
    
     return Carrito
 }
