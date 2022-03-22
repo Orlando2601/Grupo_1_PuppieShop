@@ -1,3 +1,4 @@
+
 module.exports = (sequelize, dataTypes)=>{
     let alias = 'Carrito';
     let cols = {
@@ -33,7 +34,16 @@ module.exports = (sequelize, dataTypes)=>{
         deletedAt: false
     }
 
-    const Usuarios = sequelize.define(alias, cols, config);
-
-    return Usuarios
+    const Carrito = sequelize.define(alias, cols, config);
+    Carrito.associate = function (models) {
+        Carrito.belongsToMany(models.Productos, {
+            as: "productos",
+            through: "relacioncarrito",
+            foreignKey: "id_carrito",
+            otherKey:"id_producto",
+            timestamps: false
+        })
+    }
+   
+    return Carrito
 }
