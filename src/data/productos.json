@@ -70,17 +70,5 @@
   "precio": "135000",
   "tamaño": "3.5",
   "imagen": "1645891523665-purina-pro-plan-flagship-perros-adult-razas-grandes.png"
- },
- {
-  "id": 7,
-  "mascota": "Canino",
-  "razas": "mediana",
-  "categoria": "accesorios",
-  "nombre": "qqqaaa",
-  "tamaño": "qqq",
-  "cantidad": "12",
-  "precio": "3500",
-  "referencia": "REF007",
-  "imagen": "defaul.png"
  }
 ]
