@@ -12,10 +12,12 @@ const cookies = require('cookie-parser');
 const methodOverride = require('method-override');
 const userLoggedMiddelware = require('./src/middleware/userLoggedMiddleware')
 const error404 = require('./src/middleware/errorMiddleware')
+const {crearDB} = require('./src/database/config/conect');
+const Sequelize = require('sequelize')
 //const recordarmiddleware = require('./src/middleware/recordarmiddleware')
 
 
-
+crearDB()
 /* ALMACENAR DATOS DE NAVEGACION/////////////////////////////////////////////////////////////////// */
 app.use(session({secret:'?',resave:false,saveUninitialized:false}));/* middleware que recorre cada vista */
 app.use(cookies());
