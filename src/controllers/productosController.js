@@ -7,7 +7,8 @@ const productsFilePath = path.join(__dirname, '../data/productos.json');
 const carritoFilePath = path.join(__dirname, '../data/carrito.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const carrito = JSON.parse(fs.readFileSync(carritoFilePath, 'utf-8'));
-
+const db = require('../database/models');
+const Productos = db.Producto;
 
 
 
@@ -21,7 +22,16 @@ const userhome = (req,res)=>{
     }
 
 const comida = (req,res)=>{
-       return res.render('products/listaProductos',{productos})
+    /*     try {
+        const lista =await  db.Producto.findAll({
+            include: ['marca']
+        })
+       
+         return res.json(lista);// res.render('products/products',{lista}) 
+    } catch (error) {
+        console.log(error)
+    } */
+       res.render('products/listaProductos',{productos})
     }
 const detalle = (req,res)=>{
         let ref = req.params.referencia;
