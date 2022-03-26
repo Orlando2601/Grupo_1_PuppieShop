@@ -20,10 +20,10 @@ const userhome = (req,res)=>{
 const comida = async (req,res)=>{
          try {
         const producto =await  db.Producto.findAll({
-            include: [{association:'marca'}],
-            include:['mascota']
-        })
-       
+            include: ['marca','mascota']
+            
+         })
+            //res.json(producto)
          res.render('products/listaProductos',{producto}) 
     } catch (error) {
         console.log(error)
@@ -31,8 +31,8 @@ const comida = async (req,res)=>{
     
     }
 const detalle = async(req,res)=>{
-        const lista=await db.Producto.findByPk(req.params.id)
-        
+        const lista= await db.Producto.findByPk(req.params.id,{include:['marca']})
+        //res.json(lista)
         return res.render('products/detalle-producto', {lista})
     }
     
