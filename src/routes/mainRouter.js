@@ -26,11 +26,11 @@ const { validationResult } = require('express-validator')
 
 router.post('/',upload.single('imagen'),productosvalidation,validationMiddleware,mainController.tienda)
 router.get('/editar-producto',notLogMiddleware, mainController.editarProducto)
-router.get('/editar-producto/:referencia',notLogMiddleware, mainController.editarProducto)
+router.get('/editar-producto/:id',notLogMiddleware, mainController.editarProducto)
 router.get('/crear-producto',notLogMiddleware, mainController.crearProducto)
-router.patch('/editar-producto/:referencia',upload.single('imagen'), mainController.update);
+router.patch('/editar-producto/:id',upload.single('imagen'), mainController.update);
 
-router.delete('/borrar-producto/:referencia',notLogMiddleware, mainController.destroy)
+router.delete('/borrar-producto/:id',notLogMiddleware, mainController.destroy)
 
 
 

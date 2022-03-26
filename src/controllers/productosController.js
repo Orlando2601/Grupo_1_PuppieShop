@@ -3,12 +3,8 @@ const req = require('express/lib/request');
 const { render } = require('express/lib/response');
 const fs = require('fs');
 const path = require('path')
-const productsFilePath = path.join(__dirname, '../data/productos.json');
-const carritoFilePath = path.join(__dirname, '../data/carrito.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const carrito = JSON.parse(fs.readFileSync(carritoFilePath, 'utf-8'));
 const db = require('../database/models');
-const Productos = db.Producto;
+
 
 
 
@@ -21,21 +17,22 @@ const userhome = (req,res)=>{
 
     }
 
-const comida = (req,res)=>{
-    /*     try {
-        const lista =await  db.Producto.findAll({
-            include: ['marca']
+const comida = async (req,res)=>{
+         try {
+        const producto =await  db.Producto.findAll({
+            include: [{association:'marca'}],
+            include:['mascota']
         })
        
-         return res.json(lista);// res.render('products/products',{lista}) 
+         res.render('products/listaProductos',{producto}) 
     } catch (error) {
         console.log(error)
-    } */
-       res.render('products/listaProductos',{productos})
+    } 
+    
     }
-const detalle = (req,res)=>{
-        let ref = req.params.referencia;
-        let lista = productos.find(item => item.referencia == ref)
+const detalle = async(req,res)=>{
+        const lista=await db.Producto.findByPk(req.params.id)
+        
         return res.render('products/detalle-producto', {lista})
     }
     

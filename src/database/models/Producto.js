@@ -7,7 +7,11 @@ module.exports = (sequelize, dataTypes)=>{
             
             
         },
-        nombre:{
+        raza:{
+            type: dataTypes.STRING,
+            allowNull: false
+        },
+        categoria:{
             type: dataTypes.STRING,
             allowNull: false
         },
@@ -23,18 +27,9 @@ module.exports = (sequelize, dataTypes)=>{
             type:dataTypes.INTEGER,
             allowNull: false
         },
-        imagen: {
-            type: dataTypes.STRING,
-            allowNull: false
-        },
-        id_marca: {
-            type:dataTypes.INTEGER,
-            allowNull:false
-        },
-        id_mascota: {
-            type:dataTypes.INTEGER,
-            allowNull:false
-        }
+        imagen: dataTypes.STRING(500),
+        id_marca: dataTypes.BIGINT(10),
+        id_mascota: dataTypes.BIGINT(10),
 
 
     };

@@ -1,85 +1,111 @@
 const { json } = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/productos.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models');
 
 
 
 
-const crearProducto = (req,res)=>{
-        res.render('adminProducts/crearProducto')
+
+const crearProducto = async(req,res)=>{
+    try {
+        const allmarca = await db.Marca.findAll();
+        return res.render('adminProducts/crearProducto',{marca:allmarca});
+        
+    } catch (error) {
+        res.render(error)
+        
+    }
+        
+        
+        
     }
 
-const tienda = (req,res)=>{
-        let nuevoTamano;
-        (productos.length === 0 )? nuevoTamano = 1 : nuevoTamano = productos[productos.length-1].id+1
-        let imagen =  req.file? req.file.filename:'defaul.png';
-        let nuevoproducto = {
-        id: nuevoTamano,
-        ...req.body,
-        referencia: "REF00" + nuevoTamano,
-        imagen:imagen
-      };
-      productos.push(nuevoproducto);
-      fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '));
+const tienda = async(req,res)=>{
+    const {id_mascota,raza,categoria,id_marca,tamanio,cantidad, precio }=req.body;
+    const imagen=req.file?req.file.filename:"Default.jpg";
 
-      res.render('users/adminPerfil',{lista:productos, user: req.session.usuarioLogueado});
+    await db.Producto.create({
+        id_mascota,
+        raza,
+        categoria,
+        id_marca,
+        tamanio,
+        cantidad,
+        precio, 
+        imagen
+
+    })
+    const lista=await db.Producto.findAll();
+
+      res.render('users/adminPerfil',{lista, user: req.session.usuarioLogueado});
       
     }
 
-const editarProducto = (req,res)=>{
-        let reference = req.params.referencia
-        
-        let toEdit = productos.find(element => element.referencia == reference)
-        res.render('adminProducts/editarProducto',{toEdit})
+const editarProducto = async (req,res)=>{
+        const promtoEdit=await db.Producto.findByPk(req.params.id,{include:['marca']})
+        const prommarca=db.Marca.findAll();
+        const [toEdit,marca]= await Promise.all([promtoEdit,prommarca])
+        return res.render('adminProducts/editarProducto',{toEdit,marca})
 
     }
 
-const update = (req,res)=>{
-        let referencia = req.params.referencia
-        let toStore = productos.find(element => element.referencia == referencia)
-        if (req.file){
-            let update = {
-                id: toStore.id,
-                referencia:referencia,
-    
-                ...req.body,
-                imagen: req.file.filename
-                
-            }
-            
-            productos[toStore.id -1] = update
-            fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-            res.redirect('/')
-        }else {
-            let update = {
-                id: toStore.id,
-                referencia:referencia,
-                ...req.body,
-                imagen: toStore.imagen
-                
-            }
+const update = async(req,res)=>{
+    const {id_mascota,raza,categoria,id_marca,tamanio,cantidad, precio }=req.body;
+    if(req.file){
+    await db.Producto.update(
+        {
+            id_mascota,
+            raza,
+            categoria,
+            id_marca,
+            tamanio,
+            cantidad, 
+            precio,
+            imagen:req.file.filename
 
-            
-            productos[toStore.id -1] = update
-            fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-            res.redirect('/')
+        },
+        {
+            where:{id:req.params.id}
         }
+    )}else{
+        await db.Producto.update(
+            {
+                id_mascota,
+                raza,
+                categoria,
+                id_marca,
+                tamanio,
+                cantidad, 
+                precio,
+                
+            },
+            {
+                where:{id:req.params.id}
+            }
+        )
+        
+    }
+        
+       res.redirect('/user/adminPerfil')
+        
     }
 
-const destroy = (req,res)=>{
-        let referencia = req.params.referencia;
-        
-        productos.splice((referencia-1),1)
-    
-        productos.forEach((element, index) => {
-			element.id = index+1;
-		});
+const destroy = async(req,res)=>{
+    try {   
+        await db.Producto.destroy({
+            where:{id:req.params.id}
+        })
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-		res.redirect('/')
+        res.redirect('/user/adminPerfil')
+        
+    } catch (error) {
+        res.render(error)
+        
+        
+    }
+        
+		
     }
     
 module.exports ={

@@ -28,13 +28,14 @@ const crearTablas = ()=>{
          });
             let sql1Productos = `CREATE TABLE Productos (
                 id INT PRIMARY KEY AUTO_INCREMENT,
-                nombre VARCHAR(255) NOT NULL,
+                raza VARCHAR(255) NOT NULL,
+                categoria VARCHAR(255) NOT NULL,
                 precio INT NOT NULL,
                 cantidad INT NOT NULL,
                 tamanio INT NOT NULL,
-                imagen VARCHAR(255) NOT NULL,
-                id_marca INT NOT NULL ,
-                id_mascota INT NOT NULL)`;
+                imagen VARCHAR(255),
+                id_marca BIGINT(10),
+                id_mascota BIGINT(10)`;
 
             let sql2Marcas = `CREATE TABLE Marca (
                 id INT PRIMARY KEY AUTO_INCREMENT,

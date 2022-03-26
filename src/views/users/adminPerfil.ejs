@@ -23,7 +23,7 @@
                    <p class="titulo"><%= item.nombre %></p>
                    <p class="precio">COP$<%= item.precio %></p>
                    <div id="botones">
-                    <form class="formCompra"  action="/editar-producto/<%=item.referencia %>">
+                    <form class="formCompra"  action="/editar-producto/<%=item.id %>">
                         <input id="edit" type="submit"  value="Editar Producto">
                     </form> <!-- control de button para editar producto-->
                     <form class="formCompra" action="/borrar-producto/<%= item.id %>?_method=delete" method="POST">

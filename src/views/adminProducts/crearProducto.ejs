@@ -12,18 +12,18 @@
         <form action="/" method="post" enctype="multipart/form-data"> 
             
             <div>
-                <label for="mascota">Perros</label>
-                <input type="radio" name="mascota" id="mascota" value="Canino" <% if((locals.old && old.mascota)=="Canino") { %> checked <% }%>>
-                <label for="mascota">Gatos</label>
-                <input type="radio" name="mascota" id="mascota" value="Felino" <% if((locals.old && old.mascota)=="Felino") { %> checked <% }%>>
+                <label for="id_mascota">Perros</label>
+                <input type="radio" name="id_mascota" id="mascota" value="1" <% if((locals.old && old.mascota)=="1") { %> checked <% }%>>
+                <label for="id_mascota">Gatos</label>
+                <input type="radio" name="id_mascota" id="mascota" value="2" <% if((locals.old && old.mascota)=="2") { %> checked <% }%>>
             </div>
             <div>
-                <label for="razas">Pequeña</label>
-                <input type="radio" name="razas" id="razas" value="pequeña" <% if((locals.old && old.razas)=="pequeña") { %> checked <% }%>>
+                <label for="raza">Pequeña</label>
+                <input type="radio" name="raza" id="razas" value="pequeña" <% if((locals.old && old.razas)=="pequeña") { %> checked <% }%>>
                 <label for="mascota">Mediana</label>
-                <input type="radio" name="razas" id="razas" value="mediana" <% if((locals.old && old.razas)=="mediana") { %> checked <% }%>>
+                <input type="radio" name="raza" id="razas" value="mediana" <% if((locals.old && old.razas)=="mediana") { %> checked <% }%>>
                 <label for="mascota">Grande</label>
-                <input type="radio" name="razas" id="razas" value="grande" <% if((locals.old && old.razas)=="grande") { %> checked <% }%>>
+                <input type="radio" name="raza" id="razas" value="grande" <% if((locals.old && old.razas)=="grande") { %> checked <% }%>>
             </div>
             <div>
                 <label for="categoria">Categoria</label>
@@ -35,14 +35,20 @@
             </div>
             
             <div>
-                <label for="nombreProducto">Nombre Producto</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ingrese nombre de producto" value="<%= locals.old && old.nombre ? old.nombre : '' %>">
+                <label for="id_marca">Marca</label>
+                <select name="id_marca" required>
+                    <option value="" disabled selected> Seleccionar marca </option>
+                    <% marca.forEach(marca => { %>
+                    <option value="<%= marca.id %>"><%= marca.nombre_marca %></option>
+                    <% })%> 
+                
+                </select>
                 
             </div>
             
             <div>
-                <label for="tamaño">Tamaño de producto</label>
-                <input type="text" name="tamaño" id="tamaño" placeholder="Ingrese tamaño del producto" value="<%= locals.old && old.tamaño ? old.tamaño : '' %>">
+                <label for="tamaño">Tamaño de producto en Kg</label>
+                <input type="number" name="tamanio" id="tamaño" placeholder="Ingrese tamaño del producto" value="<%= locals.old && old.tamaño ? old.tamaño : '' %>">
             </div>
             <div>
                 <label for="cantidad">Cantidad disponible</label>

@@ -14,12 +14,12 @@ router.get('/', productosController.home)
 router.get('/user/home', productosController.userhome)
 
 router.get('/comida', productosController.comida)
-router.get('/detalle/:referencia', productosController.detalle)
+router.get('/detalle/:id', productosController.detalle)
 
 router.get('/carrito',notLogMiddleware, productosController.carritodecompra)
 router.post('/carrito/:referencia',notLogMiddleware, productosController.listacarrito)
-router.get('/Editcarrito/:referencia',notLogMiddleware,productosController.editarCarrito)
-router.patch('/Editcarrito/:referencia',notLogMiddleware,productosController.actualizarCarrito)
+router.get('/Editcarrito/:id',notLogMiddleware,productosController.editarCarrito)
+router.patch('/Editcarrito/:id',notLogMiddleware,productosController.actualizarCarrito)
 router.delete('/borrar-carrito/:id',notLogMiddleware, productosController.destroy)
 
 

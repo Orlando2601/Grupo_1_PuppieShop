@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs');
+const db = require('../database/models');
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const userFilePath = path.join(__dirname, '../data/user.json');
@@ -57,14 +58,19 @@ const users = (req, res)=>{
     }
 }
 
-  const adminPefil = (req, res)=>{  
-        console.log("estas en perfil")
-        console.log(req.cookies.correo)
-
+  const adminPefil = async(req, res)=>{  
+      try {
+          const lista=await db.Producto.findAll();
         return     res.render('users/adminPerfil',{
             user: req.session.usuarioLogueado,
-            lista: productos
+            lista
         })
+          
+      } catch (error) {
+          res.render(error)
+      }
+
+       
   }
     
   const cerrarSesion = (req,res)=>{   
