@@ -2,7 +2,7 @@
 module.exports={
   "development": {
     "username": "root",
-    "password": "AGUEDa23429944-",
+    "password": "",
     "database": "productosDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
