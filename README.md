@@ -2,6 +2,8 @@
 
 ![LogoPupieShop](https://user-images.githubusercontent.com/91704080/143088703-6ddc1b18-a004-419d-a22e-e754f7e5e2d2.png)
 
+#### Pasos para iniciar el proyecto
+
 ##### Abrir la terminal dentro de la carpeta donde vamos a ejecutar el proyecto y escribir git clone https://github.com/Orlando2601/Grupo_1_PuppieShop.git
 
 ##### Si no estamos dentro de la carpeta escribimos cd Grupo_1_PuppieShop en la terminal y abrimos visual studio code para ingresar y ejecutamos los siguientes pasos
