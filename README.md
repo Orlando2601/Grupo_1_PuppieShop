@@ -2,6 +2,31 @@
 
 ![LogoPupieShop](https://user-images.githubusercontent.com/91704080/143088703-6ddc1b18-a004-419d-a22e-e754f7e5e2d2.png)
 
+##### Abrir la terminal dentro de la carpeta donde vamos a ejecutar el proyecto y escribir git clone https://github.com/Orlando2601/Grupo_1_PuppieShop.git
+
+##### Si no estamos dentro de la carpeta escribimos cd Grupo_1_PuppieShop en la terminal y abrimos visual studio code para ingresar y ejecutamos los siguientes pasos
+
+###### Paso 1 En la terminal ejecutar npm instal
+###### Paso 2 Una vez termine de instalar nos dirigimos a cambiar user y password de la base de datos segun tengamos en nuestro ordenador, ingresando con ctrl + click sobre el link de abajo nos dirige al archivo de configuracion donde debemos cambiar {"username": "root", "password": ".."} del objeto como se muestra acontinuacion
+ "development": {
+    "username": "root",
+    "password": "",
+    "database": "productosDB",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+  ###### Link [config](./src/database/config/config.js)
+
+  ###### Paso 3 En la terminal ejecutamos el comando npm start 
+  ###### Observaremos como se crearon base de datos, tablas, conexiones, y llenado de tablas por defecto
+  ###### Paso 4 Ingresamos al siguiente link http://localhost:3030/
+  ###### Paso 5 En el icono de usuario podemos acceder con los siguientes usuarios
+  ###### ADMIN: Quien tiene permisos de gestion de productos
+  ###### NO LOG: Quien solo tiene permisos de visualizacion 
+  ###### ADMIN: usuario: oswar@gmail.com | contrasenia: 00000000
+  
+
+
 
 ## Descripción
 PuppieShop es una tienda online para mascotas que cuenta con una gran variedad de productos para la diversión, entrenamiento, alimentación y salud de tu mascota. Además, cuenta con una red, a través de la cual todos los usuarios pueden compartir tips de cuidado. PuppieShop cuenta con servicio de entrega a domicilio a nivel nacional.
