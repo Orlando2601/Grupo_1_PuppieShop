@@ -35,7 +35,7 @@ let multerImageMidlewareUser = fileUploadUser.single('imagen')
 router.get('/login',guestMiddleware, userController.login)
 router.post('/login',logvalidation, userController.logged)
 router.get('/registro',guestMiddleware, registrovalidation, userController.registro)
-router.post('/registro',multerImageMidlewareUser, registrovalidation, userController.users)
+router.post('/registro',multerImageMidlewareUser,registrovalidation, userController.users)
 router.get('/adminPerfil',notLogMiddleware, userController.adminPefil)
 router.post('/cerrarSesion', userController.cerrarSesion)
 

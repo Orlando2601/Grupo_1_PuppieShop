@@ -9,16 +9,18 @@
             <i class="far fa-user"></i>
         </div>
         <!-- formulario de login -->
-        <form action="/user/login" method="POST">  
+        <form action="/user/login" id="logForm" method="POST">  
             <label for="correo">Ingrese Correo electrónico</label>
-            <input type="email" name="correo" placeholder="Correo" value="<%= locals.old && old.correo ? old.correo : '' %>" >
+            <input type="email" name="correo" id="logCorreo" placeholder="Correo" value="<%= locals.old && old.correo ? old.correo : '' %>" >
+            <p class="errorForm" id="errorLogCorreo"></p>
             <% if (locals.errors && errors.correo) { %>
-                <p id="showError" ><%= errors.correo.msg %></p>
+                <p class="errorForm" id="showError" ><%= errors.correo.msg %></p>
                 <% }; %>
             <label for="contraseña">Ingrese Contraseña</label>
-            <input type="password" name="contraseña" placeholder="Contraseña">
+            <input type="password" id="logPassword" name="contraseña" placeholder="Contraseña">
+            <p class="errorForm" id="errorLogPassword"></p>
             <% if (locals.errors && errors.contraseña) { %>
-                <p id="showError" ><%= errors.contraseña.msg %></p>
+                <p class="errorForm" id="showError" ><%= errors.contraseña.msg %></p>
                 <% }; %>
             <label for="recordame">Recordame</label>
             <input type="checkbox" name="recordame"  checked>
@@ -32,6 +34,7 @@
         <a href="/user/registro"><button class="btn" name="enlaceCreaUser">Crear Usuario</button></a>
             
     </main>
+    <script src="../../js/loginUser.js"></script>
     <%- include ('../partials/footer') %>
 </body>
 </html>

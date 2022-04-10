@@ -9,7 +9,7 @@
             <i class="fas fa-cubes"></i>
         </div>
         <h1>Complete los datos del nuevo producto</h1>
-        <form action="/" method="post" enctype="multipart/form-data"> 
+        <form action="/" method="post" id="formCrearProducto" enctype="multipart/form-data"> 
             
             <div>
                 <label for="id_mascota">Perros</label>
@@ -17,6 +17,7 @@
                 <label for="id_mascota">Gatos</label>
                 <input type="radio" name="id_mascota" id="mascota" value="2" <% if((locals.old && old.mascota)=="2") { %> checked <% }%>>
             </div>
+            <p class="errorForm" id="errorTipoMascota"></p>
             <div>
                 <label for="raza">Pequeña</label>
                 <input type="radio" name="raza" id="razas" value="pequeña" <% if((locals.old && old.razas)=="pequeña") { %> checked <% }%>>
@@ -25,18 +26,22 @@
                 <label for="mascota">Grande</label>
                 <input type="radio" name="raza" id="razas" value="grande" <% if((locals.old && old.razas)=="grande") { %> checked <% }%>>
             </div>
+            <p class="errorForm" id="errorTamañoMascota"></p>
+
             <div>
                 <label for="categoria">Categoria</label>
                 <select name="categoria" id="categoria">
+                <option value="" disabled selected>Seleccionar Categoria</option>
                 <option value="accesorios" <% if((locals.old && old.categoria)=="accesorios") { %> selected <% }%> >Accesorios</option>
                 <option value="alimentos" <% if((locals.old && old.categoria)=="alimentos") { %> selected <% }%> >Alimentos</option>
                 <option value="aseo" <% if((locals.old && old.categoria)=="aseo") { %> selected <% }%> >Aseo</option>
                 </select>
             </div>
+            <p class="errorForm" id="errorCategoriaProductos"></p>
             
             <div>
                 <label for="id_marca">Marca</label>
-                <select name="id_marca" required>
+                <select name="id_marca">
                     <option value="" disabled selected> Seleccionar marca </option>
                     <% marca.forEach(marca => { %>
                     <option value="<%= marca.id %>"><%= marca.nombre_marca %></option>
@@ -45,24 +50,32 @@
                 </select>
                 
             </div>
-            
+            <p class="errorForm" id="errorMarca"></p>
+
             <div>
                 <label for="tamaño">Tamaño de producto en Kg</label>
                 <input type="number" name="tamanio" id="tamaño" placeholder="Ingrese tamaño del producto" value="<%= locals.old && old.tamaño ? old.tamaño : '' %>">
             </div>
+            <p class="errorForm" id="errorTamaño"></p>
+
             <div>
                 <label for="cantidad">Cantidad disponible</label>
                 <input type="number" name="cantidad" id="cantidad" placeholder="Ingrese cantidad disponible" value="<%= locals.old && old.cantidad ? old.cantidad : '' %>">
             </div>
+            <p class="errorForm" id="errorCantidad"></p>
+
             <div>
                 <label for="precio">Precio</label>
                 <input type="number" name="precio" id="precio" placeholder="Ingrese precio" value="<%= locals.old && old.precio ? old.precio : '' %>">
             </div>
+            <p class="errorForm" id="errorPrecio"></p>
+
             <div>
                 <label for="imagen">Imagen de descripción</label>
-                <input type="file" name="imagen" id="imagen" placeholder="Ingrese imagen de referencia" >
+                <input type="file" name="imagen" id="imagenProducto" placeholder="Ingrese imagen de referencia" >
             </div>
-        
+            <p class="errorForm" id="errorImgProducto"></p>
+
             <button type="submit" class="buton">Guardar producto</button>
             
         </form>
@@ -80,6 +93,7 @@
           <%}%>
           
     </main>
+    <script src="../../js/crearProducto.js"></script>
     <%- include ('../partials/footer') %>
     
 </body>
