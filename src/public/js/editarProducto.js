@@ -1,6 +1,6 @@
 window.onload = function(){
     
-    console.log('hola desde el form crear');
+    console.log('hola desde el form editar');
     const expresionImg = /\.(jpeg|jpg|png|gif)$/i;
     const formCrearproducto = document.querySelector('#formCrearProducto');
     const errorTipoMascota = document.querySelector('#errorTipoMascota');
@@ -61,7 +61,7 @@ window.onload = function(){
         cantidad.value.length === 0 ? (errors.cantidad = 'Verifique el campo cantidad', errorCantidad.innerText = 'campo cantidad incorrecto' ): (delete errors.cantidad, errorCantidad.innerText = '' );
         precio.value.length === 0 ? (errors.precio = 'Verifique el campo precio', errorPrecio.innerText = 'campo precio incorrecto' ): (delete errors.precio, errorPrecio.innerText = '' );
 
-        !expresionImg.test(imagenProducto.value) ? (errors.imagenProducto = 'Verifique el formato imagen', errorImgProducto.innerText = 'Verifique el formato imagen' ): (delete errors.imagenProducto, errorImgProducto.innerText = '' );
+        //!expresionImg.test(imagenProducto.value) ? (errors.imagenProducto = 'Verifique el formato imagen', errorImgProducto.innerText = 'Verifique el formato imagen' ): (delete errors.imagenProducto, errorImgProducto.innerText = '' );
 
         if(Object.keys(errors).length > 0){
             ev.preventDefault()
