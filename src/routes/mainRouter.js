@@ -24,7 +24,7 @@ let storage = multer.diskStorage({
 var upload=multer({storage});
 const { validationResult } = require('express-validator')
 
-router.post('/',upload.single('imagen'),productosvalidation,validationMiddleware,mainController.tienda)
+router.post('/',upload.single('imagen'),productosvalidation, validationMiddleware,mainController.tienda)
 router.get('/editar-producto',notLogMiddleware, mainController.editarProducto)
 router.get('/editar-producto/:id',notLogMiddleware, mainController.editarProducto)
 router.get('/crear-producto',notLogMiddleware, mainController.crearProducto)
