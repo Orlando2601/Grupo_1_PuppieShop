@@ -13,12 +13,10 @@ const login =(req,res)=>{
     
 }  
     
-const logged = (req, res)=>{
-            const userFilePath = path.join(__dirname, '../data/user.json');
-            const usuarios = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+const logged = async(req, res)=>{
             const errores = validationResult(req);
-            let user;
-            (errores.errors.length > 0) ? res.render('users/login',{errors:errores.mapped(),old:req.body}) : user =  usuarios.find(ele => ele.correo == req.body.correo);              
+            let user=await db.Usuarios.findOne({where:{correo:req.body.correo}});
+            (errores.errors.length > 0) ? res.render('users/login',{errors:errores.mapped(),old:req.body}) : user =  await db.Usuarios.findOne({where:{correo:req.body.correo}});              
             let validacionPassword;
             !user ? res.render('users/login',{errors:{correo:{msg:'No se encontro el correo'}}}) : validacionPassword =  bcryptjs.compareSync(req.body.contraseña, user.contraseña);
             !validacionPassword ? res.render('users/login',{errors:{contraseña:{msg:"Tu contrasena no coincide"}}}): delete user.contraseña; req.session.usuarioLogueado = user;               

@@ -33,15 +33,15 @@
         
             
                    <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
-                    <label for="contraseña">Ingrese Contraseña</label>
-                    <input type="password" name="contraseña" id="contraseña" minlength="8" maxlength="12">
-                    <% if(locals.errors && errors.contraseña){ %>                   
-                        <p id="showError"><%= errors.contraseña.msg%></p>             
+                    <label for="contraseña">Ingrese Contrasena</label>
+                    <input type="password" name="contraseña" id="contrasena" minlength="8" maxlength="12">
+                    <% if(locals.errors && errors.contrasena){ %>                   
+                        <p id="showError"><%= errors.contrasena.msg%></p>             
                     <% }%>
-                    <label for="repiteContraseña">Repite la contraseña</label>
+                    <label for="repiteContraseña">Repite la contrasena</label>
                     <input type="password" name="repiteContraseña" id="contraseña" minlength="8" maxlength="12">
-                    <% if(locals.errors && errors.repiteContraseña){ %>                   
-                        <p id="showError"><%= errors.repiteContraseña.msg%></p>             
+                    <% if(locals.errors && errors.repiteContrasena){ %>                   
+                        <p id="showError"><%= errors.repiteContrasena.msg%></p>             
                     <% }%>
                     <label for="imagen">Imagen de usuario</label>
                     <input type="file" id="imagenUser" name="imagen" placeholder="Ingrese imagen de usuario" >
