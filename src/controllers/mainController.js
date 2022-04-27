@@ -24,7 +24,7 @@ const crearProducto = async(req,res)=>{
 const tienda = async(req,res)=>{
     const {id_mascota,raza,categoria,id_marca,tamanio,cantidad, precio }=req.body;
     const imagen=req.file?req.file.filename:"Default.jpg";
-
+    console.log(id_mascota)
     await db.Producto.create({
         id_mascota,
         raza,
