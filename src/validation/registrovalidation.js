@@ -11,7 +11,7 @@ const registrovalidation = [
         .isEmail().withMessage('Debes ingresar un correoo valido'),
         /* .custom(value => {
             return Usuarios.findOne({where:{correo:value}}).then(user => {
-              throw new Error('this email is already in use');
+              throw new Error('Esta correo ya esta en uso');
             })
           }), */
         

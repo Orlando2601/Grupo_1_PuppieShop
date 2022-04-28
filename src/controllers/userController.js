@@ -1,12 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs');
 const {Usuarios,Producto} = require('../database/models');
-const productsFilePath = path.join(__dirname, '../data/productos.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const userFilePath = path.join(__dirname, '../data/user.json');
-const usuarios = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+
+
    
 const login =(req,res)=>{      
             return res.render('users/login')
@@ -18,7 +15,7 @@ const logged = async(req, res)=>{
             let user=await Usuarios.findOne({where:{correo:req.body.correo}});
             (errores.errors.length > 0) ? res.render('users/login',{errors:errores.mapped(),old:req.body}) : user =  await Usuarios.findOne({where:{correo:req.body.correo}});              
             let validacionPassword;
-            !user ? res.render('users/login',{errors:{correo:{msg:'No se encontro el correo'}}}) : validacionPassword =  bcryptjs.compareSync(req.body.contraseña, user.contraseña);
+            !user ? res.render('users/login',{errors:{correo:{msg:'No se encontro el correo'}}}) : validacionPassword =  bcryptjs.compareSync(req.body.contraseña, user.contrasena);
             !validacionPassword ? res.render('users/login',{errors:{contraseña:{msg:"Tu contrasena no coincide"}}}): delete user.contraseña; req.session.usuarioLogueado = user;               
             req.body.recordame ? res.cookie('correo', req.body.correo,{maxAge:60000*60*12}): res.redirect('/user/adminPerfil');
             return res.redirect('/user/adminPerfil');
