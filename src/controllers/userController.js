@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs');
-const db = require('../database/models');
+const {Usuarios,Producto} = require('../database/models');
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const userFilePath = path.join(__dirname, '../data/user.json');
@@ -15,8 +15,8 @@ const login =(req,res)=>{
     
 const logged = async(req, res)=>{
             const errores = validationResult(req);
-            let user=await db.Usuarios.findOne({where:{correo:req.body.correo}});
-            (errores.errors.length > 0) ? res.render('users/login',{errors:errores.mapped(),old:req.body}) : user =  await db.Usuarios.findOne({where:{correo:req.body.correo}});              
+            let user=await Usuarios.findOne({where:{correo:req.body.correo}});
+            (errores.errors.length > 0) ? res.render('users/login',{errors:errores.mapped(),old:req.body}) : user =  await Usuarios.findOne({where:{correo:req.body.correo}});              
             let validacionPassword;
             !user ? res.render('users/login',{errors:{correo:{msg:'No se encontro el correo'}}}) : validacionPassword =  bcryptjs.compareSync(req.body.contraseña, user.contraseña);
             !validacionPassword ? res.render('users/login',{errors:{contraseña:{msg:"Tu contrasena no coincide"}}}): delete user.contraseña; req.session.usuarioLogueado = user;               
@@ -28,37 +28,29 @@ const registro = (req,res)=>{
         res.render('users/registro') 
     }
 
-const users = (req, res)=>{
-    const errores = validationResult(req);
-    let user
+const users = async(req, res)=>{
+    try {
+        const errores = validationResult(req);
    
-    (errores.errors.length > 0) ? res.render('users/registro',{errors:errores.mapped(),old:req.body}) : user =  usuarios.find(ele => ele.correo == req.body.correo);
-    user ? res.render('users/registro',{errors:{correo:{msg:"este correo ya se encuentra registrado"}},old:req.body}): user = false;
-    if(user === false && errores.errors.length === 0){
-
-        if(req.file ){
-            let newReference = usuarios.length
-        
-            let nuevoUser = {
-                id: newReference + 1,
-                ...req.body,
-                contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
-                imagen:req.file.filename
-            }
-            delete nuevoUser.repiteContraseña;
-            usuarios.push(nuevoUser)
-            fs.writeFileSync(userFilePath, JSON.stringify(usuarios, null, ' '))
-            res.redirect('/user/login') 
-        }else{
-            res.render('users/registro',{errors:errores.mapped(),old:req.body})
-        }
+    if (errores.errors.length > 0) {
+        res.render('users/registro',{errors:errores.mapped(),old:req.body})
+    } else {
+        const {nombre,apellido,correo,contrasena}=req.body;
+        const imagen=req.file?req.file.filename:"Default.jpg";
+        await Usuarios.create({nombre,apellido,correo,contrasena,imagen})
+        res.redirect('/') 
        
+    }
+        
+    } catch (error) {
+        console.log(error)
+        
     }
 }
 
   const adminPefil = async(req, res)=>{  
       try {
-          const lista=await db.Producto.findAll();
+          const lista=await Producto.findAll();
         return     res.render('users/adminPerfil',{
             user: req.session.usuarioLogueado,
             lista

@@ -26,8 +26,7 @@ window.onload = function(){
         !expresionCorreo.test(correo.value) ? (errors.correo = 'Verifique el campo correo', errorCorreo.innerText = 'campo correo incorrecto' ): (delete errors.correo, errorCorreo.innerText = '' );
         contraseña.value.length === 0 || contraseña.value.length < 8 ? (errors.contraseña = 'Verifique el campo contraseña', errorContraseña.innerText = 'campo contraseña incorrecto' ): (delete errors.contraseña, errorContraseña.innerText = '' );
         repiteContraseña.value.length === 0 || repiteContraseña.value.length < 8 ? (errors.repiteContraseña = 'Verifique el campo repiteContraseña', errorRepiteContraseña.innerText = 'campo repiteContraseña incorrecto' ): (delete errors.repiteContraseña, errorRepiteContraseña.innerText = '' );
-        !expresionImg.test(imagenUser.value) ? (errors.imagenUser = 'Verifique el formato imagen', errorImg.innerText = 'Verifique el formato imagen' ): (delete errors.imagenUser, errorImg.innerText = '' );
-        if(Object.keys(errors).length > 0){
+/*         !expresionImg.test(imagenUser.value) ? (errors.imagenUser = 'Verifique el formato imagen', errorImg.innerText = 'Verifique el formato imagen' ): (delete errors.imagenUser, errorImg.innerText = '' );*/        if(Object.keys(errors).length > 0){
             ev.preventDefault()
         }
         

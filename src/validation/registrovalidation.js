@@ -1,4 +1,5 @@
 const {body, check} = require('express-validator');
+const {Usuarios} = require('../database/models');
 
 const registrovalidation = [
     body('nombre')
@@ -8,6 +9,12 @@ const registrovalidation = [
     body('correo')
         .notEmpty().withMessage('No has ingresado ningun correo')
         .isEmail().withMessage('Debes ingresar un correoo valido'),
+        /* .custom(value => {
+            return Usuarios.findOne({where:{correo:value}}).then(user => {
+              throw new Error('this email is already in use');
+            })
+          }), */
+        
     body('contrasena')
         .isLength({min:6, max:12}).withMessage('Debe ingresar min 6 y max 12 caracteres')
         .notEmpty().withMessage('Debes ingresar una contrasenia entre 6 y 12 caracteres')

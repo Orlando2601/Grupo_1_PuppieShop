@@ -35,8 +35,8 @@
         
             
                    <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
-                    <label for="contraseña">Ingrese Contraseña</label>
-                    <input type="password" name="contraseña" id="contraseña" minlength="8" maxlength="12">
+                    <label for="contrasena">Ingrese Contraseña</label>
+                    <input type="password" name="contrasena" id="contrasena" minlength="8" maxlength="12">
                     <p class="errorForm" id="errorContraseña"></p>
                     <% if(locals.errors && errors.contraseña){ %>                   
                         <p class="errorForm" id="showError"><%= errors.contraseña.msg%></p>             
@@ -48,7 +48,7 @@
                         <p class="errorForm" id="showError"><%= errors.repiteContraseña.msg%></p>             
                     <% }%>
                     <label for="imagen">Imagen de usuario</label>
-                    <input type="file" id="imagenUser" name="imagen" placeholder="Ingrese imagen de usuario"  accept=".jpg,.jpeg,.png">
+                    <input type="file" id="imagenUser" name="imagen" placeholder="Ingrese imagen de usuario" >
                     <p class="errorForm" id="errorImg"></p>
             
                      <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->

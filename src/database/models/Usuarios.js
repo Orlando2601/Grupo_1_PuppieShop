@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        contraseña:{
+        contrasena:{
             type:dataTypes.INTEGER,
             allowNull: false
         },
