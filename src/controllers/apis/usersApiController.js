@@ -8,7 +8,7 @@ const listaUsuarios  = async(req, res)=>{
        
 
             const nuevo =  await listaUsers.forEach(element => {
-                element.dataValues.urlDetalleUser ="http://localhost:3000/api/usuario/"+element.id;
+                element.dataValues.urlDetalleUser ="http://localhost:3030/api/usuario/"+element.id;
             });
 
             return res.status(200).json({listaUsers})
