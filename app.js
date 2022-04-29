@@ -5,6 +5,7 @@ const app = express();
 const publicPath =path.resolve(__dirname, './src/public');
 const mainRouter = require('./src/routes/mainRouter');/* requerimos archivo de rutas */
 const productosRouter = require('./src/routes/productosRouter');/* requerimos archivo de rutas */
+const usersApiRouter = require('./src/routes/apis/usersApiRouter')
 const userRouter = require('./src/routes/userRouter');/* requerimos archivo de rutas */
 const session = require('express-session');/* requerimos archivo de session */
 const { cookie } = require('express/lib/response');
@@ -43,6 +44,7 @@ app.listen(puerto, () => { console.log('Servidor corriendo en el puerto '  + pue
 app.use(productosRouter);
 app.use('/user', userRouter);
 app.use(mainRouter); 
+app.use('/api',usersApiRouter)
 app.use(error404)
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 
