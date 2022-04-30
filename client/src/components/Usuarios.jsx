@@ -33,7 +33,7 @@ async componentDidMount(){
            
             <React.Fragment>
                 {
-                    <div className="mainListaProductos">
+                    <div>
                     {
                         this.state.usuarios.map((usuario, index)=>{
                             return <UsuarioItem { ...usuario} key={index}/>
