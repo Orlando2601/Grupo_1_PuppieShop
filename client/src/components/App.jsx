@@ -1,9 +1,13 @@
+import Footer from "./Footer";
+import Header from "./Header";
+import Home from "./Home";
 
 function App () {
     return (
         <>
-        
-            <h1>Funcionando React</h1>
+            <Header/>
+            <Home />
+            <Footer />
         </>
 
         
