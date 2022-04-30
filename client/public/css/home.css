@@ -1,0 +1,82 @@
+/* MAIN */
+.mainHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    
+}
+.mainHome section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:30px
+}
+
+.mainHome section .imagenSeccion{
+    max-width: 25vw;
+}
+.mainHome section .imagenSeccion img{
+    width: 100%;
+}
+.mainHome section p{
+    font-family: var(--fuente);
+    font-size:2.8vw;
+   
+}
+.mainHome section h2{
+    font-family: var(--fuente);
+    font-size:4vw;
+}
+.mainHome .descripcionSeccion{
+    width: 50vw;
+}
+
+
+@media (max-width: 360px) {
+
+    .descripcionSeccion p{
+        display: none;
+        font-size: var(--font-size-L);
+    }
+    .descripcionSeccion h2{
+        font-size: var(--font-size-M);
+    }
+}
+
+
+
+@media (min-width: 361px) and (max-width:600px) {
+    .descripcionSeccion p{
+        display:block;
+        font-size: var(--font-size-M);
+
+    }
+    .descripcionSeccion h2{
+        font-size: var(--font-size-L);
+    }
+    
+}
+
+@media (min-width:601px)and (max-width:800px)  {
+    .descripcionSeccion p{
+        display: flex;
+        font-size: var(--font-size-L);
+
+    }
+    .descripcionSeccion h2{
+        font-size: var(--font-size-M);
+    }
+    
+}
+
+@media (min-width:801px){
+    .descripcionSeccion p{
+        display: flex;
+        font-size: var(--font-size-L);
+
+    }
+    .descripcionSeccion h2{
+        font-size: var(--font-size-M);
+    }
+}

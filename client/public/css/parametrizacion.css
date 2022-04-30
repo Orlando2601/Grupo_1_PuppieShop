@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+* {
+    margin: 0;  /*Definimos un margen de 0*/
+    padding: 0;/* Definimos un padding de 0 */
+    box-sizing: border-box; /*con esta propiedad definimos que el margin y el padding sean incluidos dentro del tamaño de las cajas*/
+} /* Propiedades de Cajas */
+#main{
+    padding-top: 20rem;
+}
+
+html{
+    font-size: 62.5%;
+}/* Escalar tamaño de fuente de html para el uso de rem */
+
+:root{
+    --gris-texto:#89817F;
+    --negro-texto:#334231;
+    --font-size-XS: 1em;
+    --font-size-S: 1.2em;
+    --font-size-M: 1.4em;
+    --font-size-L: 1.9em;
+    --font-size-XL: 2em;
+    --font-size-XXL: 2.5em;
+    --fuente:'Yanone Kaffeesatz', sans-serif;
+    --negro:#000000;
+    --verde: #094e03e5;
+    --verdeOpaco:#094e037e;
+    --verde-claro: #18b31893;
+    --gris-oscuro: #666;
+    --verdemasclaro: #74e957;
+}/* Declaración variables */

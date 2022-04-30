@@ -1,0 +1,33 @@
+@media (max-width: 599px) {
+    /* MAIN */
+    main .top{
+        flex-direction: column;
+        gap:0px
+    }
+    main .top .right{
+        width: 100%;
+    }/* Contenedor derecho */
+}
+@media (min-width: 600px) and (max-width:799px){
+    /* MAIN */
+    main .top{
+        flex-direction: row;
+
+    }    
+
+}
+
+@media (min-width:800px){
+
+ /* MAIN */
+    main .top{
+        flex-direction: row;
+        gap: 20px;
+
+}    
+    main .top .left{
+        width: 60%;
+        height: 100%;
+}
+
+}

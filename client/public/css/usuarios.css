@@ -1,0 +1,43 @@
+.mainMaster .usuarios{
+    display: flex;
+    flex-direction: column;
+    gap:15px
+}
+
+
+.mainMaster form label, p{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: var(--fuente);
+    font-size: var(--font-size-M);
+}
+
+.mainMaster form select, input{
+    padding: 5px;
+    font-family: var(--fuente);
+    font-size: var(--font-size-M);
+    border-radius: 10px;
+       
+}
+#id{
+    display: none;
+}
+
+@media (max-width: 668px) {
+
+.mainMaster form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+}
+@media (min-width: 669px) {
+
+    .mainMaster form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    }
