@@ -1,5 +1,9 @@
+import React from "react";
+
 function Header (){
 return(
+    <React.Fragment>
+        
     <header>
     <div className="caja-logo">
         <a href="/"><img src="/images/LOGOB.png"  alt="Logo PuppieShop" /></a>              
@@ -29,7 +33,7 @@ return(
             <div className="div-btn-header">
                 <a className="a-btn-header" href="#">Contactanos</a>
             </div>
-                <div class="iconred">
+                <div className="iconred">
                     <a href="/user/login" /><i className="fa-solid fa-user"></i>
                 </div>
 
@@ -40,6 +44,7 @@ return(
         </div>
     </div>
 </header>
+    </React.Fragment>
 );
 }
 

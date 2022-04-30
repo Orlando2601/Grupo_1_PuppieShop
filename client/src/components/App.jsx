@@ -1,14 +1,21 @@
-import Footer from "./Footer";
-import Header from "./Header";
-import Home from "./Home";
+import React from "react";
+//import Footer from "./Footer";
+//import Header from "./Header";
+import Usuarios from "./Usuarios";
 
 function App () {
     return (
-        <>
-            <Header/>
-            <Home />
-            <Footer />
-        </>
+        <React.Fragment>    
+         
+                
+                <Usuarios />
+         
+           
+            
+         
+
+            
+        </React.Fragment>
 
         
     );
