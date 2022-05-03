@@ -29,7 +29,6 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
-//app.use(recordarmiddleware)
 app.use(userLoggedMiddelware)
 /* CONFIGURACION CARPETA DE VISTAS Y PARCHIVOS PUBLICOS */
 app.set('views', path.resolve(__dirname, './src/views'))
