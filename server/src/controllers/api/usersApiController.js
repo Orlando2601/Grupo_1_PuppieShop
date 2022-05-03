@@ -2,16 +2,18 @@ const db = require('../../database/models');
 
 const listaUsuarios  = async(req, res)=>{
         try {
-            const listaUsers = await db.Usuarios.findAll({
+            const {rows, count} = await db.Usuarios.findAndCountAll({
                 attributes:['id','nombre','apellido','correo']
             });
+
+     
        
 
-            const nuevo =  await listaUsers.forEach(element => {
+            const nuevo =  await rows.forEach(element => {
                 element.dataValues.urlDetalleUser ="http://localhost:3030/api/usuario/"+element.id;
             });
 
-            return res.status(200).json({listaUsers})
+            return res.status(200).json({listaUsers:rows,totalUsuarios:count})
 
             
         } catch (error) {
