@@ -12,7 +12,7 @@ const listaUsuarios  = async(req, res)=>{
             const nuevo =  await rows.forEach(element => {
                 element.dataValues.urlDetalleUser ="http://localhost:3030/api/usuario/"+element.id;
             });
-
+            
             return res.status(200).json({listaUsers:rows,totalUsuarios:count})
 
             
