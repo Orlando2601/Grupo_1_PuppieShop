@@ -1,26 +1,28 @@
-import React from "react";
+
+import { Link,Route,Routes } from "react-router-dom"
+
+
 
 function Header (){
 return(
-    <React.Fragment>
-        
-    <header>
+       
+        <header>
     <div className="caja-logo">
-        <a href="/"><img src="/images/LOGOB.png"  alt="Logo PuppieShop" /></a>              
+        <Link to="/"><img src="/images/LOGOB.png"  alt="Logo PuppieShop" /></Link>              
                            
     </div>
     <div className="header-right">
         <div className="redes">
             <div className="iconred">
-                <a href="https://www.google.com/" target="blank" /><i class="fab fa-instagram"></i> 
+                <a href="https://www.google.com/" target="blank" ><i className="fab fa-instagram"></i></a> 
                 
             </div>
             <div className="iconred">
-                <a href="https://www.google.com/" target="blank" /><i class="fab fa-facebook-f"></i>
+                <a href="https://www.google.com/" target="blank" ><i className="fab fa-facebook-f"></i></a>
                 
             </div>
             <div className="iconred">
-                <a href="https://www.google.com/" target="blank" /><i class="fab fa-whatsapp"></i>
+                <a href="https://www.google.com/" target="blank" ><i className="fab fa-whatsapp"></i></a>
             </div>
 
 
@@ -28,23 +30,26 @@ return(
 
         <div className="caja-enlace-header">
             <div className="div-btn-header">
-                <a className="a-btn-header" href="/comida">Productos</a>
+                <Link className="a-btn-header" to="/comida">Productos</Link>
             </div>
             <div className="div-btn-header">
-                <a className="a-btn-header" href="#">Contactanos</a>
+                <Link className="a-btn-header" to="#">Contactanos</Link>
             </div>
                 <div className="iconred">
-                    <a href="/user/login" /><i className="fa-solid fa-user"></i>
+                    <Link to="/user"><i className="fa-solid fa-user"></i></Link>
                 </div>
 
       
             <div className="iconred">
-                <a href="/carrito"><i className="fas fa-shopping-cart"></i></a>
+                <Link to="/carrito"><i className="fas fa-shopping-cart"></i></Link>
             </div>
         </div>
     </div>
-</header>
-    </React.Fragment>
+               
+      </header>
+
+
+               
 );
 }
 

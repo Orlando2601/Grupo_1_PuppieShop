@@ -34,6 +34,7 @@ async componentDidMount(){
             <React.Fragment>
                 {
                     <div>
+                        
                     {
                         this.state.usuarios.map((usuario, index)=>{
                             return <UsuarioItem { ...usuario} key={index}/>

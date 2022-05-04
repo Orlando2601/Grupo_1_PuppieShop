@@ -7,6 +7,7 @@ const mainRouter = require('./src/routes/mainRouter');/* requerimos archivo de r
 const productosRouter = require('./src/routes/productosRouter');/* requerimos archivo de rutas */
 const userRouter = require('./src/routes/userRouter');/* requerimos archivo de rutas */
 const usersApiRouter = require('./src/routes/api/usersApiRouter')
+const productApiRouter = require('./src/routes/api/productApiRouter')
 const session = require('express-session');/* requerimos archivo de session */
 const { cookie } = require('express/lib/response');
 const cookies = require('cookie-parser');
@@ -16,7 +17,8 @@ const error404 = require('./src/middleware/errorMiddleware')
 const {crearDB} = require('./src/database/config/conect');
 const Sequelize = require('sequelize')
 //const recordarmiddleware = require('./src/middleware/recordarmiddleware')
-
+const cors = require('cors')
+app.use(cors())
 
 crearDB()
 /* ALMACENAR DATOS DE NAVEGACION/////////////////////////////////////////////////////////////////// */
@@ -44,7 +46,8 @@ app.use(productosRouter);
 app.use('/user', userRouter);
 app.use(mainRouter); 
 app.use('/api',usersApiRouter); 
-app.use(error404)
+/* app.use(error404) */
+app.use('/api',productApiRouter); 
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 
 
