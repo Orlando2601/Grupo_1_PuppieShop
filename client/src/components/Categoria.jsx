@@ -12,15 +12,41 @@ function Categoria(props) {
         
     return(
         <>
-        
-        <h1 className="marca">Pro Plan</h1>
-        <p>Total de productos: {ProPlan.length}</p>
-        <h1 className="marca">Dog Show</h1>
-        <p>Total de productos: {DogShow.length}</p>
-        <h1 className="marca">Purina One</h1>
-        <p>Total de productos: {PurinaOne.length}</p>
-        <h1 className="marca">Chunky</h1>
-        <p>Total de productos: {Chunky.length}</p>
+        <h1>Cantidad de productos por Marcas</h1>
+            <table className="table">
+  <thead>
+    <tr>
+
+      <th scope="col">Marca</th>
+      <th scope="col">Cantidad</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Pro Plan</th>
+      <td>{ProPlan.length}</td>
+    </tr>
+    <tr>
+      <th scope="row">Dog Show</th>
+      <td>{DogShow.length}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">Purina One</th>
+      <td>{PurinaOne.length}</td>
+
+    </tr>
+    <tr>
+      <th scope="row">Chunky</th>
+      <td>{Chunky.length}</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+
         </>
 
 
