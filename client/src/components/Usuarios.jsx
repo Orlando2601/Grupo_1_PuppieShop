@@ -16,9 +16,10 @@ class Usuarios extends Component{
 async componentDidMount(){
     const response =await fetch("/api/usuarios");
     const users = await response.json()
-    console.log(users)
+    
     this.setState({
-        usuarios: users.listaUsers
+        usuarios: users.listaUsers,
+        cantidad:users.totalUsuarios
     })
 
     
@@ -33,7 +34,9 @@ async componentDidMount(){
            
             <React.Fragment>
                 {
-                    <div>
+
+                    <div className="container overflow-hidden">
+                        <h1>Total usuarios registrados {this.state.cantidad}</h1>
                         
                     {
                         this.state.usuarios.map((usuario, index)=>{

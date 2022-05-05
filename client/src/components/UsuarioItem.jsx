@@ -2,19 +2,27 @@
 
 function UsuarioItem(props){
     return(
-        <div>
-            <p>Usuario</p>
-            <tr className="list-group list-group-flush">
-                <th className="list-group-item">Nombre: {props.nombre}</th>
-                <tr/>
-                <th className="list-group-item">Apellido: {props.apellido}</th>
-                <br/>
-                <th className="list-group-item">Correo: {props.correo}</th>
-                <br/>
-                <a className="list-group-item" href="http://localhost:3030/api/usuario/">Detalle: {props.urlDetalleUser}</a>
-            </tr>
-
-        </div>
+        <>
+             <img  className="img-fluid" src={props.imagen} alt="" width="200vw" />
+            <table className="table table-bordered">
+                <thead>
+                    <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Url</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">{props.id}</th>
+                    <td> {props.nombre}</td>
+                    <td>{props.correo}</td>
+                    <td><a href={'http://localhost:3030/api/usuario/'+props.id}>{props.urlDetalleUser}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </>
 
     );
 

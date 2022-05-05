@@ -3,7 +3,7 @@ const db = require('../../database/models');
 const listaUsuarios  = async(req, res)=>{
         try {
             const {rows, count} = await db.Usuarios.findAndCountAll({
-                attributes:['id','nombre','apellido','correo']
+                attributes:['id','nombre','apellido','correo', 'imagen']
             });
 
      
@@ -27,7 +27,9 @@ const listaUsuarios  = async(req, res)=>{
 const detalleUsuario = async(req, res)=>{
     try {
         const idUser = req.params.id
-        const usuario = await db.Usuarios.findByPk(idUser)
+        const usuario = await db.Usuarios.findByPk(idUser,{
+            attributes:["id","nombre","apellido", "correo", "imagen"]
+        })
         const nameImg = usuario.imagen
         usuario.imagen = `http://localhost:3030/${nameImg}`
 

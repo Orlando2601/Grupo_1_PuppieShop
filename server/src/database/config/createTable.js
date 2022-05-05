@@ -67,8 +67,8 @@ const crearTablas = ()=>{
                 (2, "Gatos")`;
             const sql8LlenarTablaUsuarios = `INSERT INTO Usuarios (id, nombre, apellido, correo, contrasena, imagen) 
                 VALUES 
-                (1, "Oswar", "Baez", "oswar@gmail.com", "$2a$10$npI2AuveykOqT0I4WIwFLO7rmtYLcwYFb9VtPN5DZHejjJ65wKt1q","imagen1645885848674.png"),
-                (2, "Rafael", "estrada", "prueba@hotmail.com","$2a$10$8lvdiYc4Jb/mrUBzUsfhNuiefvDcOx9pkYV0Amz55.EFM/VdkC46u","imagen1645918117518.png")`;
+                (1, "Oswar", "Baez", "oswar@gmail.com", "$2a$10$npI2AuveykOqT0I4WIwFLO7rmtYLcwYFb9VtPN5DZHejjJ65wKt1q","oswar.png"),
+                (2, "Rafael", "estrada", "prueba@hotmail.com","$2a$10$8lvdiYc4Jb/mrUBzUsfhNuiefvDcOx9pkYV0Amz55.EFM/VdkC46u","imagen1645885848674.png")`;
 
            
 
