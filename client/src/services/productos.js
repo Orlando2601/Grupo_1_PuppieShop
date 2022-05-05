@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const apiproducto="/api/comida"
+const apiproducto="http://localhost:3030/api/comida/"
 
 function productos() {
     try {
@@ -12,5 +12,8 @@ function productos() {
     }
     
 }
+
+  
+
 
 export default productos

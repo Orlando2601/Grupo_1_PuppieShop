@@ -68,7 +68,12 @@ header .header-right .caja-enlace-header .imgUser a img{
     height: 100%;
     border-radius: 50%;
 }
+header .iconred .fa{
+    font-size: 2em;
+    color: #3E6B1C;
+    text-decoration: none;
 
+}
 
 /* RESPONSIVE */
 @media (max-width: 360px) {

@@ -1,5 +1,5 @@
 
-import { Link,Route,Routes } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 
@@ -41,7 +41,7 @@ return(
 
       
             <div className="iconred">
-                <Link to="/carrito"><i className="fas fa-shopping-cart"></i></Link>
+                <Link to="/categoria" className="fa">Marcas</Link>
             </div>
         </div>
     </div>

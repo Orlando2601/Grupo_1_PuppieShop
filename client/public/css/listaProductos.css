@@ -85,6 +85,11 @@
     
 
 }
+.marca{
+    text-align: center
+
+}
+
 .mainListaProductos article .vermas button{
     margin-top: 10px;
     display: flex;
@@ -106,6 +111,9 @@
 color:aliceblue
     
 
+}
+.ultimo h1{
+    text-align: center;
 }
 
 

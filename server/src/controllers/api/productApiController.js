@@ -15,7 +15,7 @@ const comida = async (req,res)=>{
         });
         
 
-            return res.json({rows,totaldeproductos:count})
+            return res.json({productos:rows,totaldeproductos:count})
 
            
     } catch (error) {
@@ -26,8 +26,10 @@ const comida = async (req,res)=>{
 const detalle = async(req,res)=>{
     try {
         const lista= await db.Producto.findByPk(req.params.id,{include:['marca']})
-    //res.json(lista)
-    return res.json(lista)
+
+        const imagen = lista.dataValues.Urlimagen ="http://localhost:3030/images/productsDB/"+lista.imagen;
+    
+       return res.json(lista)
         
     } catch (error) {
         
