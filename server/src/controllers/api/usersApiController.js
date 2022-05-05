@@ -28,6 +28,9 @@ const detalleUsuario = async(req, res)=>{
     try {
         const idUser = req.params.id
         const usuario = await db.Usuarios.findByPk(idUser)
+        const nameImg = usuario.imagen
+        usuario.imagen = `http://localhost:3030/${nameImg}`
+
         return res.json({usuario})
     } catch (error) {
         console.log(error)

@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const publicPath =path.resolve(__dirname, './src/public');
+const imgPublic = path.resolve(__dirname, './src/public/images/dbUsers');
 const mainRouter = require('./src/routes/mainRouter');/* requerimos archivo de rutas */
 const productosRouter = require('./src/routes/productosRouter');/* requerimos archivo de rutas */
 const userRouter = require('./src/routes/userRouter');/* requerimos archivo de rutas */
@@ -35,6 +36,7 @@ app.use(userLoggedMiddelware)
 /* CONFIGURACION CARPETA DE VISTAS Y PARCHIVOS PUBLICOS */
 app.set('views', path.resolve(__dirname, './src/views'))
 app.use(express.static(publicPath));
+app.use(express.static(imgPublic));
 /* CONFIGURACION RENDERIZACION VISTAS //////////////////////////////////////////////////////////////*/
 app.set('view engine', 'ejs'); /* Expresamos a express motor de vistas como ejs */
 /* CONFIGURACION PUERTO Y SERVIDOR///////////////////////////////////////////////////////////////// */
